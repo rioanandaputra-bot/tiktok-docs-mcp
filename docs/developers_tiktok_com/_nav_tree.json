@@ -1,0 +1,2387 @@
+{
+  "tree": [
+    {
+      "href": "/doc/overview",
+      "label": "Docs",
+      "depth": 0,
+      "children": [
+        {
+          "href": "/doc/working-with-organizations",
+          "label": "Account Management",
+          "depth": 1,
+          "children": []
+        },
+        {
+          "href": "/doc/getting-started-create-an-app",
+          "label": "App Management",
+          "depth": 1,
+          "children": [
+            {
+              "href": "/doc/add-a-sandbox",
+              "label": "Add a Sandbox",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "href": "/doc/getting-started-faq",
+              "label": "App Review FAQ",
+              "depth": 2,
+              "children": []
+            }
+          ]
+        },
+        {
+          "href": "/doc/app-review-guidelines",
+          "label": "Our Guidelines",
+          "depth": 1,
+          "children": [
+            {
+              "href": "/doc/our-guidelines-developer-guidelines",
+              "label": "Developer Guidelines",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "href": "/doc/getting-started-design-guidelines",
+              "label": "Design Guidelines",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "href": "/doc/content-sharing-guidelines",
+              "label": "Content Sharing Guidelines",
+              "depth": 2,
+              "children": []
+            }
+          ]
+        },
+        {
+          "href": "/doc/mobile-sdk-ios-quickstart",
+          "label": "Integration Essentials",
+          "depth": 1,
+          "children": [
+            {
+              "href": "/doc/mobile-sdk-android-quickstart",
+              "label": "Android",
+              "depth": 3,
+              "children": []
+            },
+            {
+              "href": "/doc/tiktok-api-v2-rate-limit",
+              "label": "Server API",
+              "depth": 2,
+              "children": [
+                {
+                  "href": "/doc/tiktok-api-v2-error-handling",
+                  "label": "Error Handling",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/oauth-user-access-token-management",
+                  "label": "OAuth",
+                  "depth": 3,
+                  "children": [
+                    {
+                      "href": "/doc/client-access-token-management",
+                      "label": "Client Access Token Management",
+                      "depth": 4,
+                      "children": []
+                    },
+                    {
+                      "href": "/doc/oauth-error-handling",
+                      "label": "Error Handling",
+                      "depth": 4,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "href": "/doc/webhooks-overview",
+              "label": "Webhooks",
+              "depth": 2,
+              "children": [
+                {
+                  "href": "/doc/webhooks-events",
+                  "label": "Events",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/webhooks-verification",
+                  "label": "Verification",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "href": "/doc/login-kit-overview",
+          "label": "Login Kit",
+          "depth": 1,
+          "children": [
+            {
+              "href": "/doc/login-kit-web",
+              "label": "Web",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "href": "/doc/login-kit-desktop",
+              "label": "Desktop",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "href": "/doc/login-kit-ios-quickstart",
+              "label": "iOS",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "href": "/doc/login-kit-android-quickstart-v2",
+              "label": "Android",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "href": "/doc/login-kit-manage-user-access-tokens",
+              "label": "Manage User Access Tokens",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "href": "/doc/login-kit-qr-code-authorization",
+              "label": "QR Code Authorization",
+              "depth": 2,
+              "children": []
+            }
+          ]
+        },
+        {
+          "href": "/doc/share-kit-ios-quickstart-v2",
+          "label": "Share Kit",
+          "depth": 1,
+          "children": [
+            {
+              "href": "/doc/share-kit-android-quickstart-v2",
+              "label": "Android",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "href": "/doc/green-screen-kit",
+              "label": "Green Screen Effect",
+              "depth": 2,
+              "children": []
+            }
+          ]
+        },
+        {
+          "href": "/doc/content-posting-api-get-started",
+          "label": "Content Posting API",
+          "depth": 1,
+          "children": [
+            {
+              "href": "/doc/content-posting-api-get-started-upload-content",
+              "label": "Get Started - Upload",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "href": "/doc/content-posting-api-media-transfer-guide",
+              "label": "Media Transfer Guide",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "href": "/doc/content-posting-api-reference-direct-post",
+              "label": "API Reference",
+              "depth": 2,
+              "children": [
+                {
+                  "href": "/doc/content-posting-api-reference-upload-video",
+                  "label": "Upload",
+                  "depth": 4,
+                  "children": []
+                },
+                {
+                  "href": "/doc/content-posting-api-reference-photo-post",
+                  "label": "Photo",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/content-posting-api-reference-query-creator-info",
+                  "label": "Query Creator Info",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/content-posting-api-reference-get-video-status",
+                  "label": "Get Post Status",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "href": "/doc/data-portability-api-get-started",
+          "label": "Data Portability API",
+          "depth": 1,
+          "children": [
+            {
+              "href": "/doc/data-portability-api-faq",
+              "label": "Data Portability FAQ",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "href": "/doc/data-portability-api-application-guidelines",
+              "label": " Data Portability Application Guidelines",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "href": "/doc/data-portability-api-add-data-request",
+              "label": "API Reference",
+              "depth": 2,
+              "children": [
+                {
+                  "href": "/doc/data-portability-api-cancel-data-request",
+                  "label": "Cancel Data Request",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/data-portability-api-check-status-of-data-request",
+                  "label": "Check Status of Data Request",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/data-portability-api-download",
+                  "label": "Download",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/data-portability-data-types",
+                  "label": "Data Types",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "href": "/doc/display-api-overview",
+          "label": "Display API",
+          "depth": 1,
+          "children": [
+            {
+              "href": "/doc/display-api-get-started",
+              "label": "Get Started",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "href": "/doc/tiktok-api-v2-get-user-info",
+              "label": "API Reference",
+              "depth": 2,
+              "children": [
+                {
+                  "href": "/doc/tiktok-api-v2-video-query",
+                  "label": "Query Videos",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/tiktok-api-v2-video-list",
+                  "label": "List Videos",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/tiktok-api-v2-video-object",
+                  "label": "Video Object",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "href": "/doc/about-research-api",
+          "label": "Research Tools",
+          "depth": 1,
+          "children": [
+            {
+              "href": "/doc/research-api-get-started",
+              "label": "Getting Started - Research API",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "href": "/doc/vce-getting-started",
+              "label": "Getting Started - VCE",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "href": "/doc/research-api-faq",
+              "label": "Frequently Asked Questions",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "href": "/doc/research-api-codebook",
+              "label": "Codebook",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "href": "/doc/research-api-specs-query-videos",
+              "label": "API Reference",
+              "depth": 2,
+              "children": [
+                {
+                  "href": "/doc/research-api-specs-query-user-info",
+                  "label": "Query User Info",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/batch-compliance-apis",
+                  "label": "Batch Compliance APIs",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/research-api-specs-query-video-comments",
+                  "label": "Query Video Comments",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/research-api-specs-query-user-liked-videos",
+                  "label": "Query User Liked Videos",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/research-api-specs-query-user-pinned-videos",
+                  "label": "Query User Pinned Videos",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/research-api-specs-query-user-followers",
+                  "label": "Query User Followers",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/research-api-specs-query-user-following",
+                  "label": "Query User Following",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/research-api-specs-query-user-reposted-videos",
+                  "label": "Query User Reposted Videos",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/research-api-specs-query-playlist-info",
+                  "label": "Query Playlist Info",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/research-api-specs-query-tiktok-shop-info",
+                  "label": "Query TikTok Shop Info",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/research-api-specs-query-tiktok-shop-products",
+                  "label": "Query TikTok Shop Products",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/research-api-specs-query-tiktok-shop-reviews",
+                  "label": "Query TikTok Shop Reviews",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "href": "/doc/vce-query-videos",
+              "label": "VCE Reference",
+              "depth": 2,
+              "children": [
+                {
+                  "href": "/doc/vce-query-video-comments",
+                  "label": "Query Video Comments",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/vce-query-profiles",
+                  "label": "Query User Info",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/vce-query-liked-videos",
+                  "label": "Query User Liked Videos",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/vce-query-reposted-videos",
+                  "label": "Query User Reposted Videos",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/vce-query-pinned-videos",
+                  "label": "Query User Pinned Videos",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/vce-query-followers-list",
+                  "label": "Query User Followers",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/vce-query-following-list",
+                  "label": "Query User Following",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/vce-query-playlists",
+                  "label": "Query Playlist Info",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/vce-query-tiktok-shop-data",
+                  "label": "Query TikTok Shop Info",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/vce-query-tiktok-shop-products",
+                  "label": "Query TikTok Shop Products",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/vce-query-tiktok-shop-reviews",
+                  "label": "Query TikTok Shop Reviews",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/data-refresh-for-video-wi",
+                  "label": "Data Refresh For video_wi",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/data-refresh-for-comment-wi",
+                  "label": "Data Refresh For comment_wi",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "href": "/doc/commercial-content-api-getting-started",
+          "label": "Commercial Content API",
+          "depth": 1,
+          "children": [
+            {
+              "href": "/doc/commercial-content-api-query-ads",
+              "label": "API Reference",
+              "depth": 2,
+              "children": [
+                {
+                  "href": "/doc/commercial-content-api-query-advertisers",
+                  "label": "Query Advertisers",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/commercial-content-api-get-ad-details",
+                  "label": "Get Ad Details",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/commercial-content-api-get-ad-report",
+                  "label": "Get Ad Report",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/commercial-content-api-query-commercial-content",
+                  "label": "Query Commercial Content",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/commercial-content-api-supported-countries",
+                  "label": "Supported Countries",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "href": "/doc/embed-player",
+          "label": "Embed",
+          "depth": 1,
+          "children": [
+            {
+              "href": "/doc/embed-videos",
+              "label": "Embed Videos",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "href": "/doc/embed-creator-profiles",
+              "label": "Embed Creator Profiles",
+              "depth": 2,
+              "children": []
+            }
+          ]
+        },
+        {
+          "href": "/doc/monetization-overview",
+          "label": "Monetization ",
+          "depth": 1,
+          "children": [
+            {
+              "href": "/doc/enable-monetization-features",
+              "label": "Enable Monetization Features",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "href": "/doc/tiktok-beans-pricing-tiers",
+              "label": "TikTok Beans Pricing Tiers",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "href": "/doc/manage-revenue-settlement",
+              "label": "Manage Revenue Settlement",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "href": "/doc/process-invoices-and-payouts",
+              "label": "Process Invoices and Payouts",
+              "depth": 2,
+              "children": []
+            }
+          ]
+        },
+        {
+          "href": "/doc/perpare-your-developer-account",
+          "label": "TikTok Minis Platform",
+          "depth": 1,
+          "children": [
+            {
+              "href": "/doc/verify-your-business",
+              "label": "Verify Your Business",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "href": "/doc/industry-qualification-review",
+              "label": "Industry Qualification Review",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "href": "/doc/launch-your-app-to-us-users-minigames",
+              "label": "U.S. and E.U. Launch Approval",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "href": "/doc/configure-localization",
+              "label": "Configure Localization",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "href": "/doc/set-up-development-configuration",
+              "label": "Set Up Development Configuration",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "href": "/doc/minis-server-apis-overview",
+              "label": "TikTok Minis Server APIs",
+              "depth": 2,
+              "children": [
+                {
+                  "href": "/doc/minis-oauth",
+                  "label": "OAuth for TikTok Minis",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/minis-user-data",
+                  "label": "TikTok User Data API",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/minis-payment-apis",
+                  "label": "Payment APIs",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/minis-subscription-apis",
+                  "label": "Subscription APIs",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/minis-error-codes",
+                  "label": "Error Codes",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "href": "/doc/mini-games-overview",
+          "label": "Mini Games",
+          "depth": 1,
+          "children": [
+            {
+              "href": "/doc/mini-games-integration-workflow",
+              "label": "Mini Games Integration Workflow",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "href": "/doc/basic-information-specifications",
+              "label": "Basic Information Specifications",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "href": "/doc/develop-your-mini-game",
+              "label": "Develop Your Mini Game",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "href": "/doc/silent-login",
+              "label": "Capability Guides",
+              "depth": 2,
+              "children": [
+                {
+                  "href": "/doc/home-screen-shortcut",
+                  "label": "Home Screen Shortcut ",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/revisit-from-profile",
+                  "label": "Revisit From Profile",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/in-app-ads",
+                  "label": "In-App Ads",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/in-app-purchases",
+                  "label": "In-App Purchases",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "href": "/doc/debug-your-mini-game",
+              "label": "Debug Your Mini Game",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "href": "/doc/submit-your-app-for-review",
+              "label": "Release Your Mini Game ",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "href": "/doc/mini-game-analytics",
+              "label": "Mini Game Analytics",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "href": "/doc/mini-games-sdk-overview",
+              "label": "Mini Games SDK",
+              "depth": 2,
+              "children": [
+                {
+                  "href": "/doc/mini-games-base-library-update-log",
+                  "label": "Mini Games SDK Changelog ",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/mini-games-sdk-get-started",
+                  "label": "Initialize SDK ",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/mini-games-sdk-basic-utility",
+                  "label": "Basic Utility",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/mini-games-sdk-storage",
+                  "label": "Data Caching",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/mini-games-sdk-device-and-network",
+                  "label": "Device and Network",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/mini-games-sdk-event",
+                  "label": "Event",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/mini-games-sdk-file",
+                  "label": "File",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/mini-games-sdk-iaa",
+                  "label": "In-App Ads",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/mini-games-sdk-payment",
+                  "label": "In-App Purchases",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/mini-games-sdk-login",
+                  "label": "Login and Authorization",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/mini-games-sdk-media",
+                  "label": "Media",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/mini-games-sdk-render-and-canvas",
+                  "label": "Render and Canvas",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/mini-games-sdk-revisit-incentives",
+                  "label": "Revist Incentives",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/mini-games-sdk-sharing",
+                  "label": "Sharing",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/mini-games-sdk-subpackage-loading",
+                  "label": "Subpackage Loading",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/mini-games-sdk-system",
+                  "label": "System",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/mini-games-sdk-ui",
+                  "label": "UI",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/mini-games-sdk-websocket",
+                  "label": "Websocket",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "href": "/doc/for-you-feed-cards",
+              "label": "For You Feed Cards",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "href": "/doc/mini-games-preparation-stage",
+              "label": "HTML Mini Games",
+              "depth": 2,
+              "children": [
+                {
+                  "href": "/doc/mini-games-development-stage",
+                  "label": "Development Stage",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/mini-games-publication-stage",
+                  "label": "Publication Stage",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/mini-games-monetization",
+                  "label": "Mini Games Monetization",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "href": "/doc/minis-overview",
+          "label": "Mini Dramas",
+          "depth": 1,
+          "children": [
+            {
+              "href": "/doc/tiktok-minis-integration-workflow",
+              "label": "Mini Dramas Integration Workflow",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "href": "/doc/tiktok-minis-basic-information-specifications",
+              "label": "Basic Information Specifications",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "href": "/doc/tiktok-minis-develop-your-mini-app",
+              "label": "Develop Your Mini Drama",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "href": "/doc/tiktok-minis-silent-login",
+              "label": "Capability Guides",
+              "depth": 2,
+              "children": [
+                {
+                  "href": "/doc/tiktok-minis-explicit-authorization",
+                  "label": "Explicit Authorization",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/tiktok-minis-in-app-purchases",
+                  "label": "In-App Purchases",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/tiktok-minis-in-app-ads",
+                  "label": "In-App Ads",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/tiktok-minis-navigation-bar",
+                  "label": "Navigation Bar",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "href": "/doc/debug-your-mini-app",
+              "label": "Debug Your Mini Drama",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "href": "/doc/tiktok-minis-release-your-mini-app",
+              "label": "Release Your Mini Drama",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "href": "/doc/mini-drama-analytics",
+              "label": "Mini Drama Analytics",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "href": "/doc/minis-report-handling-guide",
+              "label": "Report Handling Guide",
+              "depth": 2,
+              "children": []
+            },
+            {
+              "href": "/doc/minis-sdk-get-started",
+              "label": "TikTok Minis SDK ",
+              "depth": 2,
+              "children": [
+                {
+                  "href": "/doc/minis-sdk-basic-utility",
+                  "label": "Basic Utility",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/minis-sdk-device",
+                  "label": "Device",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/minis-sdk-event",
+                  "label": "Event",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/minis-sdk-in-app-ads",
+                  "label": "In-App Ads",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/minis-sdk-payment",
+                  "label": "In-App Purchases",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/minis-sdk-login",
+                  "label": "Login and Authorization",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/minis-sdk-share",
+                  "label": "Share",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/minis-sdk-subscriptions",
+                  "label": "Subscriptions",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/minis-sdk-ui",
+                  "label": "UI",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "href": "/doc/minis-preparation-stage",
+              "label": "Legacy Guides",
+              "depth": 2,
+              "children": [
+                {
+                  "href": "/doc/minis-development-stage",
+                  "label": "Development Stage",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/minis-publication-stage",
+                  "label": "Publication Stage",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/minis-changelog",
+                  "label": "Changelog",
+                  "depth": 3,
+                  "children": []
+                },
+                {
+                  "href": "/doc/launch-your-app-to-us-users",
+                  "label": "Launch Your App to U.S. Users ",
+                  "depth": 3,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "href": "/doc/tiktok-go-dining-overview",
+          "label": "TikTok GO ",
+          "depth": 1,
+          "children": [
+            {
+              "href": "/doc/set-up-merchant-portal-account",
+              "label": "Set Up Merchant Portal Account",
+              "depth": 3,
+              "children": []
+            },
+            {
+              "href": "/doc/set-up-developer-portal-account",
+              "label": "Set Up Developer Portal Account",
+              "depth": 3,
+              "children": []
+            },
+            {
+              "href": "/doc/obtain-access-token-for-apis",
+              "label": "Obtain Access Token for APIs",
+              "depth": 3,
+              "children": []
+            },
+            {
+              "href": "/doc/integrate-with-dining-saas",
+              "label": "Integrate With Dining SaaS",
+              "depth": 3,
+              "children": []
+            },
+            {
+              "href": "/doc/prepare-product-content",
+              "label": "Prepare Product Content",
+              "depth": 3,
+              "children": []
+            },
+            {
+              "href": "/doc/run-acceptance-tests",
+              "label": "Run Acceptance Tests",
+              "depth": 3,
+              "children": []
+            },
+            {
+              "href": "/doc/launch-your-solution",
+              "label": "Launch Your Solution",
+              "depth": 3,
+              "children": []
+            },
+            {
+              "href": "/doc/shop-management",
+              "label": "API Reference",
+              "depth": 3,
+              "children": [
+                {
+                  "href": "/doc/product-management",
+                  "label": "Product Management",
+                  "depth": 4,
+                  "children": []
+                },
+                {
+                  "href": "/doc/voucher-management",
+                  "label": "Voucher Management",
+                  "depth": 4,
+                  "children": []
+                },
+                {
+                  "href": "/doc/dining-saas-sample-code",
+                  "label": "Dining SaaS Sample Code",
+                  "depth": 4,
+                  "children": []
+                },
+                {
+                  "href": "/doc/local-service-error-codes",
+                  "label": "Error Codes",
+                  "depth": 4,
+                  "children": []
+                },
+                {
+                  "href": "/doc/category-tree",
+                  "label": "Category Tree",
+                  "depth": 4,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "href": "/doc/scopes-overview",
+          "label": "Scopes",
+          "depth": 1,
+          "children": [
+            {
+              "href": "/doc/tiktok-api-scopes",
+              "label": "Scopes Reference",
+              "depth": 2,
+              "children": []
+            }
+          ]
+        },
+        {
+          "href": "/doc/tiktok-api-v2-introduction",
+          "label": "Legacy Products",
+          "depth": 1,
+          "children": [
+            {
+              "href": "/doc/tiktok-api-v1-video-list",
+              "label": "List Videos",
+              "depth": 3,
+              "children": []
+            },
+            {
+              "href": "/doc/tiktok-api-v1-user-info",
+              "label": "User Info",
+              "depth": 3,
+              "children": []
+            },
+            {
+              "href": "/doc/tiktok-api-v1-video-query",
+              "label": "Query Videos",
+              "depth": 3,
+              "children": []
+            },
+            {
+              "href": "/doc/legacy-user-access-guide",
+              "label": "Legacy User Access Token Guide",
+              "depth": 3,
+              "children": []
+            },
+            {
+              "href": "/doc/web-video-kit-with-web",
+              "label": "Share Video API",
+              "depth": 3,
+              "children": []
+            },
+            {
+              "href": "/doc/getting-started-ios-quickstart-objective-c",
+              "label": "Legacy Mobile SDK",
+              "depth": 2,
+              "children": [
+                {
+                  "href": "/doc/getting-started-ios-quickstart-swift",
+                  "label": "Quickstart Swift",
+                  "depth": 4,
+                  "children": []
+                },
+                {
+                  "href": "/doc/getting-started-ios-handling-errors",
+                  "label": "Handling Errors",
+                  "depth": 4,
+                  "children": []
+                },
+                {
+                  "href": "/doc/getting-started-ios-download",
+                  "label": "Download",
+                  "depth": 4,
+                  "children": []
+                },
+                {
+                  "href": "/doc/login-kit-ios-login-kit-with-objective-c",
+                  "label": "Login Kit With Objective-C",
+                  "depth": 4,
+                  "children": []
+                },
+                {
+                  "href": "/doc/login-kit-ios-login-kit-with-swift",
+                  "label": "Login Kit With Swift",
+                  "depth": 4,
+                  "children": []
+                },
+                {
+                  "href": "/doc/video-kit-ios-video-kit-with-objective-c",
+                  "label": "Video Kit With Objective-C",
+                  "depth": 4,
+                  "children": []
+                },
+                {
+                  "href": "/doc/video-kit-ios-video-kit-with-swift",
+                  "label": " Video Kit With Swift",
+                  "depth": 4,
+                  "children": []
+                },
+                {
+                  "href": "/doc/getting-started-android-quickstart",
+                  "label": "Android",
+                  "depth": 3,
+                  "children": [
+                    {
+                      "href": "/doc/getting-started-android-handling-errors",
+                      "label": "Handling Errors",
+                      "depth": 4,
+                      "children": []
+                    },
+                    {
+                      "href": "/doc/getting-started-android-download",
+                      "label": "Download",
+                      "depth": 4,
+                      "children": []
+                    },
+                    {
+                      "href": "/doc/login-kit-android",
+                      "label": "Login Kit with Android",
+                      "depth": 4,
+                      "children": []
+                    },
+                    {
+                      "href": "/doc/video-kit-android-video-kit-with-android",
+                      "label": "Video Kit With Android",
+                      "depth": 4,
+                      "children": []
+                    },
+                    {
+                      "href": "/doc/video-kit-android-android-fileprovider",
+                      "label": "Android FileProvider",
+                      "depth": 4,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "href": "/doc/changelog",
+          "label": "Changelog",
+          "depth": 1,
+          "children": []
+        },
+        {
+          "href": "/doc/display-api-get-started/",
+          "label": "Display API",
+          "depth": 1,
+          "children": []
+        },
+        {
+          "href": "/doc/embed-videos/",
+          "label": "Embed Videos",
+          "depth": 1,
+          "children": []
+        }
+      ]
+    }
+  ],
+  "flat": [
+    {
+      "href": "/doc/overview",
+      "label": "Docs",
+      "depth": 0
+    },
+    {
+      "href": "/doc/working-with-organizations",
+      "label": "Account Management",
+      "depth": 1
+    },
+    {
+      "href": "/doc/getting-started-create-an-app",
+      "label": "App Management",
+      "depth": 1
+    },
+    {
+      "href": "/doc/add-a-sandbox",
+      "label": "Add a Sandbox",
+      "depth": 2
+    },
+    {
+      "href": "/doc/getting-started-faq",
+      "label": "App Review FAQ",
+      "depth": 2
+    },
+    {
+      "href": "/doc/app-review-guidelines",
+      "label": "Our Guidelines",
+      "depth": 1
+    },
+    {
+      "href": "/doc/our-guidelines-developer-guidelines",
+      "label": "Developer Guidelines",
+      "depth": 2
+    },
+    {
+      "href": "/doc/getting-started-design-guidelines",
+      "label": "Design Guidelines",
+      "depth": 2
+    },
+    {
+      "href": "/doc/content-sharing-guidelines",
+      "label": "Content Sharing Guidelines",
+      "depth": 2
+    },
+    {
+      "href": "/doc/mobile-sdk-ios-quickstart",
+      "label": "Integration Essentials",
+      "depth": 1
+    },
+    {
+      "href": "/doc/mobile-sdk-android-quickstart",
+      "label": "Android",
+      "depth": 3
+    },
+    {
+      "href": "/doc/tiktok-api-v2-rate-limit",
+      "label": "Server API",
+      "depth": 2
+    },
+    {
+      "href": "/doc/tiktok-api-v2-error-handling",
+      "label": "Error Handling",
+      "depth": 3
+    },
+    {
+      "href": "/doc/oauth-user-access-token-management",
+      "label": "OAuth",
+      "depth": 3
+    },
+    {
+      "href": "/doc/client-access-token-management",
+      "label": "Client Access Token Management",
+      "depth": 4
+    },
+    {
+      "href": "/doc/oauth-error-handling",
+      "label": "Error Handling",
+      "depth": 4
+    },
+    {
+      "href": "/doc/webhooks-overview",
+      "label": "Webhooks",
+      "depth": 2
+    },
+    {
+      "href": "/doc/webhooks-events",
+      "label": "Events",
+      "depth": 3
+    },
+    {
+      "href": "/doc/webhooks-verification",
+      "label": "Verification",
+      "depth": 3
+    },
+    {
+      "href": "/doc/login-kit-overview",
+      "label": "Login Kit",
+      "depth": 1
+    },
+    {
+      "href": "/doc/login-kit-web",
+      "label": "Web",
+      "depth": 2
+    },
+    {
+      "href": "/doc/login-kit-desktop",
+      "label": "Desktop",
+      "depth": 2
+    },
+    {
+      "href": "/doc/login-kit-ios-quickstart",
+      "label": "iOS",
+      "depth": 2
+    },
+    {
+      "href": "/doc/login-kit-android-quickstart-v2",
+      "label": "Android",
+      "depth": 2
+    },
+    {
+      "href": "/doc/login-kit-manage-user-access-tokens",
+      "label": "Manage User Access Tokens",
+      "depth": 2
+    },
+    {
+      "href": "/doc/login-kit-qr-code-authorization",
+      "label": "QR Code Authorization",
+      "depth": 2
+    },
+    {
+      "href": "/doc/share-kit-ios-quickstart-v2",
+      "label": "Share Kit",
+      "depth": 1
+    },
+    {
+      "href": "/doc/share-kit-android-quickstart-v2",
+      "label": "Android",
+      "depth": 2
+    },
+    {
+      "href": "/doc/green-screen-kit",
+      "label": "Green Screen Effect",
+      "depth": 2
+    },
+    {
+      "href": "/doc/content-posting-api-get-started",
+      "label": "Content Posting API",
+      "depth": 1
+    },
+    {
+      "href": "/doc/content-posting-api-get-started-upload-content",
+      "label": "Get Started - Upload",
+      "depth": 2
+    },
+    {
+      "href": "/doc/content-posting-api-media-transfer-guide",
+      "label": "Media Transfer Guide",
+      "depth": 2
+    },
+    {
+      "href": "/doc/content-posting-api-reference-direct-post",
+      "label": "API Reference",
+      "depth": 2
+    },
+    {
+      "href": "/doc/content-posting-api-reference-upload-video",
+      "label": "Upload",
+      "depth": 4
+    },
+    {
+      "href": "/doc/content-posting-api-reference-photo-post",
+      "label": "Photo",
+      "depth": 3
+    },
+    {
+      "href": "/doc/content-posting-api-reference-query-creator-info",
+      "label": "Query Creator Info",
+      "depth": 3
+    },
+    {
+      "href": "/doc/content-posting-api-reference-get-video-status",
+      "label": "Get Post Status",
+      "depth": 3
+    },
+    {
+      "href": "/doc/data-portability-api-get-started",
+      "label": "Data Portability API",
+      "depth": 1
+    },
+    {
+      "href": "/doc/data-portability-api-faq",
+      "label": "Data Portability FAQ",
+      "depth": 2
+    },
+    {
+      "href": "/doc/data-portability-api-application-guidelines",
+      "label": " Data Portability Application Guidelines",
+      "depth": 2
+    },
+    {
+      "href": "/doc/data-portability-api-add-data-request",
+      "label": "API Reference",
+      "depth": 2
+    },
+    {
+      "href": "/doc/data-portability-api-cancel-data-request",
+      "label": "Cancel Data Request",
+      "depth": 3
+    },
+    {
+      "href": "/doc/data-portability-api-check-status-of-data-request",
+      "label": "Check Status of Data Request",
+      "depth": 3
+    },
+    {
+      "href": "/doc/data-portability-api-download",
+      "label": "Download",
+      "depth": 3
+    },
+    {
+      "href": "/doc/data-portability-data-types",
+      "label": "Data Types",
+      "depth": 3
+    },
+    {
+      "href": "/doc/display-api-overview",
+      "label": "Display API",
+      "depth": 1
+    },
+    {
+      "href": "/doc/display-api-get-started",
+      "label": "Get Started",
+      "depth": 2
+    },
+    {
+      "href": "/doc/tiktok-api-v2-get-user-info",
+      "label": "API Reference",
+      "depth": 2
+    },
+    {
+      "href": "/doc/tiktok-api-v2-video-query",
+      "label": "Query Videos",
+      "depth": 3
+    },
+    {
+      "href": "/doc/tiktok-api-v2-video-list",
+      "label": "List Videos",
+      "depth": 3
+    },
+    {
+      "href": "/doc/tiktok-api-v2-video-object",
+      "label": "Video Object",
+      "depth": 3
+    },
+    {
+      "href": "/doc/about-research-api",
+      "label": "Research Tools",
+      "depth": 1
+    },
+    {
+      "href": "/doc/research-api-get-started",
+      "label": "Getting Started - Research API",
+      "depth": 2
+    },
+    {
+      "href": "/doc/vce-getting-started",
+      "label": "Getting Started - VCE",
+      "depth": 2
+    },
+    {
+      "href": "/doc/research-api-faq",
+      "label": "Frequently Asked Questions",
+      "depth": 2
+    },
+    {
+      "href": "/doc/research-api-codebook",
+      "label": "Codebook",
+      "depth": 2
+    },
+    {
+      "href": "/doc/research-api-specs-query-videos",
+      "label": "API Reference",
+      "depth": 2
+    },
+    {
+      "href": "/doc/research-api-specs-query-user-info",
+      "label": "Query User Info",
+      "depth": 3
+    },
+    {
+      "href": "/doc/batch-compliance-apis",
+      "label": "Batch Compliance APIs",
+      "depth": 3
+    },
+    {
+      "href": "/doc/research-api-specs-query-video-comments",
+      "label": "Query Video Comments",
+      "depth": 3
+    },
+    {
+      "href": "/doc/research-api-specs-query-user-liked-videos",
+      "label": "Query User Liked Videos",
+      "depth": 3
+    },
+    {
+      "href": "/doc/research-api-specs-query-user-pinned-videos",
+      "label": "Query User Pinned Videos",
+      "depth": 3
+    },
+    {
+      "href": "/doc/research-api-specs-query-user-followers",
+      "label": "Query User Followers",
+      "depth": 3
+    },
+    {
+      "href": "/doc/research-api-specs-query-user-following",
+      "label": "Query User Following",
+      "depth": 3
+    },
+    {
+      "href": "/doc/research-api-specs-query-user-reposted-videos",
+      "label": "Query User Reposted Videos",
+      "depth": 3
+    },
+    {
+      "href": "/doc/research-api-specs-query-playlist-info",
+      "label": "Query Playlist Info",
+      "depth": 3
+    },
+    {
+      "href": "/doc/research-api-specs-query-tiktok-shop-info",
+      "label": "Query TikTok Shop Info",
+      "depth": 3
+    },
+    {
+      "href": "/doc/research-api-specs-query-tiktok-shop-products",
+      "label": "Query TikTok Shop Products",
+      "depth": 3
+    },
+    {
+      "href": "/doc/research-api-specs-query-tiktok-shop-reviews",
+      "label": "Query TikTok Shop Reviews",
+      "depth": 3
+    },
+    {
+      "href": "/doc/vce-query-videos",
+      "label": "VCE Reference",
+      "depth": 2
+    },
+    {
+      "href": "/doc/vce-query-video-comments",
+      "label": "Query Video Comments",
+      "depth": 3
+    },
+    {
+      "href": "/doc/vce-query-profiles",
+      "label": "Query User Info",
+      "depth": 3
+    },
+    {
+      "href": "/doc/vce-query-liked-videos",
+      "label": "Query User Liked Videos",
+      "depth": 3
+    },
+    {
+      "href": "/doc/vce-query-reposted-videos",
+      "label": "Query User Reposted Videos",
+      "depth": 3
+    },
+    {
+      "href": "/doc/vce-query-pinned-videos",
+      "label": "Query User Pinned Videos",
+      "depth": 3
+    },
+    {
+      "href": "/doc/vce-query-followers-list",
+      "label": "Query User Followers",
+      "depth": 3
+    },
+    {
+      "href": "/doc/vce-query-following-list",
+      "label": "Query User Following",
+      "depth": 3
+    },
+    {
+      "href": "/doc/vce-query-playlists",
+      "label": "Query Playlist Info",
+      "depth": 3
+    },
+    {
+      "href": "/doc/vce-query-tiktok-shop-data",
+      "label": "Query TikTok Shop Info",
+      "depth": 3
+    },
+    {
+      "href": "/doc/vce-query-tiktok-shop-products",
+      "label": "Query TikTok Shop Products",
+      "depth": 3
+    },
+    {
+      "href": "/doc/vce-query-tiktok-shop-reviews",
+      "label": "Query TikTok Shop Reviews",
+      "depth": 3
+    },
+    {
+      "href": "/doc/data-refresh-for-video-wi",
+      "label": "Data Refresh For video_wi",
+      "depth": 3
+    },
+    {
+      "href": "/doc/data-refresh-for-comment-wi",
+      "label": "Data Refresh For comment_wi",
+      "depth": 3
+    },
+    {
+      "href": "/doc/commercial-content-api-getting-started",
+      "label": "Commercial Content API",
+      "depth": 1
+    },
+    {
+      "href": "/doc/commercial-content-api-query-ads",
+      "label": "API Reference",
+      "depth": 2
+    },
+    {
+      "href": "/doc/commercial-content-api-query-advertisers",
+      "label": "Query Advertisers",
+      "depth": 3
+    },
+    {
+      "href": "/doc/commercial-content-api-get-ad-details",
+      "label": "Get Ad Details",
+      "depth": 3
+    },
+    {
+      "href": "/doc/commercial-content-api-get-ad-report",
+      "label": "Get Ad Report",
+      "depth": 3
+    },
+    {
+      "href": "/doc/commercial-content-api-query-commercial-content",
+      "label": "Query Commercial Content",
+      "depth": 3
+    },
+    {
+      "href": "/doc/commercial-content-api-supported-countries",
+      "label": "Supported Countries",
+      "depth": 3
+    },
+    {
+      "href": "/doc/embed-player",
+      "label": "Embed",
+      "depth": 1
+    },
+    {
+      "href": "/doc/embed-videos",
+      "label": "Embed Videos",
+      "depth": 2
+    },
+    {
+      "href": "/doc/embed-creator-profiles",
+      "label": "Embed Creator Profiles",
+      "depth": 2
+    },
+    {
+      "href": "/doc/monetization-overview",
+      "label": "Monetization ",
+      "depth": 1
+    },
+    {
+      "href": "/doc/enable-monetization-features",
+      "label": "Enable Monetization Features",
+      "depth": 2
+    },
+    {
+      "href": "/doc/tiktok-beans-pricing-tiers",
+      "label": "TikTok Beans Pricing Tiers",
+      "depth": 2
+    },
+    {
+      "href": "/doc/manage-revenue-settlement",
+      "label": "Manage Revenue Settlement",
+      "depth": 2
+    },
+    {
+      "href": "/doc/process-invoices-and-payouts",
+      "label": "Process Invoices and Payouts",
+      "depth": 2
+    },
+    {
+      "href": "/doc/perpare-your-developer-account",
+      "label": "TikTok Minis Platform",
+      "depth": 1
+    },
+    {
+      "href": "/doc/verify-your-business",
+      "label": "Verify Your Business",
+      "depth": 2
+    },
+    {
+      "href": "/doc/industry-qualification-review",
+      "label": "Industry Qualification Review",
+      "depth": 2
+    },
+    {
+      "href": "/doc/launch-your-app-to-us-users-minigames",
+      "label": "U.S. and E.U. Launch Approval",
+      "depth": 2
+    },
+    {
+      "href": "/doc/configure-localization",
+      "label": "Configure Localization",
+      "depth": 2
+    },
+    {
+      "href": "/doc/set-up-development-configuration",
+      "label": "Set Up Development Configuration",
+      "depth": 2
+    },
+    {
+      "href": "/doc/minis-server-apis-overview",
+      "label": "TikTok Minis Server APIs",
+      "depth": 2
+    },
+    {
+      "href": "/doc/minis-oauth",
+      "label": "OAuth for TikTok Minis",
+      "depth": 3
+    },
+    {
+      "href": "/doc/minis-user-data",
+      "label": "TikTok User Data API",
+      "depth": 3
+    },
+    {
+      "href": "/doc/minis-payment-apis",
+      "label": "Payment APIs",
+      "depth": 3
+    },
+    {
+      "href": "/doc/minis-subscription-apis",
+      "label": "Subscription APIs",
+      "depth": 3
+    },
+    {
+      "href": "/doc/minis-error-codes",
+      "label": "Error Codes",
+      "depth": 3
+    },
+    {
+      "href": "/doc/mini-games-overview",
+      "label": "Mini Games",
+      "depth": 1
+    },
+    {
+      "href": "/doc/mini-games-integration-workflow",
+      "label": "Mini Games Integration Workflow",
+      "depth": 2
+    },
+    {
+      "href": "/doc/basic-information-specifications",
+      "label": "Basic Information Specifications",
+      "depth": 2
+    },
+    {
+      "href": "/doc/develop-your-mini-game",
+      "label": "Develop Your Mini Game",
+      "depth": 2
+    },
+    {
+      "href": "/doc/silent-login",
+      "label": "Capability Guides",
+      "depth": 2
+    },
+    {
+      "href": "/doc/home-screen-shortcut",
+      "label": "Home Screen Shortcut ",
+      "depth": 3
+    },
+    {
+      "href": "/doc/revisit-from-profile",
+      "label": "Revisit From Profile",
+      "depth": 3
+    },
+    {
+      "href": "/doc/in-app-ads",
+      "label": "In-App Ads",
+      "depth": 3
+    },
+    {
+      "href": "/doc/in-app-purchases",
+      "label": "In-App Purchases",
+      "depth": 3
+    },
+    {
+      "href": "/doc/debug-your-mini-game",
+      "label": "Debug Your Mini Game",
+      "depth": 2
+    },
+    {
+      "href": "/doc/submit-your-app-for-review",
+      "label": "Release Your Mini Game ",
+      "depth": 2
+    },
+    {
+      "href": "/doc/mini-game-analytics",
+      "label": "Mini Game Analytics",
+      "depth": 2
+    },
+    {
+      "href": "/doc/mini-games-sdk-overview",
+      "label": "Mini Games SDK",
+      "depth": 2
+    },
+    {
+      "href": "/doc/mini-games-base-library-update-log",
+      "label": "Mini Games SDK Changelog ",
+      "depth": 3
+    },
+    {
+      "href": "/doc/mini-games-sdk-get-started",
+      "label": "Initialize SDK ",
+      "depth": 3
+    },
+    {
+      "href": "/doc/mini-games-sdk-basic-utility",
+      "label": "Basic Utility",
+      "depth": 3
+    },
+    {
+      "href": "/doc/mini-games-sdk-storage",
+      "label": "Data Caching",
+      "depth": 3
+    },
+    {
+      "href": "/doc/mini-games-sdk-device-and-network",
+      "label": "Device and Network",
+      "depth": 3
+    },
+    {
+      "href": "/doc/mini-games-sdk-event",
+      "label": "Event",
+      "depth": 3
+    },
+    {
+      "href": "/doc/mini-games-sdk-file",
+      "label": "File",
+      "depth": 3
+    },
+    {
+      "href": "/doc/mini-games-sdk-iaa",
+      "label": "In-App Ads",
+      "depth": 3
+    },
+    {
+      "href": "/doc/mini-games-sdk-payment",
+      "label": "In-App Purchases",
+      "depth": 3
+    },
+    {
+      "href": "/doc/mini-games-sdk-login",
+      "label": "Login and Authorization",
+      "depth": 3
+    },
+    {
+      "href": "/doc/mini-games-sdk-media",
+      "label": "Media",
+      "depth": 3
+    },
+    {
+      "href": "/doc/mini-games-sdk-render-and-canvas",
+      "label": "Render and Canvas",
+      "depth": 3
+    },
+    {
+      "href": "/doc/mini-games-sdk-revisit-incentives",
+      "label": "Revist Incentives",
+      "depth": 3
+    },
+    {
+      "href": "/doc/mini-games-sdk-sharing",
+      "label": "Sharing",
+      "depth": 3
+    },
+    {
+      "href": "/doc/mini-games-sdk-subpackage-loading",
+      "label": "Subpackage Loading",
+      "depth": 3
+    },
+    {
+      "href": "/doc/mini-games-sdk-system",
+      "label": "System",
+      "depth": 3
+    },
+    {
+      "href": "/doc/mini-games-sdk-ui",
+      "label": "UI",
+      "depth": 3
+    },
+    {
+      "href": "/doc/mini-games-sdk-websocket",
+      "label": "Websocket",
+      "depth": 3
+    },
+    {
+      "href": "/doc/for-you-feed-cards",
+      "label": "For You Feed Cards",
+      "depth": 2
+    },
+    {
+      "href": "/doc/mini-games-preparation-stage",
+      "label": "HTML Mini Games",
+      "depth": 2
+    },
+    {
+      "href": "/doc/mini-games-development-stage",
+      "label": "Development Stage",
+      "depth": 3
+    },
+    {
+      "href": "/doc/mini-games-publication-stage",
+      "label": "Publication Stage",
+      "depth": 3
+    },
+    {
+      "href": "/doc/mini-games-monetization",
+      "label": "Mini Games Monetization",
+      "depth": 3
+    },
+    {
+      "href": "/doc/minis-overview",
+      "label": "Mini Dramas",
+      "depth": 1
+    },
+    {
+      "href": "/doc/tiktok-minis-integration-workflow",
+      "label": "Mini Dramas Integration Workflow",
+      "depth": 2
+    },
+    {
+      "href": "/doc/tiktok-minis-basic-information-specifications",
+      "label": "Basic Information Specifications",
+      "depth": 2
+    },
+    {
+      "href": "/doc/tiktok-minis-develop-your-mini-app",
+      "label": "Develop Your Mini Drama",
+      "depth": 2
+    },
+    {
+      "href": "/doc/tiktok-minis-silent-login",
+      "label": "Capability Guides",
+      "depth": 2
+    },
+    {
+      "href": "/doc/tiktok-minis-explicit-authorization",
+      "label": "Explicit Authorization",
+      "depth": 3
+    },
+    {
+      "href": "/doc/tiktok-minis-in-app-purchases",
+      "label": "In-App Purchases",
+      "depth": 3
+    },
+    {
+      "href": "/doc/tiktok-minis-in-app-ads",
+      "label": "In-App Ads",
+      "depth": 3
+    },
+    {
+      "href": "/doc/tiktok-minis-navigation-bar",
+      "label": "Navigation Bar",
+      "depth": 3
+    },
+    {
+      "href": "/doc/debug-your-mini-app",
+      "label": "Debug Your Mini Drama",
+      "depth": 2
+    },
+    {
+      "href": "/doc/tiktok-minis-release-your-mini-app",
+      "label": "Release Your Mini Drama",
+      "depth": 2
+    },
+    {
+      "href": "/doc/mini-drama-analytics",
+      "label": "Mini Drama Analytics",
+      "depth": 2
+    },
+    {
+      "href": "/doc/minis-report-handling-guide",
+      "label": "Report Handling Guide",
+      "depth": 2
+    },
+    {
+      "href": "/doc/minis-sdk-get-started",
+      "label": "TikTok Minis SDK ",
+      "depth": 2
+    },
+    {
+      "href": "/doc/minis-sdk-basic-utility",
+      "label": "Basic Utility",
+      "depth": 3
+    },
+    {
+      "href": "/doc/minis-sdk-device",
+      "label": "Device",
+      "depth": 3
+    },
+    {
+      "href": "/doc/minis-sdk-event",
+      "label": "Event",
+      "depth": 3
+    },
+    {
+      "href": "/doc/minis-sdk-in-app-ads",
+      "label": "In-App Ads",
+      "depth": 3
+    },
+    {
+      "href": "/doc/minis-sdk-payment",
+      "label": "In-App Purchases",
+      "depth": 3
+    },
+    {
+      "href": "/doc/minis-sdk-login",
+      "label": "Login and Authorization",
+      "depth": 3
+    },
+    {
+      "href": "/doc/minis-sdk-share",
+      "label": "Share",
+      "depth": 3
+    },
+    {
+      "href": "/doc/minis-sdk-subscriptions",
+      "label": "Subscriptions",
+      "depth": 3
+    },
+    {
+      "href": "/doc/minis-sdk-ui",
+      "label": "UI",
+      "depth": 3
+    },
+    {
+      "href": "/doc/minis-preparation-stage",
+      "label": "Legacy Guides",
+      "depth": 2
+    },
+    {
+      "href": "/doc/minis-development-stage",
+      "label": "Development Stage",
+      "depth": 3
+    },
+    {
+      "href": "/doc/minis-publication-stage",
+      "label": "Publication Stage",
+      "depth": 3
+    },
+    {
+      "href": "/doc/minis-changelog",
+      "label": "Changelog",
+      "depth": 3
+    },
+    {
+      "href": "/doc/launch-your-app-to-us-users",
+      "label": "Launch Your App to U.S. Users ",
+      "depth": 3
+    },
+    {
+      "href": "/doc/tiktok-go-dining-overview",
+      "label": "TikTok GO ",
+      "depth": 1
+    },
+    {
+      "href": "/doc/set-up-merchant-portal-account",
+      "label": "Set Up Merchant Portal Account",
+      "depth": 3
+    },
+    {
+      "href": "/doc/set-up-developer-portal-account",
+      "label": "Set Up Developer Portal Account",
+      "depth": 3
+    },
+    {
+      "href": "/doc/obtain-access-token-for-apis",
+      "label": "Obtain Access Token for APIs",
+      "depth": 3
+    },
+    {
+      "href": "/doc/integrate-with-dining-saas",
+      "label": "Integrate With Dining SaaS",
+      "depth": 3
+    },
+    {
+      "href": "/doc/prepare-product-content",
+      "label": "Prepare Product Content",
+      "depth": 3
+    },
+    {
+      "href": "/doc/run-acceptance-tests",
+      "label": "Run Acceptance Tests",
+      "depth": 3
+    },
+    {
+      "href": "/doc/launch-your-solution",
+      "label": "Launch Your Solution",
+      "depth": 3
+    },
+    {
+      "href": "/doc/shop-management",
+      "label": "API Reference",
+      "depth": 3
+    },
+    {
+      "href": "/doc/product-management",
+      "label": "Product Management",
+      "depth": 4
+    },
+    {
+      "href": "/doc/voucher-management",
+      "label": "Voucher Management",
+      "depth": 4
+    },
+    {
+      "href": "/doc/dining-saas-sample-code",
+      "label": "Dining SaaS Sample Code",
+      "depth": 4
+    },
+    {
+      "href": "/doc/local-service-error-codes",
+      "label": "Error Codes",
+      "depth": 4
+    },
+    {
+      "href": "/doc/category-tree",
+      "label": "Category Tree",
+      "depth": 4
+    },
+    {
+      "href": "/doc/scopes-overview",
+      "label": "Scopes",
+      "depth": 1
+    },
+    {
+      "href": "/doc/tiktok-api-scopes",
+      "label": "Scopes Reference",
+      "depth": 2
+    },
+    {
+      "href": "/doc/tiktok-api-v2-introduction",
+      "label": "Legacy Products",
+      "depth": 1
+    },
+    {
+      "href": "/doc/tiktok-api-v1-video-list",
+      "label": "List Videos",
+      "depth": 3
+    },
+    {
+      "href": "/doc/tiktok-api-v1-user-info",
+      "label": "User Info",
+      "depth": 3
+    },
+    {
+      "href": "/doc/tiktok-api-v1-video-query",
+      "label": "Query Videos",
+      "depth": 3
+    },
+    {
+      "href": "/doc/legacy-user-access-guide",
+      "label": "Legacy User Access Token Guide",
+      "depth": 3
+    },
+    {
+      "href": "/doc/web-video-kit-with-web",
+      "label": "Share Video API",
+      "depth": 3
+    },
+    {
+      "href": "/doc/getting-started-ios-quickstart-objective-c",
+      "label": "Legacy Mobile SDK",
+      "depth": 2
+    },
+    {
+      "href": "/doc/getting-started-ios-quickstart-swift",
+      "label": "Quickstart Swift",
+      "depth": 4
+    },
+    {
+      "href": "/doc/getting-started-ios-handling-errors",
+      "label": "Handling Errors",
+      "depth": 4
+    },
+    {
+      "href": "/doc/getting-started-ios-download",
+      "label": "Download",
+      "depth": 4
+    },
+    {
+      "href": "/doc/login-kit-ios-login-kit-with-objective-c",
+      "label": "Login Kit With Objective-C",
+      "depth": 4
+    },
+    {
+      "href": "/doc/login-kit-ios-login-kit-with-swift",
+      "label": "Login Kit With Swift",
+      "depth": 4
+    },
+    {
+      "href": "/doc/video-kit-ios-video-kit-with-objective-c",
+      "label": "Video Kit With Objective-C",
+      "depth": 4
+    },
+    {
+      "href": "/doc/video-kit-ios-video-kit-with-swift",
+      "label": " Video Kit With Swift",
+      "depth": 4
+    },
+    {
+      "href": "/doc/getting-started-android-quickstart",
+      "label": "Android",
+      "depth": 3
+    },
+    {
+      "href": "/doc/getting-started-android-handling-errors",
+      "label": "Handling Errors",
+      "depth": 4
+    },
+    {
+      "href": "/doc/getting-started-android-download",
+      "label": "Download",
+      "depth": 4
+    },
+    {
+      "href": "/doc/login-kit-android",
+      "label": "Login Kit with Android",
+      "depth": 4
+    },
+    {
+      "href": "/doc/video-kit-android-video-kit-with-android",
+      "label": "Video Kit With Android",
+      "depth": 4
+    },
+    {
+      "href": "/doc/video-kit-android-android-fileprovider",
+      "label": "Android FileProvider",
+      "depth": 4
+    },
+    {
+      "href": "/doc/changelog",
+      "label": "Changelog",
+      "depth": 1
+    },
+    {
+      "href": "/doc/display-api-get-started/",
+      "label": "Display API",
+      "depth": 1
+    },
+    {
+      "href": "/doc/embed-videos/",
+      "label": "Embed Videos",
+      "depth": 1
+    }
+  ]
+}

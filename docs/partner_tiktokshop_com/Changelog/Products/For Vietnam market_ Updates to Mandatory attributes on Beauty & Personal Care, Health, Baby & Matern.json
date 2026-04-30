@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "document_id": "69ee028240280804f5be9cdf",
+    "parent_id": "654b22360fe8ca02c079012f",
+    "name": "For Vietnam market: Updates to Mandatory attributes on Beauty & Personal Care, Health, Baby & Maternity, and Food & Beverages related categories",
+    "document_path": "qc6yk2e0",
+    "is_api_doc": false,
+    "doc_type": 3,
+    "update_time": "1777205980",
+    "keywords": [
+      "Coming Soon",
+      "Action Required"
+    ]
+  },
+  "detail": {
+    "title": "For Vietnam market: Updates to Mandatory attributes on Beauty & Personal Care, Health, Baby & Maternity, and Food & Beverages related categories",
+    "content": "# What is changing?\nStarting from 26 May 2026, partners will be required to provide additional mandatory product attributes when listing or editing products by using API for products under the following categories: Beauty & Personal Care, Health, Baby & Maternity, and Food & Beverages.\nThe mandatory product attributes will include :\n\n* product license details\n* Product License Type\n* Product License Number\n* Date of Issuance\n* Place of Issuance\n\n They will be added into \"product_attributes\" parameter.\n# Which markets are affected?\nThe updates of the requirements apply to the local and cross-border sellers in the Vietnam market.\n# Who is affected?\nDevelopers with applications that use [Create Product](https://partner.tiktokshop.com/docv2/page/create-product-202309), [Edit Product](https://partner.tiktokshop.com/docv2/page/edit-product-202509), and [Partial Edit Product](https://partner.tiktokshop.com/docv2/page/partial-edit-product-202509#Back%20To%20Top)\n# Which version is applicable?\nThe updates of the requirements apply to all versions of the related APIs\n# What action is required?\nWithout this mandatory attribute sellers will not be able to create and update products.\nUse the Get Attributes to check what attributes are mandatory and pass attribute values via the Create Product, Edit Product, and Partial Edit Product to help sellers fill in the attribute values.\n",
+    "update_time": "1777205980",
+    "view_count": 0,
+    "prev_document_id": "69e9cc34186bcf04b431d1f2",
+    "prev_document_path": "9q4we8qr",
+    "next_document_id": "6740642f29926a030df796bd",
+    "next_document_path": "maintenance-scheduled-downtime-for-promotion-apis",
+    "is_api_doc": false,
+    "document_id": "69ee028240280804f5be9cdf",
+    "doc_type": 3,
+    "keywords": [
+      {
+        "keyword": "Coming Soon",
+        "font_color": "#3B87F6",
+        "background_color": "#EBF3FE"
+      },
+      {
+        "keyword": "Action Required",
+        "font_color": "#F754A8",
+        "background_color": "#FFE8F1"
+      }
+    ]
+  }
+}

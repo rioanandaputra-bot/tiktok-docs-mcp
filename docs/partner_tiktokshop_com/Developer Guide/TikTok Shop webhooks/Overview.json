@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "document_id": "64f1997e93f5dc028e357341",
+    "parent_id": "6504244ede672602b77f2e41",
+    "name": "Overview",
+    "document_path": "tts-webhooks-overview",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1751449959",
+    "keywords": []
+  },
+  "detail": {
+    "title": "Overview",
+    "content": "Webhooks enable real-time HTTP notifications for TikTok Shop events and actions, transmitted securely over HTTPS to the subscribed HTTP server.\n![Image](https://p16-arcosite-sg.ibyteimg.com/tos-alisg-i-k9wyc2ijk0-sg/a7684affb194494c963ffde1f486a741~tplv-k9wyc2ijk0-image.image)\n\n1. The app subscribes to the `Order Status Update` topic for a shop and listens for order status update events\n2. The app specifies an HTTPS endpoint hosted by the app server to receive events for the topic.\n3. An order in the shop is created or the status has changed.\n4. The event is published to the `Order Status Update` topic.\n5. TikTok Shop sends the webhook with an order status upload payload to the registered subscription endpoint.\n\n## Use cases\nCommon webhook use cases include the following:\n\n* Receive a notification when order status has been updated\n* Receive a notification when the order recipient address has been updated\n* Receive a notification when return status has been updated\n* Receive a notification when product status has been updated\n\n## Attention\nDue to possible network problems and other uncertainties, you cannot completely rely on webhooks. You must have business logic, such as pulling orders through scheduled tasks, etc.\n## Webhooks Header and Body\n### Header\nTikTok Shop Partners Center pushes notification to developers and places signature in the \"**Authorization**\" field of the http request header.\nThe signature is generated with **HMAC-SHA256** and it should be verified by developers.\nSignature is generated as follows:\n\n1. Suppose your app key is **abcdef**.\n2. Suppose the webhook payload is:\n\n```plaintext\n{\"type\":1,\"tts_notification_id\":\"7380066284010030890\",\"shop_id\":\"7495540735365777507\",\"timestamp\":1718305585,\"data\":{\"is_on_hold_order\":true,\"order_id\":\"576653688135258178\",\"order_status\":\"UNPAID\",\"update_time\":1718305585}}\n```\n\n\n3. Concatenate {app key}{webhook payload} as signature base string with no formatting when pasting the strings:\n\n```plaintext\nabcdef{\"type\":1,\"tts_notification_id\":\"7380066284010030890\",\"shop_id\":\"7495540735365777507\",\"timestamp\":1718305585,\"data\":{\"is_on_hold_order\":true,\"order_id\":\"576653688135258178\",\"order_status\":\"UNPAID\",\"update_time\":1718305585}}\n```\n\n\n4. Suppose your app secret is **123** to use as the signing key.\n5. Calculate the signature by passing the signature base string and signing key to the hmac-sha256 hashing algorithm. The resulting sign is:\n\n```plaintext\n5dec0f11ec2f6783b8deee53c9ffbf8d024302f7c7e7fa55a35d17629031ac05\n```\n\n## Body\nAll webhook notifications from TikTok Shop will include the following payload parameters\n| Param Name | Sample | Description |\n| --- | --- | --- |\n| type | 1 | The identification of each type of notification |\n| shop_id | 123455 | The identification of the TikTok Shop |\n| timestamp | 1627587506 | The timestamp when the notification is pushed |\n| data | \"data\": { <br> \"order_id\": \"1X2X3X4X5\", <br> \"order_status\": \"CANCEL\", <br> \"update_time\": 1627587505} | The object contains business parameters related to the specific notification type. |\n### Sample\nSample curl request:\n```JSON\ncurl   --location --request POST 'https://www.bing.com/webhook' \\\n--header 'Content-Type: application/json' \\\n--header 'Authorization: 46c0d0a3299661dc92888f7da8ba2321f240e460e2b005389353432a1062b777'\\\n--data-raw '{\n    \"type\": 1,\n    \"shop_id\": \"7494049642642441621\",\n    \"timestamp\": 1644412885,\n    \"data\": {\n        \"order_id\": \"576486316948490001\",\n        \"order_status\": \"UNPAID\",\n        \"update_time\": 1644412885\n    }\n}'\n```\n\n➡️ See a list of our webhooks [here](1-order-status-change)\n\n",
+    "update_time": "1751449959",
+    "view_count": 0,
+    "prev_document_id": "694aca8bea754504a0c44bea",
+    "prev_document_path": "wfi3nz36",
+    "next_document_id": "650512b42f024f02be19755f",
+    "next_document_path": "configuration-guide",
+    "is_api_doc": false,
+    "document_id": "64f1997e93f5dc028e357341",
+    "doc_type": 2,
+    "keywords": [
+      {
+        "keyword": "",
+        "font_color": "#141414",
+        "background_color": "#E6E6E6"
+      }
+    ]
+  }
+}

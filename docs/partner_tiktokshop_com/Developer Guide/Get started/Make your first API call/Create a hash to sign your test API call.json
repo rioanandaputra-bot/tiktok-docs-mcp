@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "document_id": "686da77d813b8f0491e0e29f",
+    "parent_id": "686da774cf872f048166e9d9",
+    "name": "Create a hash to sign your test API call",
+    "document_path": "create-hash-to-sign-your-test-api-call",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1770798006",
+    "keywords": []
+  },
+  "detail": {
+    "title": "Create a hash to sign your test API call",
+    "content": "Now that you've [created a test access token](generate-test-access-token), you're ready to generate the cryptographic hash required to sign your first API call.\nThere are six steps to generating the required cryptographic hash:\n## Step 1: Sort query parameter names alphabetically\nSort the query parameter names and values alphabetically. For the Get Authorized shop API, there are two required query parameters: `app_key` and `timestamp`. You're already familiar with `app_key`, it's the TikTok Shop App key that was generated for your test TikTok Shop App when you created it. `timestamp` is the current date and time in Unix epoch format, which is the number of seconds that have passed since January 1, 1970.\nIf you don't have a way to generate this programmatically, you can perform a web search to find a [website that can produce this value for you](https://www.google.com/search?q=generate+timestamp+in+unix+format). As an example, let's assume your `app_key` is `123456` and the current `timestamp` is `1234567890`. To sort these parameters, we compare `app_key` to `timestamp`, and since the first letter of `app_key` is `a`, it comes before the `t` in `timestamp`. Therefore, our sorted query parameters are 1: `app_key`, 2: `timestamp`.\n## Step 2: Concatenate the sorted parameters names and values\nConcatenate the sorted query parameters and their values from step 1 into a single string. In the example from step 1, this string is `app_key123456timestamp1234567890`.\n## Step 3: Append the string from step 2 to the API path\nFor our first API call, we don't need to perform a step to concatenate the request body to the string created in step 2. For the call to Get Authorized Shops, there is no request body.\nTherefore, our next step is to append the string from step 2 to the API request path. For Get Authorized Shops, this is:\n```text\n/authorization/202309/shops\n```\n\nIn the example from steps 1 and 2, the resulting string is:\n```text\n/authorization/202309/shopsapp_key123456timestamp1234567890\n```\n\n## Step 4: Prepend and append TikTok Shop App client secret\nPrepend and append your TikTok Shop App client secret to the string in step 3. In our example, let's assume that our client secret is `abc000def111`. The resulting string is now:\n```text\nabc000def111/authorization/202309/shopsapp_key123456timestamp1234567890abc000def111\n```\n\n## Step 5: Encode the string using HMAC-SHA256\nTo generate the signature, you must use the **HMAC-SHA256** algorithm.\nHMAC-SHA256 requires **two inputs**:\n\n1.  **Key (Secret Key)**\n2.  **Message (the string to be signed from Step 4)**\n\n### 🔑 Important\nThe **Key (also called Secret Key or Salt in some tools)** must be your **TikTok Shop App Client Secret**.\nYou can find your App Secret in:\n>  [TikTok Shop Partner Center Console](https://partner-sso.tiktok.com/account/login)\n>  → App & Service\n>  → Select your App\n>  → Developing section\n>  → App Secret\n\n⚠️ If you do not enter the App Secret as the Key, the generated signature will be invalid.\n### How to Generate the Signature\nYou may use:\n\n*  An online [HMAC-SHA256 generator tool](https://www.google.com/search?q=generate+HMAC-SHA256+key)\n*  Or your own backend code\n\nIf using an online tool:\n\n*  Select algorithm: **HMAC-SHA256**\n*  Enter the string from Step 4 as the **Message**\n*  Enter your **App Secret as the Key / Secret / Salt**\n*  Ensure output format is **hex (lowercase)** unless otherwise specified\n\nIf you prefer using code, please refer to the code samples provided in the [Sign your API request](https://partner.tiktokshop.com/docv2/page/sign-your-api-request) documentation.\n## Next steps\nNow that you've generated your cryptographic hash, you can make your first API call.\n\n",
+    "update_time": "1770798006",
+    "view_count": 0,
+    "prev_document_id": "686da77b1aa957049adb3410",
+    "prev_document_path": "generate-test-access-token",
+    "next_document_id": "686da77ff3fa270492d63e5a",
+    "next_document_path": "call-get-authorized-shops",
+    "is_api_doc": false,
+    "document_id": "686da77d813b8f0491e0e29f",
+    "doc_type": 2,
+    "keywords": [
+      {
+        "keyword": "",
+        "font_color": "#141414",
+        "background_color": "#E6E6E6"
+      }
+    ]
+  }
+}

@@ -1,0 +1,108 @@
+Docs
+# Query Playlists
+## Create Query Task
+### Query
+#### Query Parameters
+
+| **Key** | **Type** | **Description** | **Example** | **Required** |
+| --- | --- | --- | --- | --- |
+| category | string | The data category for which the analysis is planned | playlists | Yes |
+| condition_groups | object | Specifications for what data should be returned and processed NOTE: "playlist_id" is the only query able parameter. "EQ" is the only operator. | condition_groups = [ { "operator": "and", "conditions": [ { "field": "playlist_id", "operator": "eq", "field_values": ["7145179763387255595"] } ] } ] | No |
+| fields | string | Data fields to be returned. Interface will only return the fields listed here. | playlist_id, playlist_name, playlist_video_ids, playlist_last_updated, and playlist_item_total | No |
+| limit | int | The maximum number of records that will be returned. **Test Stage** The default value is 100, and the maximum value is 5000 per day. **Execution Stage** The default value is 1000, and the maximum value is 100,000 in one query. | 200 | No |
+
+#### Query Condition
+
+| **Key** | **Type** | **Description** | **Required** |
+| --- | --- | --- | --- |
+| and | list<Condition> | The `and`conditions specify that all the conditions in the list must be met | No |
+| or | list<Condition> | The `or`conditions specify that at least one of the conditions in the list must be met | No |
+| not | list<Condition> | The `not`conditions specify that none of the conditions in the list must be met | No |
+
+#### Response
+
+| **Key** | **Type** | **Description** | **Example** |
+| --- | --- | --- | --- |
+| task_id | int | Data query job task identifier | 12345 |
+
+## Check Query Task Status
+### Query Parameters
+
+| **Key** | **Type** | **Description** | **Example** | **Required** |
+| --- | --- | --- | --- | --- |
+| task_id | int | Data query job task identifier | 12345 | Yes |
+
+### Response
+
+| **Key** | **Type** | **Description** | **Example** |
+| --- | --- | --- | --- |
+| status | string | Data query job task status | Created AnalysisFailed Processing Completed Cancelled Validating |
+
+### Check Query Task Sample Code
+#### Example
+```
+status = client.check_query_task_status(task_id)
+```
+## Cancel Query Task
+### Query Parameters
+
+| **Key** | **Type** | **Description** | **Example** | **Required** |
+| --- | --- | --- | --- | --- |
+| task_id | int | Data query job task identifier | 12345 | Yes |
+
+### Response
+
+| **Key** | **Type** | **Description** | **Example** |
+| --- | --- | --- | --- |
+| success | bool | Whether the request was successfully cancelled | True |
+
+### Cancel Query Task Sample Code
+#### Example
+```
+result = client.cancel_query_task(task_id)
+```
+## Get Query Task Result
+### Query Parameters
+
+| **Key** | **Type** | **Description** | **Example** | **Required** |
+| --- | --- | --- | --- | --- |
+| task_id | int | Data query job task identifier | 12345 | Yes |
+
+### Response
+
+| **Key** | **Type** | **Description** | **Example** |
+| --- | --- | --- | --- |
+| result | string | Data fields returned from the query. Interface will only return the fields listed here. | playlist_id, playlist_name, playlist_video_ids, playlist_last_updated, and playlist_item_total. |
+
+### Get Query Task Sample Code
+#### Example
+```
+data = client.get_query_task_result(task_id)
+```
+## Query Playlists from TikTok via SDK
+**Example code**
+```
+from pyrqs import rqs
+import time
+from datetime import datetime, timedelta
+import json
+category = 'playlists'
+fields = 'playlist_id, playlist_name, playlist_video_ids, playlist_last_updated, playlist_item_total'
+limit = 60
+client = rqs.RQSClient()
+condition_groups = [
+        {
+            "operator": "and",
+            "conditions": [
+                {
+                    "field": "playlist_id",
+                    "operator": "EQ",
+                    "field_values": ["7145179763387255595"]
+                }
+            ]
+        }
+]
+data = client.query(category=category, fields = fields, condition_groups=condition_groups, limit=limit)
+print(data)
+```
+Was this document helpful?

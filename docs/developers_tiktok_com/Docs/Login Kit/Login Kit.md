@@ -1,0 +1,6 @@
+Docs
+# Login Kit
+[[[[[Integrating with our Login Kit enables users to quickly and securely sign into your app with their TikTok account. LoginKit is available on iOS](https://developers.tiktok.com/doc/login-kit-ios-quickstart), Android](https://developers.tiktok.com/doc/login-kit-android-quickstart-v2), Desktop](https://developers.tiktok.com/doc/login-kit-desktop/) and Web](https://developers.tiktok.com/doc/login-kit-web). Login Kit is based on OAuth 2.0](https://www.rfc-editor.org/rfc/rfc6749) for user authorization and API authentication.
+After successfully completing authentication with TikTok, your application will be able to request access to basic user data such as display name and avatar. For requesting access to additional data from users, pre-approval will be required in your TikTok app on developers.tiktok.com.
+[Once users have approved your access, you can view basic user data with our Display APIs. Learn more here](https://developers.tiktok.com/doc/display-api-get-started).
+Was this document helpful?

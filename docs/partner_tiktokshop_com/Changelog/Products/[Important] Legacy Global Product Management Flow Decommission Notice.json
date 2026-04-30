@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "document_id": "694247ec448a12074c0189ed",
+    "parent_id": "654b22360fe8ca02c079012f",
+    "name": "[Important] Legacy Global Product Management Flow Decommission Notice ",
+    "document_path": "fapus8ql",
+    "is_api_doc": false,
+    "doc_type": 3,
+    "update_time": "1765951937",
+    "keywords": [
+      "Action Required",
+      "Breaking Change"
+    ]
+  },
+  "detail": {
+    "title": "[Important] Legacy Global Product Management Flow Decommission Notice ",
+    "content": "## Summary\nThe platform has introduced a **new product management workflow** (see *“https://partner.tiktokshop.com/docv2/page/a5crrkzs”* for details). All cross-border merchants are now supported and can use this new workflow to complete product management–related operations.\nTo reduce overall maintenance costs for both developers and the platform, and to unify product management capabilities, the platform will deprecate the legacy global product management flow.\n\n## **Changes**\n\n* Starting **January 31**, the platform will progressively shut down the legacy global product management flow\n* Cross-border merchants will be supported **only via the new product management workflow** for product publishing\n* All legacy global product management–related **APIs will be officially deprecated and fully** **retired**\n\n\n## Developer Action Items\n\n* Please complete the integration and migration to the **new product management workflow** as soon as possible\n* Proactively check and remove any remaining calls to **Global Product APIs**\n* Ensure all related updates are completed **before January 31**\n\n\n## Affected markets\n Cross-border merchants and related developers across all markets\n\n## Affected APIs\n| **API Name** | **Version** |\n| --- | --- |\n| 【GET】Get Global Categories | `202309` (and later) |\n| 【GET】Get Global Category Rules | `202309` (and later) |\n| 【GET】Get Global Attributes | `202309` (and later) |\n| 【POST】Create Global Product | `202309` (and later) |\n| 【POST】Publish Global Product | `202309` (and later) |\n| 【PUT】Edit Global Product | `202309` (and later) |\n| 【DEL】Delete Global Products | `202309` (and later) |\n| 【GET】Get Global Product | `202309` (and later) |\n| 【POST】Search Global Products | `202309` (and later) |\n| 【POST】Update Global Inventory | `202309` (and later) |\n| 【POST】Partial Edit Global Product | `202309` (and later) |\n## \n\n",
+    "update_time": "1765951937",
+    "view_count": 0,
+    "prev_document_id": "6935e049797c6b0504a6ddbc",
+    "prev_document_path": "xmc35tyc",
+    "next_document_id": "694261f89c2edf068501a9b2",
+    "next_document_path": "ezoyrtmn",
+    "is_api_doc": false,
+    "document_id": "694247ec448a12074c0189ed",
+    "doc_type": 3,
+    "keywords": [
+      {
+        "keyword": "Action Required",
+        "font_color": "#F754A8",
+        "background_color": "#FFE8F1"
+      },
+      {
+        "keyword": "Breaking Change",
+        "font_color": "#141414",
+        "background_color": "#E6E6E6"
+      }
+    ]
+  }
+}

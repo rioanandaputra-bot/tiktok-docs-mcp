@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "document_id": "64f1990b93f5dc028e35604b",
+    "parent_id": "678e3a277b3982031228dd3f",
+    "name": "Overview",
+    "document_path": "tts-api-concepts-overview",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1751945656",
+    "keywords": []
+  },
+  "detail": {
+    "title": "Overview",
+    "content": "TikTok Shop provides a comprehensive range of APIs known as TTS API, which allows TTS developers access to user data within the app, including catalogs, orders, shipments, payments, and more. Leveraging the capabilities of the TTS API, developers can create apps that extend Seller Center's existing functionalities. These apps can enhance product catalog listings, streamline order fulfillment, minimize operational burdens, and accelerate customer interactions.\n### Key Features\nWith the TikTok Shop API, you can:\n\n* Set up an [authorization workflow](authorization-guide-202309) that developers initiate from the TTS App & Service Market detail page or from your own website.\n* Configure [webhooks](tts-webhooks-overview) to receive notifications from TikTok Shop Open Platform\n* Test your app functionality in Sandbox or by making API calls using the [API testing tool](https://partner.tiktokshop.com/dev/api-testing-tool).\n\n| **NO.** | **API Category** | **API description** |\n| --- | --- | --- |\n| 1 | [Product API](products-api-overview) | The Product API is one of the most important APIs in TTS. Developers can use the Product API to access rules and attributes information of product categories, upload product images, videos, certifications, and other files, create products, edit product information, update inventory and prices, etc. Additionally, we also provide a set of Global Product APIs (APIs with \"global\" in their names) for cross-border e-commerce developers. Using the Global Product API, cross-border e-commerce developers can offer unified product management solutions for cross-border sellers selling across multiple regional markets. |\n| 2 | [Order API](order-api-overview) | Developers can use the Order API to retrieve order information from TTS seller shops. Once sellers obtain the order information, they can perform order fulfillment operations as well as actions like order cancellation and returns. |\n| 3 | [Fulfillment API](fulfillment-api-overview) | Developers can utilize the Fulfillment API to synchronize the fulfillment status of TTS orders to TTS (3PL). They can also fulfill orders using TTS-provided shipping label services (4PL). Additionally, the Fulfillment By Tik Tok Shop (FBT) service can be used, and developers can access the fulfillment status of TTS orders through the fulfillment API. |\n| 4 | [Return & Refund API](return-refund-and-cancel-api-overview) | When consumers initiate a Return or Refund request, developers can use the Return & Refund API to access Return or Refund order information and assist sellers in reviewing or rejecting Return or Refund requests initiated by consumers. |\n| 5 | [Logistics API](logistic-api-overview) | When sellers use TTS's provided logistics services, developers can use the Logistics API to assist sellers in retrieving Warehouse List, Global Warehouse List, Subscribed Delivery Options, Shipping Providers. |\n| 6 | [Promotion API](promotion-api-overview) | Developers can use the Promotion API to assist sellers in setting up promotions, discounts, and other offers for specific products. |\n| 7 | [Finance API](finance-api-overview) | Developers can utilize the Financial API to assist sellers in obtaining payment and settlement information for their TTS shop. |\n| 8 | [Seller API](seller-api-overview) | The Seller API exclusively supports cross-border operations, where a single seller can establish shops in multiple regional markets, allowing one seller to possess multiple shops. Developers can utilize the Seller API to retrieve the shop status of cross-border sellers and ascertain whether a specific cross-border market is eligible for the Global Product feature. |\n| 9 | [Authorization API](get-authorized-shops) | Developers can utilize the Authorization API to proceed with the authorization token exchanging process and retrieve authorized shop information for apps . |\n| 10 | [Events API](get-shop-webhooks) | Developers can utilize the Events API to subscribe and unsubscribe Open platform webhooks of TikTok Shop business events for apps; |\n| 11 | Data Reconciliation API | Developers can utilize the data reconciliation API to transfer external data to open platform for Quality Engine to reconcile. |\n| 12 | [Supply Chain](confirm-package-shipment) | This API is for TikTok Shop certified warehouse partners. Developers can utilize Supply Chain API to send back the package fulfillment detail info of the orders fulfilled by the certified warehouse to TTS. |\n> For a complete list of available APIs, refer to [TTS API reference docs](create-product).\n\n### API Version\nThe TTS API is versioned, and while some older API versions are still accessible, some are unsupported and can stop working at any time. Developers are strongly encouraged to migrate to the latest API version promptly. For additional details on TTS API versioning, refer to [TTS API versioning](api-versioning).\n\n",
+    "update_time": "1751945656",
+    "view_count": 0,
+    "prev_document_id": "64f19916cb677b0286e76d9d",
+    "prev_document_path": "access-scope",
+    "next_document_id": "678e3a40c0833b03100a46b1",
+    "next_document_path": "methods-and-endpoints",
+    "is_api_doc": false,
+    "document_id": "64f1990b93f5dc028e35604b",
+    "doc_type": 2,
+    "keywords": [
+      {
+        "keyword": "",
+        "font_color": "#141414",
+        "background_color": "#E6E6E6"
+      }
+    ]
+  }
+}

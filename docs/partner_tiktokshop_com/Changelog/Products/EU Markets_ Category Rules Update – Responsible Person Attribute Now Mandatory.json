@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "document_id": "698bf5f4d5932e049fad408c",
+    "parent_id": "654b22360fe8ca02c079012f",
+    "name": "EU Markets: Category Rules Update – Responsible Person Attribute Now Mandatory ",
+    "document_path": "r1wchdjn",
+    "is_api_doc": false,
+    "doc_type": 3,
+    "update_time": "1770780805",
+    "keywords": [
+      "Coming Soon",
+      "Action Required"
+    ]
+  },
+  "detail": {
+    "title": "EU Markets: Category Rules Update – Responsible Person Attribute Now Mandatory ",
+    "content": "# What is changing?\nStarting **February 28, 2026**, the **Responsible Person (RP)** attribute will change from **optional to mandatory** in **selected existing product categories** where it was previously optional.\nSellers must update existing listings to include the Responsible Person attribute by **March 28, 2026**. Listings that are not updated by this date may be **deactivated by the platform**.\n\nUpdated API Endpoint(s): \n\n* [Get Category Rules ](https://partner.tiktokshop.com/docv2/page/get-category-rules-202309)\n\n\nThe category rules response will reflect the updated requirement (the Responsible Person attribute will be marked as mandatory for affected categories).\n# Which markets are affected?\n\n* All EU markets\n* Local and cross border sellers\n\n# Who is affected?\nDevelopers with applications that are used for product listing and management. \n# What action is required?\n\n1. Sync product category fields with the latest category rules.\n2. Ensure the Responsible Person attribute is mandatory and populated for all affected categories to avoid:\n* Product creation errors\n* Product update errors\n* Listing deactivations\n\n\n*General recommendation: Product categories are updated frequently, so it's recommended to call the API in real time to ensure you are using the latest category data. Caching category data locally may result in using outdated information, leading to errors when creating products.\n",
+    "update_time": "1770780805",
+    "view_count": 0,
+    "prev_document_id": "694261f89c2edf068501a9b2",
+    "prev_document_path": "ezoyrtmn",
+    "next_document_id": "69cf908570d83304e25ea66e",
+    "next_document_path": "l8xklei9",
+    "is_api_doc": false,
+    "document_id": "698bf5f4d5932e049fad408c",
+    "doc_type": 3,
+    "keywords": [
+      {
+        "keyword": "Coming Soon",
+        "font_color": "#3B87F6",
+        "background_color": "#EBF3FE"
+      },
+      {
+        "keyword": "Action Required",
+        "font_color": "#F754A8",
+        "background_color": "#FFE8F1"
+      }
+    ]
+  }
+}

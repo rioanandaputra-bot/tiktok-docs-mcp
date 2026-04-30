@@ -1,0 +1,34 @@
+{
+  "meta": {
+    "document_id": "6935e049797c6b0504a6ddbc",
+    "parent_id": "654b22360fe8ca02c079012f",
+    "name": "US market: Backorder Quantity Thresholds",
+    "document_path": "xmc35tyc",
+    "is_api_doc": false,
+    "doc_type": 3,
+    "update_time": "1765144250",
+    "keywords": [
+      "New"
+    ]
+  },
+  "detail": {
+    "title": "US market: Backorder Quantity Thresholds",
+    "content": "## Summary\nWe've introduced inventory `backorder_quantity` functionality, which allows sellers to define a backorder quantity **threshold** to continue to capture sales, in the event the physical inventory is temporarily out-of-stock. There also needs to be a `handling_time` defined, which dictates how many days the seller needs to process the backorder and sets the SLA for sending a fulfillment event update to TikTok Shop.\n[Backorder(BO) Seller Academy article](https://seller-us.tiktok.com/university/essay?knowledge_id=1242390120679211)\n\n**Important note**: Currently, only select qualified sellers can use the backorder functionality and need to go through TikTok account management for approval. Once the sellers are approved, they **must** activate the backorder functionality on their product detail page within their seller center interface first. There is currently no API functionality to activate the backorder flag on a `product_id` / `sku level`.\n\nUpdating `backorder_quantity` thresholds and `handling_time` can only be done through the API after the seller has completed the backorder activation.\n\n## Affected markets and versions\nThis change applies to the following market(s):\n\n* United States (US)\n\nThis change applies to the following API version(s):\n\n* Please see table below\n\n## What's changing?\n### Product APIs\n| **Endpoint(s)** | **Version(s) Affected** | **Change(s)** |\n| --- | --- | --- |\n| [Check Product Listing](check-product-listing#Back%20To%20Top) | `202309` | New response parameters within the`inventory` object: `backorder_quantity` <br> `handling_time` |\n| [Create Product](https://partner.tiktokshop.com/docv2/page/create-product-202309) | `202309` | New body parameters within the `inventory` object: `backorder_quantity` <br> `handling_time` |\n| [Search Products](search-products) | `202502` | New response parameters within the `inventory` object: `backorder_quantity` <br> `handling_time` |\n| [Get Product](get-product) | `202309` | New response parameters within the `inventory` object: `backorder_quantity` <br> `handling_time` |\n| [Update Inventory](https://partner.tiktokshop.com/docv2/page/update-inventory-202309) | `202309` | New body parameters within the `inventory` object: `backorder_quantity` <br> `handling_time` |\n| [Edit Product](https://partner.tiktokshop.com/docv2/page/edit-product-202509) | `202509` | New body parameters within the `inventory` object: `backorder_quantity` <br> `handling_time` |\n| [Partial Edit Product](https://partner.tiktokshop.com/docv2/page/partial-edit-product-202509#Back%20To%20Top) | `202509` | New body parameters within the `inventory` object: `backorder_quantity` <br> `handling_time` |\n## \n\n",
+    "update_time": "1765144250",
+    "view_count": 0,
+    "prev_document_id": "690e4911c6ef97049d5beb1b",
+    "prev_document_path": "sj5neagj",
+    "next_document_id": "694247ec448a12074c0189ed",
+    "next_document_path": "fapus8ql",
+    "is_api_doc": false,
+    "document_id": "6935e049797c6b0504a6ddbc",
+    "doc_type": 3,
+    "keywords": [
+      {
+        "keyword": "New",
+        "font_color": "#7EB712",
+        "background_color": "#EDF8BB"
+      }
+    ]
+  }
+}

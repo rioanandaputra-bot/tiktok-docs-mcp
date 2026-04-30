@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "document_id": "6939a1e66ae5d8050a4bd0c4",
+    "parent_id": "6790b76b786253031540ac36",
+    "name": "(56) Sample Application Status Change",
+    "document_path": "urzvzank",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1765390250",
+    "keywords": []
+  },
+  "detail": {
+    "title": "(56) Sample Application Status Change",
+    "content": "## Trigger scenario\nThis webhook will trigger when the creator's sample application status changes.\n## Data business parameters\n| **Parameter name** | **Data Type** | **Sample** | **Description** |\n| --- | --- | --- | --- |\n| type | int | `56` | The ID of the webhook type. |\n| tts_notification_id | string | `\"7327112393057371910\"` | The ID of the notification. |\n| shop_id | string | `\"7494049642642441621\"` | TikTok shop ID |\n| timestamp | int | `1644412885` | The UNIX timestamp when this webhook was triggered. |\n| data | object |  |  |\n| └application_id | string | `\"123456\"` | The id of the sample application |\n| └new_status | string | `\"PENDING\"` | The status of sample applications. <br> The possible enumerated values are: <br>  <br> * `PENDING`: The sample application is waiting for the seller's review. <br> * `AWAITING_SHIPMENT`: The application is approved, and the seller needs to ship the sample. <br> * `SHIPPED`: The sample has been shipped by the seller and is waiting for the creator to receive the package. <br> * `CONTENT_PENDING`: The creator has received the sample package and is expected to create content. <br> * `REJECT_CANCELLED`: The sample application has been rejected by the seller. <br> * `OVERDUE_CANCELLED`: The sample application has expired due to being overdue. <br> * `UNFULFILL_CANCELLED`: The creator did not fulfill the commitment to create content within the agreed timeframe. <br> * `DEL_OPEN_COLLAB`: Open collaboration has been deleted. <br> * `SELLER_NOT_SHIP_CANCELLED`: The seller did not ship the sample within the required timeframe. <br> * `WITHDRAW_CANCELLED`: The creator withdrew the sample application before the seller approved it. <br> * `UNFULFILLABLE_CANCELLED`: The application was cancelled due to reasons beyond the creator's control, making it impossible to create content. <br> * `OPS_CANCELLED`: The application was manually cancelled by operations staff. <br> * `OPS_FAILED`: The application was marked as failed by operations staff. <br> * `OPS_COMPLETED`: The application was manually marked as completed by operations staff. <br> * `COMPLETED`: The application is complete, and the creator has posted the content. <br>  <br> This field allows for tracking the status of a sample application throughout its lifecycle, providing visibility into each stage of the process for sellers and creators. |\n| └creator | []object |  | Creator detailed information. It includes various details such as the creator's TikTok user name and TikTok user id. |\n| └└creator_open_id | string | `\"uACafQAAAABmUU2qon4R0vUYvUVS3QC6CICP2m5A2-wd77j8R9G0yg\"` | Creator Open ID. [More details](https://partner.tiktokshop.com/docv2/page/3obfokj6) |\n| └product | []object |  | Product information. |\n| └└id | string | `\"1729859829942358814\"` | The product identifier. |\n| └└sku_id | string | `\"1729859567502267166\"` | The unique id of product sku which the creator applied for as a sample. |\n## Event example\n```JSON\n{\n  \"type\": 56,\n  \"shop_id\": \"7494049642642441621\",\n  \"tts_notification_id\": \"7327112393057371910\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"application_id\": \"123456\",\n    \"new_status\": \"PENDING\",\n    \"creator\": {\n      \"creator_open_id\": \"uACafQAAAABmUU2qon4R0vUYvUVS3QC6CICP2m5A2-wd77j8R9G0yg\"\n    },\n    \"product\": {\n      \"id\": \"1729859829942358814\",\n      \"sku_id\": \"1729859567502267166\"\n    }\n  }\n}\n```\n\n\n",
+    "update_time": "1765390250",
+    "view_count": 0,
+    "prev_document_id": "6790b76eb59cf9030997b783",
+    "prev_document_path": "33-new-message-listener",
+    "next_document_id": "6614330bfe9fdc02e002abfd",
+    "next_document_path": "13-new-conversation",
+    "is_api_doc": false,
+    "document_id": "6939a1e66ae5d8050a4bd0c4",
+    "doc_type": 2,
+    "keywords": [
+      {
+        "keyword": "",
+        "font_color": "#141414",
+        "background_color": "#E6E6E6"
+      }
+    ]
+  }
+}

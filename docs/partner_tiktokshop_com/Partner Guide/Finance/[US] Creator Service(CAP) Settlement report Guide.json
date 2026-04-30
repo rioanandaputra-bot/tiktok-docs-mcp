@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "document_id": "69cb3fa13c1ac204eedb8806",
+    "parent_id": "697713eb4d6251049aec1d85",
+    "name": "[US] Creator Service(CAP) Settlement report Guide",
+    "document_path": "dyr6jbn3",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1774927957",
+    "keywords": []
+  },
+  "detail": {
+    "title": "[US] Creator Service(CAP) Settlement report Guide",
+    "content": "# What is settlement report? \nA settlement report is a financial document that provides a detailed breakdown of your account activity for a specified settlement period. This report enables you to reconcile your commission earned.\n# How can I download the settlement report?\nTo download the settlement report, please follow these steps:\nPartner Center-Finance-Payment-Earnings-Export orders.\n# How do I read the settlement report? \nBelow, you can find the definitions of each column.\n| **Column** | **Definition** |\n| --- | --- |\n| Order ID | Unique order identifier |\n| Sku id | SKU unique ID |\n| SKU | SKU name |\n| Product ID | Product unique ID |\n| Product Name | Product name |\n| Price | Item price |\n| Quantity | Item quantity |\n| Creator username | Creator Username |\n| Tag id | Third-party linkshare creator identifier, visible for SEA agencies only. |\n| Shop name | Seller shop name |\n| Shop code | Seller shop code |\n| Currency | Transaction currency (for example, USD, MXN). |\n| Order type | Channel that attributed the order, for example affiliate or shop ads. |\n| Order Settlement Status | Settlement status of the order with the platform (for example, settled or pending). |\n| Content Type | Type of content that generated the order, such as video, live,showcase. |\n| Content id | Content unique ID |\n| Attribution Type | Attribution type, for example: direct, indirect |\n| Commission model | Commission model applied to this order, such as tiered or fixed rate based on order volume. |\n| Standard commission rate | Standard base commission rate applied to commissionable GMV, expressed as a percentage. |\n| Shop Ads commission rate | Commission rate for shop ads traffic, expressed as a percentage. |\n| TikTok Commission bonus rate | TikTok commission bonus rate, expressed as a percentage of the commissionable base. |\n| Partner Commission bonus rate | Partner commission bonus rate, expressed as a percentage of the commissionable base. |\n| GMV | Buyer paid amount for the order (GMV). |\n| Est. commission base | Estimated commissionable amount before settlement, used as the base for calculating all commission components. |\n| Est. standard commission | Estimated standard commission portion before creator–MCN revenue sharing while the order is not yet settled. |\n| Est. shop ads commission | Estimated shop ads commission portion before creator–MCN revenue sharing while the order is not yet settled. |\n| Est. TikTok commission bonus | Estimated TikTok commission bonus portion before creator–MCN revenue sharing while the order is not yet settled. |\n| Est. Partner commission bonus | Estimated partner or agency-funded commission bonus portion before creator–MCN revenue sharing while the order is not yet settled. |\n| Actual commission base | Final commissionable base amount after settlement, used to compute actual commissions. |\n| Actual standard commission | Final standard commission portion before creator–MCN revenue sharing after settlement. |\n| Actual shop ads commission | Final shop ads commission portion before creator–MCN revenue sharing after settlement. |\n| Actual TikTok commission bonus | Final TikTok commission bonus portion before creator–MCN revenue sharing after settlement. |\n| Actual partner commission bonus | Final partner or agency-funded commission bonus portion before creator–MCN revenue sharing after settlement. |\n| creator tax | Total tax withheld and paid by the platform on behalf of the creator. |\n| Actual Commission Earnings before split | Total commission earnings attributable to the creator before sharing with the MCN, net of creator tax. SUM(AB+AC+AD+AE-AF) |\n| Agency commission sharing portion | Contracted MCN revenue share percentage applied to the creator's commission income. |\n| Total creator earned commission | Final commission income paid out to the creator after MCN share. |\n| Total agency earned commission before tax | Total commission allocated to the MCN before agency-level taxes. |\n| Agency Tax - ISR | Income tax (ISR) withheld and paid on behalf of the agency in Mexico. |\n| Agency Tax - IVA | Value-added tax (IVA) withheld and paid on behalf of the agency in Mexico. |\n| Total agency earned commission | Final commission income received by the MCN after agency taxes. |\n| Total agency earned commission after FX | Total agency commission converted to the settlement currency after applying the foreign exchange rate. |\n| FX Rate | Foreign exchange rate used to convert commission amounts to the settlement currency. |\n| Invitation ID | Identifier of the invitation or recruitment campaign associated with the creator or order. |\n| Time order created | Timestamp when the order was created. |\n| Time order delivered | Timestamp when the order was delivered, if available. |\n| Payment ID | Payout transaction ID, (for successed payment only). |\n| Payment status | Payout status |\n\n",
+    "update_time": "1774927957",
+    "view_count": 0,
+    "prev_document_id": "650a33f2c16ffe02b8e4c4c4",
+    "prev_document_path": "650a33f2c16ffe02b8e4c4c4",
+    "next_document_id": "69cb40760ea43c04ecce72db",
+    "next_document_path": "tur4s3v7",
+    "is_api_doc": false,
+    "document_id": "69cb3fa13c1ac204eedb8806",
+    "doc_type": 2,
+    "keywords": [
+      {
+        "keyword": "",
+        "font_color": "#141414",
+        "background_color": "#E6E6E6"
+      }
+    ]
+  }
+}

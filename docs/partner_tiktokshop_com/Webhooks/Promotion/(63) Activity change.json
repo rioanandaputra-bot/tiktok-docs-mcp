@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "document_id": "69c3bda1d468e604f335362a",
+    "parent_id": "67ff82cca15973047eddcb5b",
+    "name": "(63) Activity change",
+    "document_path": "x6legjl9",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1774447756",
+    "keywords": []
+  },
+  "detail": {
+    "title": "(63) Activity change",
+    "content": "## Trigger scenario\nThe Activity change webhook is designed to notify partners about modifications related to  activities and the products associated with them. This allows applications to stay synchronized with changes in activity details or product inclusion/exclusion lists.\n## Data business parameters\n| Properties | Type | Example | Description |\n| --- | --- | --- | --- |\n| shop_id | String | \"7494049642642441621\" | The ID of the shop. |\n| timestamp | Int64 | 1732526400 | The time when this webhook was triggered, represented by Unix timestamp. |\n| tts_notification_id | String | \"7327112393057371910\" | The ID of the notification. |\n| type | Int64 | 63 | The ID of the webhook type. |\n| data | Object |  |  |\n| └ activity_id | String | \"7136104329798256386\" | The ID of the promotion activity. |\n| └ update_time | Int64 | 1732526465 | The time when the status changed, represented as a Unix timestamp (seconds). |\n| └ change_type | String | CREATE | The type of activity changes.  <br>  <br> * CREATE <br> * UPDATE <br> * DEACTIVATE |\n| └ product_update_list | Object |  | Products included in an updated scope. |\n| └└ product_ids | []String | [\"123456\",\"789012\"] | Included product IDs. |\n| └└ exclude_product_ids | []String | [\"345678\"] | IDs of the BXGY exclude products to remove. <br> Max count: 100. |\n| └└ benefit_product_ids | []String | [\"456789\"] | TikTokShop product ID list. |\n| └ product_remove_list | Object |  | Products removed from the activity. |\n| └└ product_ids | []String | [\"111222\",\"333444\"] | Removed product IDs. |\n| └└ sku_ids | []String | [\"111\",\"222\"] | Removed SKU IDs. |\n| └└ benefit_product_ids | []String | [\"555666\"] | TikTokShop product ID list. |\n| └└ exclude_product_ids | []String | [\"345678\"] | IDs of the BXGY exclude products to remove. <br> Max count: 100. |\n\n## Event example\n```JSON\n{\n  \"type\": 63,\n  \"timestamp\": 1678886400,\n  \"shop_id\": \"789123456789123456\",\n  \"tts_notification_id\": \"000000000000000001\",\n  \"data\": {\n    \"activity_id\": \"act_123456789012345678\",\n    \"update_time\": 1678886400,\n    \"change_type\": \"product_update\",\n    \"product_update_list\": {\n      \"product_ids\": [\n        \"11111111\",\n        \"22222222\"\n      ],\n      \"exclude_product_ids\": [\n        \"33333333\"\n      ],\n      \"benefit_product_ids\": [\n        \"44444444\"\n      ]\n    },\n    \"product_remove_list\": {\n      \"product_ids\": [\n        \"55555555\"\n      ],\n      \"sku_ids\": [\n        \"66666666\"\n      ],\n      \"benefit_product_ids\": [],\n      \"exclude_product_ids\": []\n    }\n  }\n}\n```\n\n\n",
+    "update_time": "1774447756",
+    "view_count": 0,
+    "prev_document_id": "67ff82ce550a99048d938b2e",
+    "prev_document_path": "39-activity-status-change",
+    "next_document_id": "65030162bb2a4d028d50cc51",
+    "next_document_path": "12-return-status-change",
+    "is_api_doc": false,
+    "document_id": "69c3bda1d468e604f335362a",
+    "doc_type": 2,
+    "keywords": [
+      {
+        "keyword": "",
+        "font_color": "#141414",
+        "background_color": "#E6E6E6"
+      }
+    ]
+  }
+}

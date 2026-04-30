@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "document_id": "69e8876988697860b286e76b",
+    "parent_id": "65040e15a57708028b5a9cde",
+    "name": "[US TSP] Multi-login Matrix Console ",
+    "document_path": "o2igx59z",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1776847640",
+    "keywords": []
+  },
+  "detail": {
+    "title": "[US TSP] Multi-login Matrix Console ",
+    "content": "# Product Overview\nAs a key enhancement to the **Multilogin Matrix Console**, the **Multi-select shop to log in to Seller Center** feature provides a streamlined entry point for batch store management. By allowing TSP to pre-select multiple authorized stores from a centralized pop-up, the system carries these selections into a single Seller Center session. This enables TSP to switch between seller backends instantaneously without re-navigating, delivering a high-efficiency, matrix-style workplace.\n\n# Product Benefits\nThe Multi-select shop to log in to Seller Center provides two primary advantages:\n\n* **Eliminated Repetitive Manual Entry:** By allowing loading multiple stores in a single action, the system replaces the tedious one-by-one access with efficient batch processing. This removes repetitive back-and-forth navigation and cuts down on redundant login time.\n* **Efficient Multi-Store Switching:** Seamless batch access replaces the need for back-and-forth navigation between stores. By removing the need for individual logins and fragmented steps, the Multi-select shop to log in to Seller Center tool streamlines high-volume store management and saves massive operational time.\n\n\n# User Guide\n| **Step** | **Process** | **Screenshot** |\n| --- | --- | --- |\n| 1 | **Enter the Multi-select shop to log in to Seller Center** <br>  <br> * Page entrance: Partner center - Manage services - Service orders - Multi-select shop to log in to Seller Center  <br> * Click \"Multi-select shop to log in to Seller Center\" within the Partner Center to trigger a centralized selection pop-up. <br> * Page URL: https://partner.us.tiktokshop.com/leads-pool?page=1&region=US&searchParam=lead_status%3D1%26seller_type%3D2&size=10 <br> * *You can still use Single shop to log in to Seller Center, but you will only be able to manage one shop at a time. Therefore, we recommend using the new portal.* <br>  <br>  <br>  | ![Image](https://p16-arcosite-sg.ibyteimg.com/tos-alisg-i-k9wyc2ijk0-sg/d0c9ac06130344e0a76b7ab732266a31~tplv-k9wyc2ijk0-image.image) <br> *New feature* <br> ![Image](https://p16-arcosite-sg.ibyteimg.com/tos-alisg-i-k9wyc2ijk0-sg/6c4306e6260d4be99e49ec92ecd6d867~tplv-k9wyc2ijk0-image.image) <br> *Old feature* |\n| 2 | **Select shops in partner center** <br>  <br> * From your authorized list, select stores that you intend to manage in the current session. <br>  <br>  | ![Image](https://p16-arcosite-sg.ibyteimg.com/tos-alisg-i-k9wyc2ijk0-sg/be50be03b1384e9bbb2afde63a4289f6~tplv-k9wyc2ijk0-image.image) |\n| 3 | **Switch shop in seller center** <br>  <br> * The system will automatically carry all selected store identities into the backend, allowing you to switch between different seller environments via the top navigation bar without redundant logins or re-navigation. | ![Image](https://p16-arcosite-sg.ibyteimg.com/tos-alisg-i-k9wyc2ijk0-sg/0799e6a48cd7420389d6375fc7d783b2~tplv-k9wyc2ijk0-image.image) |\n| 4 | **Exit seller management** <br>  <br> * Simply click the **Return to partner center** button — no need to log out. <br>  <br>  | ![Image](https://p16-arcosite-sg.ibyteimg.com/tos-alisg-i-k9wyc2ijk0-sg/0994ea13777c43b9a39824ee3a8a7396~tplv-k9wyc2ijk0-image.image) |\n",
+    "update_time": "1776847640",
+    "view_count": 0,
+    "prev_document_id": "6745b0da357b0c0310dd23ab",
+    "prev_document_path": "6745b0da357b0c0310dd23ab",
+    "next_document_id": "65827f9090054e02df839848",
+    "next_document_path": "65827f9090054e02df839848",
+    "is_api_doc": false,
+    "document_id": "69e8876988697860b286e76b",
+    "doc_type": 2,
+    "keywords": [
+      {
+        "keyword": "",
+        "font_color": "#141414",
+        "background_color": "#E6E6E6"
+      }
+    ]
+  }
+}

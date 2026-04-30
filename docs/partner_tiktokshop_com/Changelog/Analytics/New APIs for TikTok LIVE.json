@@ -1,0 +1,34 @@
+{
+  "meta": {
+    "document_id": "68af6771eb3a300486d0e157",
+    "parent_id": "68af6766f863d304997a97ff",
+    "name": "New APIs for TikTok LIVE ",
+    "document_path": "sv0xa2r6",
+    "is_api_doc": false,
+    "doc_type": 3,
+    "update_time": "1756326557",
+    "keywords": [
+      "New"
+    ]
+  },
+  "detail": {
+    "title": "New APIs for TikTok LIVE ",
+    "content": "# Summary\nWe've received a lot of requests to add TikTok LIVE analytics to our ever-growing TikTok Shop analytics APIs. We're happy to announce that we've recently just launched two new endpoints to address this demand!\n# Impact\n|  |  |\n| --- | --- |\n| Impacted market(s) | * All markets - local and cross-border |\n| Impacted version(s) | * 202309 (and later) |\n# Changes\n## New analytics APIs\nThe following endpoints and have been newly launched:\n| **Endpoint** | **Description** |\n| --- | --- |\n| [GET Shop Live Performance Overview](https://partner.tiktokshop.com/docv2/page/get-shop-live-performance-overview-202508) | Returns overall performance metrics for all LIVE stream sessions under a certain shop. |\n| [GET Shop Live Performance List](https://partner.tiktokshop.com/docv2/page/get-shop-live-performance-list-202508) | Returns a list of LIVE stream sessions and associated metrics for a shop. |\n\nFor those familiar with our video performance endpoints, namely [GET Shop Video Performance Overview](https://partner.tiktokshop.com/docv2/page/get-shop-video-performance-overview-202409) and [GET Shop Video Performance List](https://partner.tiktokshop.com/docv2/page/get-shop-video-performance-list-202409), these new LIVE endpoints have been structured to mirror those two APIs. \n\n\n",
+    "update_time": "1756326557",
+    "view_count": 0,
+    "prev_document_id": "698d74de3a0ca3049812e044",
+    "prev_document_path": "joyljtav",
+    "next_document_id": "68d6ce2d8e2c770495cced8c",
+    "next_document_path": "j5k1cmia",
+    "is_api_doc": false,
+    "document_id": "68af6771eb3a300486d0e157",
+    "doc_type": 3,
+    "keywords": [
+      {
+        "keyword": "New",
+        "font_color": "#7EB712",
+        "background_color": "#EDF8BB"
+      }
+    ]
+  }
+}

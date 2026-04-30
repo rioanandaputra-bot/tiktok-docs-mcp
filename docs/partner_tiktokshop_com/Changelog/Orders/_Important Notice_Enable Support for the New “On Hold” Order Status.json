@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "document_id": "6969b89b40cf18049cb6eb42",
+    "parent_id": "653779d3932caf02c122361c",
+    "name": "【Important Notice】Enable Support for the New “On Hold” Order Status",
+    "document_path": "yb76cyzi",
+    "is_api_doc": false,
+    "doc_type": 3,
+    "update_time": "1768537535",
+    "keywords": [
+      "Action Required",
+      "Breaking Change"
+    ]
+  },
+  "detail": {
+    "title": "【Important Notice】Enable Support for the New “On Hold” Order Status",
+    "content": "# **Mandatory Activation for All Apps in All Global Markets, Q1 2026**\nTo enhance buyer experience and improve overall order processing stability, TikTok Shop introduced a new order status — **“On Hold”** — effective **December 13, 2023**.\nTo ensure ecosystem-wide consistency, **TikTok Shop will automatically activate “On Hold” orders for all apps that have not yet enabled support starting in Q1 2026**.\nThis means:\n**All apps that have not completed integration will begin receiving On Hold orders**, which may lead to fulfillment failures, missing address fields, and other processing issues.\nPlease complete the necessary updates as soon as possible to avoid disruption for your merchants.\n\n\n---\n\n\n# 1. What Is the “On Hold” Status?\n“On Hold” is a new order status applied **after payment**, lasting **1 hour**. During this window:\n\n* Buyers may cancel the order without seller approval\n* Sellers cannot take any action on the order (e.g., print labels, ship packages)\n* The API will return empty values for **full_address**, **recipient_address**, and **district_info**\n* A new field **is_on_hold_order** is added in API v202309 to distinguish this flow\n\nThis update applies to **cross-border and local sellers**.\n\n\n---\n\n\n# 2. Why You Must Support It Now\nStarting **Q1 2026**:\n\n* All apps (including those not directly processing orders) **will be automatically enabled for On Hold orders**\n* Apps that are *not* prepared may experience:\n   * Fulfillment errors (Error Code 21011044)\n   * Missing address data\n   * Incorrect handling of the 1-hour customer remorse window\n   * Merchant complaints and disrupted operations\n\n**To avoid these risks, please complete your integration before Q1 2026.**\n\n\n---\n\n\n# 3. Required Developer Actions\n### **3.1 - Upgrade to API v202309 (Strongly Recommended)**\nOnly v202309 includes the new field **is_on_hold_order**, which enables apps to correctly identify whether an order has passed the On Hold stage.\n> Apps using legacy API versions cannot reliably process On Hold orders.\n\n\n### **3.2 - Support Both Order Status Flows**\nDepending on the shop and category, merchants may still receive **two types of order flows**:\n| **Order Flow** | **Status Path** | **is_on_hold_order** | **Required Handling** |\n| --- | --- | --- | --- |\n| **New Flow** | `Unpaid` → `On Hold` → `Awaiting Shipment` | `TRUE` | Can fulfill immediately after status becomes `Awaiting Shipment` |\n| **Existing Flow** | `Unpaid` → `Awaiting Shipment` | `FALSE` | Must hold the order for 1 hour before shipping |\nYour app must support **both** flows in parallel.\n\n### **3.3 - Complete the “On Hold Status Developer Declaration” in Partner Center**\nAfter finishing development & testing:\nNavigate to:\n**Partner Center → App & Service → App Detail → On Hold Status Developer Declaration**\nClick **“Declare”** to confirm support.\nOnce the declaration is completed:\n\n* The “App does not support On Hold” warning will be removed\n* The app will be marked as fully compatible\n* Merchants can install the app without receiving warnings\n\n\n### **3.4 - Test Using Sandbox 2.0**\n\n* Sandbox 2.0 shops **always include On Hold** in eligible categories\n* Some categories allow testing of the **existing** order flow (without On Hold)\n* All developers should verify their app handles both flows correctly\n\n\n\n---\n\n\n# 4. Key Timeline\n| **Timeframe** | **Requirement** |\n| --- | --- |\n| **Now – Q1 2026** | Developers must complete On Hold support + declaration |\n| **Q1 2026** | TikTok Shop will activate On Hold orders for all non-compliant apps |\n| **After activation** | Apps without support may fail to fulfill orders or return errors |\n\n---\n\n\n# 5. Impact / Potential Risks if Not Updated\nIf the app does not support On Hold before the enforcement date:\n\n* **API error 21011044 will prevent shipment**\n* **Missing address data may cause logistics failures**\n* **Merchants may be unable to fulfill orders**\n* **App installation pages will continue to show warning banners**\n* **Increased merchant complaints and operational risk**\n\n\n---\n\n\n# 6. Additional Resources\nIf you encounter any issues during the integration process, please refer to: \n\n* [Order Integration Solution Guide](https://bytedance.us.larkoffice.com/docx/T8HXdaOH2oJXdtxMkk9u5Sh1sCb)\n* [Upgrading to API version v202309](https://partner.tiktokshop.com/docv2/page/upgrading-to-api-version-202309)\n* [Sandbox 2.0 Test Guide ](https://partner.tiktokshop.com/docv2/page/seller-center-development-shops)\n\nIf you have any further questions, please contact us via Partner Center or Developer Support.\n# \n\n",
+    "update_time": "1768537535",
+    "view_count": 0,
+    "prev_document_id": "68e6a1118e2c77049551eb08",
+    "prev_document_path": "8cpq7zt5",
+    "next_document_id": "69e71689404e8ddd8794d1ea",
+    "next_document_path": "uc1ds0td",
+    "is_api_doc": false,
+    "document_id": "6969b89b40cf18049cb6eb42",
+    "doc_type": 3,
+    "keywords": [
+      {
+        "keyword": "Action Required",
+        "font_color": "#F754A8",
+        "background_color": "#FFE8F1"
+      },
+      {
+        "keyword": "Breaking Change",
+        "font_color": "#141414",
+        "background_color": "#E6E6E6"
+      }
+    ]
+  }
+}

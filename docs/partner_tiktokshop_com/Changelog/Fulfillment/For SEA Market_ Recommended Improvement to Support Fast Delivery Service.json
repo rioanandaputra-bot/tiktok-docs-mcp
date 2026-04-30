@@ -1,0 +1,34 @@
+{
+  "meta": {
+    "document_id": "694af90a7b0f6f049ae109cc",
+    "parent_id": "654dc3f79b8d1c02d8697a23",
+    "name": "For SEA Market: Recommended Improvement to Support Fast Delivery Service",
+    "document_path": "m5p1u1fo",
+    "is_api_doc": false,
+    "doc_type": 3,
+    "update_time": "1769486873",
+    "keywords": [
+      "Updated"
+    ]
+  },
+  "detail": {
+    "title": "For SEA Market: Recommended Improvement to Support Fast Delivery Service",
+    "content": "# What is changing?\nWhen sellers choose **++Instant or Sameday shipping option++** to facilitate faster delivery to customers, TikTok Shop will aggressively evaluate the shipping and collection time of the orders to provide a satisfactory user experience. \nIn Seller Center, there are several functions to support sellers for better managing these fast delivery orders. We recommend adopting the following changes\n\n1. Allow sellers to print shipping labels before schedule shipping\n2. Understand new SLA update\n3. Enhance your features to encourage faster actions \n   1. Send push notifications when new orders arrived\n   2. Orders tag or specific filters to easily separate fast delivery services\n   3. Default to sort fast delivery orders on top\n\n# Which markets are affected?\nThis is applicable for **local sellers in the ID, SG, PH, VN, TH and MY markets.**\n# Who is affected?\n**All seller types** are affected by this change.\n# How to identify fast delivery options?\nYou can identify fast delivery options using the following fields\n| **API** | **Field name** | **Type** | **Field Value** |\n| --- | --- | --- | --- |\n| [Get Order Detail](https://partner.tiktokshop.com/docv2/page/get-order-detail-202309), <br> [Get Order List](https://partner.tiktokshop.com/docv2/page/get-order-list-202309) | `fulfillment_priority_level` <br>  | `int` <br>  | `100` = Instant <br> `200` = Sameday 8 hours <br> `300` = Sameday |\n# What action is required?\nWe recommend adopting these changes so sellers can handle orders effectively in a timely manner.\n## Allow sellers to print shipping labels before schedule shipping\nApplicable only for `fulfillment_priority_level` = `100`,`200`,`300`. These 2 steps should be independent and can be processed without dependencies.\n**Note: only applicable for** **++printed document format is PDF.++**\n\n1. Use the [Get Package Shipping Document](https://partner.tiktokshop.com/docv2/page/650aa5fac16ffe02b8f112ca?external_id=650aa5fac16ffe02b8f112ca) API to get the shipping label.\n2. Use the [Ship Package](https://partner.tiktokshop.com/docv2/page/650aa4f1defece02be6e7cb1?external_id=650aa4f1defece02be6e7cb1) API to schedule the package handover.\n\n## Understand new SLA update\nApplicable only for `fulfillment_priority_level` = `100`,`200`,`300`. **Late Dispatch Rate (LDR)** will be captured based on ++\"Arrange Shipment\"++ time. It's important to track this time as deadline for sellers to follow the guidelines strictly.\n| Delivery option | LDR Assessment when | API | Field name |\n| --- | --- | --- | --- |\n| Instant, Sameday 8 hours, Sameday | Seller clicked \"Arrange Shipment\". This is when call [Ship Package](https://partner.tiktokshop.com/docv2/page/650aa4f1defece02be6e7cb1?external_id=650aa4f1defece02be6e7cb1) successfully. | [Get Order Detail](https://partner.tiktokshop.com/docv2/page/get-order-detail-202309) <br>  | `rts_sla_time` <br>  |\n| Other delivery options | Package collection successful and order marked as \"Shipped\" |  | `tts_sla_time` |\nFor different countries, you can learn more about SLA in the following link\n\n* [Vietnam](https://seller-vn.tiktok.com/university/essay?identity=1&role=1&knowledge_id=1797134848837393&from=feature_guide)\n* [Malaysia](https://seller-my.tiktok.com/university/essay?identity=1&role=1&knowledge_id=6712877676267265&from=feature_guide)\n* [Thailand](https://seller-th.tiktok.com/university/essay?knowledge_id=5069164268996368&lang=en)\n* [Singapore](https://seller-sg.tiktok.com/university/essay?knowledge_id=500347816036097&default_language=en&identity=1)\n* [Indonesia](https://seller-id.tokopedia.com/university/essay?knowledge_id=7753821275686658)\n\n## Enhance your features to encourage faster actions\nIt's recommended to use `fulfillment_priority_level` to differentiate fast delivery services and have the following functions available.\n1) Send push notifications when new orders arrived\n2) Orders tag or specific filters to easily separate fast delivery services\n3) Default to sort fast delivery orders on top\n",
+    "update_time": "1769486873",
+    "view_count": 0,
+    "prev_document_id": "694a789b100d45049710a9d7",
+    "prev_document_path": "4260w8mg",
+    "next_document_id": "69a6adf196796b049fe30fc0",
+    "next_document_path": "7z0wsn3s",
+    "is_api_doc": false,
+    "document_id": "694af90a7b0f6f049ae109cc",
+    "doc_type": 3,
+    "keywords": [
+      {
+        "keyword": "Updated",
+        "font_color": "#FF7D00",
+        "background_color": "#FFF7E8"
+      }
+    ]
+  }
+}

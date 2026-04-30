@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "document_id": "69de0329404e8ddd87800ea6",
+    "parent_id": "68af6766f863d304997a97ff",
+    "name": "Bestsellers Analytics Open API Launch",
+    "document_path": "3dk9557y",
+    "is_api_doc": false,
+    "doc_type": 3,
+    "update_time": "1776157796",
+    "keywords": [
+      "New",
+      "Action Required"
+    ]
+  },
+  "detail": {
+    "title": "Bestsellers Analytics Open API Launch",
+    "content": "## Overview\nThis release introduces the **Bestsellers Analytics OpenAPI**, a set of four new APIs that provide programmatic access to TikTok Shop's Bestsellers rankings from Data Compass. Developers can now retrieve the top 100 products, creators, videos, and LIVE sessions by GMV in the seller's authorized market.\nPreviously, Bestsellers data was only available through the Seller Center web portal with no API access. Third-party data service providers — one of the most influential app categories in the TikTok Shop ecosystem — had no compliant way to access this data. This release enables ISVs across multiple app categories (including **Analytics & Reporting**, **ERP**, **Connector**, **Creator collaborations** and **TikTok Shop Seller** apps) to build data-driven features such as trending product discovery, top creator analysis, viral video insights, and competitive benchmarking.\n## What's New\n### Affected APIs\n| Name | Path | Type | Version | Description |\n| --- | --- | --- | --- | --- |\n| [Get Bestselling Products](https://partner.tiktokshop.com/docv2/page/get-bestselling-products-202511) | [GET]/analytics/202511/products/bestselling | RESTful API | 202511 | Get the top 100 performing products of the target date range. |\n| [Get Bestselling Creators](https://partner.tiktokshop.com/docv2/page/get-bestselling-creators-202511) | [GET]/analytics/202511/creators/bestselling | RESTful API | 202511 | Get the top 100 performing creators of the target date range. |\n| [Get Bestselling Videos](https://partner.tiktokshop.com/docv2/page/get-bestselling-videos-202511) | [GET]/analytics/202511/videos/bestselling | RESTful API | 202511 | Get the top 100 performing videos of the target date range. |\n| [Get Bestselling LIVEs](https://partner.tiktokshop.com/docv2/page/get-bestselling-lives-202511) | [GET]/analytics/202511/lives/bestselling | RESTful API | 202511 | Get the top 100 performing lives of the target date range. |\n### Important Notes\n\n* **Authorization required:** All four APIs require a valid seller OAuth access token (x-tts-access-token). The data returned is scoped to the seller's registered market.\n* **GMV desensitization:** All GMV values are returned as ranges with a random offset applied for privacy protection. Exact GMV figures are not available.\n* **Top 100 limit:** Each API returns a maximum of 100 records per request.\n* **Time granularity:** The minimum granularity is daily (1D). Supported time slots are 1D, 7D, and 30D.\n* **Currency options:** Responses support USD (US dollars) or LOCAL (local currency) via the currency query parameter.\n* **API version:** All four APIs share the version 202511.\n* **Access level:** Public — available to all ISVs and sellers who request the Bestsellers scope.\n",
+    "update_time": "1776157796",
+    "view_count": 0,
+    "prev_document_id": "697687c19d942f0499ad7c28",
+    "prev_document_path": "ukjcmkq5",
+    "next_document_id": "68417994603891048c65f4c2",
+    "next_document_path": "deprecating-tts-api-v1",
+    "is_api_doc": false,
+    "document_id": "69de0329404e8ddd87800ea6",
+    "doc_type": 3,
+    "keywords": [
+      {
+        "keyword": "New",
+        "font_color": "#7EB712",
+        "background_color": "#EDF8BB"
+      },
+      {
+        "keyword": "Action Required",
+        "font_color": "#F754A8",
+        "background_color": "#FFE8F1"
+      }
+    ]
+  }
+}

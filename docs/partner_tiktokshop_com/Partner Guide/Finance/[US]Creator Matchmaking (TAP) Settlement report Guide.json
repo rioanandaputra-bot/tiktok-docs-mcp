@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "document_id": "69cb40760ea43c04ecce72db",
+    "parent_id": "697713eb4d6251049aec1d85",
+    "name": "[US]Creator Matchmaking (TAP) Settlement report Guide",
+    "document_path": "tur4s3v7",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1774928043",
+    "keywords": []
+  },
+  "detail": {
+    "title": "[US]Creator Matchmaking (TAP) Settlement report Guide",
+    "content": "# What is settlement report? \nA settlement report is a financial document that provides a detailed breakdown of your account activity for a specified settlement period. This report enables you to reconcile your commission earned.\n# How can I download the settlement report?\nTo download the settlement report, please follow these steps:\nPartner Center-Finance-Payment-Earnings-Export orders.\n# How do I read the settlement report? \nBelow, you can find the definitions of each column.\n| **Column** | **Definition** |\n| --- | --- |\n| Order ID | Unique order identifier |\n| sku id | SKU unique ID |\n| SKU | SKU name |\n| Creator Username | Creator Username |\n| Product ID | Product unique ID |\n| Product Name | Product name |\n| Price | Item price |\n| Quantity | Item quantity |\n| Shop name | Seller shop name |\n| Shop code | Seller shop code |\n| Campagin ID | Marketing campaign ID |\n| Order type | Order promotion type, for example: affiliate, shop ads |\n| Order Settlement Status | Payout settlement status, for example:Settled, Pending |\n| Order Status | Order status: for example: Cancelled |\n| Content Type | Type of content that generated the order, such as video, live,showcase. |\n| Content id | Content unique ID |\n| Attribution Type | Attribution type, for example: direct, Indirect |\n| Commission GMV | Customer-paid GMV. |\n| Affiliate partner commission rate | Commission rate applied to the partner's share of affiliate commission after splitting with the creator. |\n| Affiliate partner shop ads commission rate | Commission rate applied to the partner's share of shop ads commission. |\n| Affiliate partner bonus rate | Bonus rate applied to the partner's share of TAP bonus commission. |\n| Est. Commission Base | Estimated commissionable GMV used as the base for all estimated commission. |\n| Est. affiliate partner commission | Estimated pre-tax affiliate commission amount retained by the partner after splitting with the creator. |\n| Est. affiliate partner shop ads commission | Estimated pre-tax shop ads commission amount retained by the partner after splitting with the creator. |\n| Est. affiliate partner bonus commission | Estimated pre-tax TAP bonus commission amount retained by the partner after splitting with the creator. |\n| Est. ISR | Estimated Mexican income tax (ISR) on the partner's commission amounts used for tax accrual. |\n| Est. IVA | Estimated Mexican value-added tax (IVA) on the partner's commission amounts used for tax accrual. |\n| Creator commission rate | Commission rate applied to the creator's share of affiliate commission. |\n| Creator shop ads commission rate | Commission rate applied to the creator's share of shop ads commission. |\n| Creator's partner bonus rate | Commission rate applied to the creator's share of TAP bonus commission. |\n| Est. creator commission | Estimated pre-tax affiliate commission amount for the creator before any agency split. |\n| Est. creator shop ads commission | Estimated pre-tax shop ads commission amount for the creator before any agency split. |\n| Est. creator partner bonus commission | Estimated pre-tax TAP bonus commission amount for the creator before any agency split. |\n| Actual Commission Base | Final commissionable GMV after returns and refunds, used as the base for actual commission and tax amounts. |\n| Actual affiliate partner commission | Final pre-tax affiliate commission amount actually retained by the partner after splitting with the creator. |\n| actual affiliate partner shop ads commission | Final pre-tax shop ads commission amount actually retained by the partner after splitting with the creator. |\n| actual affiliate partner bonus commission | Final pre-tax TAP bonus commission amount actually retained by the partner after splitting with the creator. |\n| actual ISV | Final Mexican income tax (ISR/ISV) actually charged on the partner's commission amounts. |\n| actual IVA | Final Mexican value-added tax (IVA) actually charged on the partner's commission amounts. |\n| Actual creator commission | Final pre-tax affiliate commission amount actually paid to the creator before any agency split. |\n| actual creator shop ads commission | Final pre-tax shop ads commission amount actually paid to the creator before any agency split. |\n| actual creator partner bonus commission | Final pre-tax TAP bonus commission amount actually paid to the creator before any agency split. |\n| Time Created | Order creation time |\n| Time order delivered | Delivery completion time |\n| Payment ID | Payout transaction ID,(for successed payment only) |\n| payment status | Payout status |\n\n",
+    "update_time": "1774928043",
+    "view_count": 0,
+    "prev_document_id": "69cb3fa13c1ac204eedb8806",
+    "prev_document_path": "dyr6jbn3",
+    "next_document_id": "6506bbf2de672602b7bc0697",
+    "next_document_path": "6506bbf2de672602b7bc0697",
+    "is_api_doc": false,
+    "document_id": "69cb40760ea43c04ecce72db",
+    "doc_type": 2,
+    "keywords": [
+      {
+        "keyword": "",
+        "font_color": "#141414",
+        "background_color": "#E6E6E6"
+      }
+    ]
+  }
+}

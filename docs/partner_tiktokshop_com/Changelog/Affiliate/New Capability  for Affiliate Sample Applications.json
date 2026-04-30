@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "document_id": "69536605c58cc40499510958",
+    "parent_id": "669a0589a6a5e002e6da8824",
+    "name": "New Capability  for Affiliate Sample Applications ",
+    "document_path": "x0ebukvz",
+    "is_api_doc": false,
+    "doc_type": 3,
+    "update_time": "1767073399",
+    "keywords": [
+      "New",
+      "Action Required"
+    ]
+  },
+  "detail": {
+    "title": "New Capability  for Affiliate Sample Applications ",
+    "content": "# Overview\nThis release introduces several new affiliate sample-related capabilities to improve the compliance and automation of the sample application workflow. Additionally, the platform now supports sub-account authorization for affiliate-category apps, allowing merchants to grant permissions to eligible sub-accounts for increased operational flexibility.\n## What’s New\n\n* **New API:**[ Seller Get Sample Request Deeplink ](https://partner.tiktokshop.com/docv2/page/seller-get-sample-request-deeplink-202512#Back%20To%20Top)\n\n   This API returns a TikTok deeplink that directs a user to the sample request page within the TikTok app. Sellers can send this deeplink to creators via Instant Messaging (IM) or by encoding it into a QR code for email distribution.\n\n* **New Webhook:**[ Sample Application Status Change](https://partner.tiktokshop.com/docv2/page/urzvzank)\n\n  This webhook sends notifications when a sample application is submitted or its status changes. This allows sellers and developers to receive real-time updates and review applications without relying on high-frequency polling.\n\n* **New Capability:** Sub-account Authorization for Affiliate Apps **** Merchants can now authorize affiliate-category applications using eligible sub-accounts that have the required permissions. This feature enhances flexibility and operational efficiency for managing multiple accounts and roles.\n\n\n## Important Notes\n\n* The `Sample Application Status Change` webhook helps reduce reliance on polling the `Seller Search Sample Applications` API, leading to better performance and fewer rate-limiting issues.\n* Sub-account authorization is only available for applications in the \"Affiliate\" service category.\n\n## Affected APIs and Webhooks\n| **Name** | **Type** | **Version** |\n| --- | --- | --- |\n| Seller Get Sample Request Deeplink | API | 202512 |\n| Sample Application Status Change | Webhook |  |\n",
+    "update_time": "1767073399",
+    "view_count": 0,
+    "prev_document_id": "68bf0bdd9370fc0490f8bc07",
+    "prev_document_path": "3obfokj6",
+    "next_document_id": "69d8c2294ce9a804deec62c3",
+    "next_document_path": "4brha1mn",
+    "is_api_doc": false,
+    "document_id": "69536605c58cc40499510958",
+    "doc_type": 3,
+    "keywords": [
+      {
+        "keyword": "New",
+        "font_color": "#7EB712",
+        "background_color": "#EDF8BB"
+      },
+      {
+        "keyword": "Action Required",
+        "font_color": "#F754A8",
+        "background_color": "#FFE8F1"
+      }
+    ]
+  }
+}

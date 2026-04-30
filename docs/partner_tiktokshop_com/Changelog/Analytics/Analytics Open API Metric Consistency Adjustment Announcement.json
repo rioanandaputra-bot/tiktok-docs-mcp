@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "document_id": "698d74de3a0ca3049812e044",
+    "parent_id": "68af6766f863d304997a97ff",
+    "name": "Analytics Open API Metric Consistency Adjustment Announcement",
+    "document_path": "joyljtav",
+    "is_api_doc": false,
+    "doc_type": 3,
+    "update_time": "1770878288",
+    "keywords": [
+      "Updated",
+      "2026-02-12"
+    ]
+  },
+  "detail": {
+    "title": "Analytics Open API Metric Consistency Adjustment Announcement",
+    "content": "### 1. Overview & Background\nTo provide developers and merchants with a more consistent and accurate data experience, we will soon be adjusting the metric attribution for select Analytics Open APIs. This upgrade is designed to harmonize data definitions across different analytics products and help our partners more accurately measure business performance.\n### 2. Summary of Changes\nTo ensure a smooth transition, we will be introducing a **new API version** while making backward-compatible adjustments to the **current API version**.\n\n* **Current API Version**:\n   * **Data Source Update**: The data source for relevant metrics will be updated to a new, unified attribution model to align with other platform products, such as the Seller Center.\n   * **No Structural Changes**: API response field names and data structures will remain unchanged to minimize impact on existing applications.\n   * **Description Updates**: We will update the descriptions for all affected fields in the developer documentation to reflect the new attribution logic.\n* **New API Version**:\n   * **Comprehensive Upgrade**: The new API version will feature updated data sources, field names, and descriptions to provide clearer and more valuable business metrics.\n   * **Optional Migration**: We encourage partners to evaluate the benefits of the new API version and plan their migration according to their own business needs and development cycles.\n* **Data Behavior Note**:\n   * Both API versions will return concrete numeric values. Due to the unified attribution logic, minor differences may be observed for the same metric between the old and new data sources. This is expected behavior, and the data returned by the API should be considered final.\n\n### 3. Impact & Actions for ISVs\nThis adjustment offers partners greater flexibility:\n\n* **No Mandatory Migration**: If you wish to maintain your current integration, the backward-compatible changes to the current API version will ensure your application continues to function correctly. You only need to be aware of the updated metric descriptions in the developer documentation.\n* **Evaluate the New Version**: The new API version provides more accurate and comprehensive attribution metrics, which can help you build more powerful data analytics applications. We recommend reviewing the \"Expected Changes\" below to assess the value of the new API for your business and plan your adoption accordingly.\n\n### 4. Expected Changes\n<span style=\"background-color: rgba(255,246,122, 0.8)\">The following table outlines the expected changes to help you prepare. The final scope of API changes (including additions or removals) and field descriptions are </span><span style=\"background-color: rgba(255,246,122, 0.8)\"><strong>subject to the official release</strong></span><span style=\"background-color: rgba(255,246,122, 0.8)\"> and will be detailed in the developer documentation.</span>\n\n| **API** | **Current Version API: Fields with Updated Data Source (New Attribution)** | **New Version API Metrics** |\n| --- | --- | --- |\n| Get Video Performance | gmv, order_count, item_sold_count | Attributed GMV, Attributed order count, Attributed items sold count |\n| Get Shop LIVE Performance Per Minutes | **Overall**: gmv, items_sold <br> **Intervals**: gmv, items_sold, sku_orders, main_orders, customers, avg_price, click_to_order_rate, gpm, created_sku_orders, sku_order_rate | **Overall**: Attributed GMV, Attributed items sold <br> **Intervals**: Attributed GMV, Attributed items sold, Attributed SKU orders, Attributed main orders, Attributed avg. price, Attributed SKU order CTOR, Attributed main order CTOR, Watch attributed GPM, Show attributed GPM |\n| Get shop LIVE products performance list | direct_gmv, items_sold, created_sku_orders, avg_price, sku_orders, main_orders, payment_rate, add_to_cart_count, sku_order_ctor, main_order_ctor, watch_gpm | Attributed GMV, Attributed items sold, Attributed created SKU orders, Attributed SKU orders, Attributed main orders |\n| Get Shop Product Performance Detail | top_contents.contents.items_sold, top_contents.contents.gmv, top_creators.gmv, top_creators.items_sold | Top content - attributed items sold, Top content - attributed GMV, Top creators - attributed GMV, Top creators - attributed items sold |\n| Get Shop SKU Performance | gmv, gmv_breakdown, items_sold, items_sold_breakdown | Attributed GMV breakdown, Attributed items sold breakdown |\n| Get Shop Video Performance List | gmv, gpm, sku_orders, items_sold, avg_customers | Attributed GMV, Attributed GPM, Attributed SKU orders, Attributed items sold, Attributed avg. customers |\n| Get Shop Video Performance Overview | gmv, sku_orders, avg_customers | Attributed GMV, Attributed SKU orders, Attributed avg. customers |\n| Get Shop Video Performance Details | **Overall**: gmv, gpm, items_sold, customers <br> **Breakdowns**: gmv, gpm, items_sold, customers | Attributed GMV, Attributed GPM, Attributed items sold, Attributed customers |\n| Get Shop Video Product Performance List | gmv, units_sold, daily_avg_buyers | Attributed GMV, Attributed units sold, Attributed daily avg. buyers |\n| Get Shop LIVE Performance List | gmv, products_added, different_products_sold, created_sku_orders, sku_orders, items_sold, customers, avg_price, click_to_order_rate, 24h_live_gmv | Attributed GMV, Attributed products added, Attributed different products sold, Attributed created SKU orders, Attributed SKU orders, Attributed items sold, Attributed customers, Attributed 24h live GMV |\n| Get Shop LIVE Performance Overview | gmv, sku_orders, customers, items_sold, click_to_order_rate | Attributed GMV, Attributed SKU orders, Attributed customers, Attributed items sold |\n\n<span style=\"background-color: rgba(255,246,122, 0.8)\"><strong>Disclaimer</strong></span><span style=\"background-color: rgba(255,246,122, 0.8)\">: The list above is for planning purposes only and may be subject to change. Please refer to the official developer documentation at the time of release for the final and definitive list of APIs and fields.</span>\n### 5. Timeline & Key Statements\n\n* **Expected Launch Date**: We expect to complete this rollout by the **end of March 2026**. Any changes to this timeline will be communicated through the developer portal.\n* **Final Consistency Statement**: All API changes are **subject to the final released version** and will be consistent with the data attribution models used in official products like the Seller Center.\n\nThank you for your understanding and support.\n",
+    "update_time": "1770878288",
+    "view_count": 0,
+    "prev_document_id": "695a2d45100d4504979a63ee",
+    "prev_document_path": "u62dh98s",
+    "next_document_id": "68af6771eb3a300486d0e157",
+    "next_document_path": "sv0xa2r6",
+    "is_api_doc": false,
+    "document_id": "698d74de3a0ca3049812e044",
+    "doc_type": 3,
+    "keywords": [
+      {
+        "keyword": "Updated",
+        "font_color": "#FF7D00",
+        "background_color": "#FFF7E8"
+      },
+      {
+        "keyword": "2026-02-12",
+        "font_color": "#141414",
+        "background_color": "#E6E6E6"
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "document_id": "67c83e0799a75104986ae498",
+    "parent_id": "67c83e05b4bc0c049c4d9c39",
+    "name": "Overview",
+    "document_path": "tts-api-sdk-overview",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1751449712",
+    "keywords": []
+  },
+  "detail": {
+    "title": "Overview",
+    "content": "TikTok Shop API SDKs reduces the amount of work required to use TikTok Shop APIs.\nThis SDK provides support for the backends of your TikTok Shop apps to access TikTok Shop API, by making it easier to make requests without writing codes for authentication. Currently, you cannot register / process webhooks with this SDK.\nThe SDKs are available for Java, Go, and Node.js.\nThe SDK is available to part of the TikTok Shop developers currently, and will soon be available for all developers. Check the [console](https://partner.tiktokshop.com/openlearn/api-sdk) to see if you are on the whitelist. If you are, you can access the page like this:\n![Image](https://sf16-sg.tiktokcdn.com/obj/eden-sg/jvK_ylwvslclK_JWZ%5B%5B/ljhwZthlaukjlkulzlp/Developer_Guide/TTSPC_API_SDK/81b2df68-85e8-4ded-8225-59e4f9a3063b.png)\n\n",
+    "update_time": "1751449712",
+    "view_count": 0,
+    "prev_document_id": "650512b42f024f02be19755f",
+    "prev_document_path": "configuration-guide",
+    "next_document_id": "67c83e0a65c8c504be4417f8",
+    "next_document_path": "download-sdk",
+    "is_api_doc": false,
+    "document_id": "67c83e0799a75104986ae498",
+    "doc_type": 2,
+    "keywords": [
+      {
+        "keyword": "",
+        "font_color": "#141414",
+        "background_color": "#E6E6E6"
+      }
+    ]
+  }
+}

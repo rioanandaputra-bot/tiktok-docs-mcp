@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "document_id": "694261f89c2edf068501a9b2",
+    "parent_id": "654b22360fe8ca02c079012f",
+    "name": "For SEA market: Product category expansion cutoff date is January 12, 2026",
+    "document_path": "ezoyrtmn",
+    "is_api_doc": false,
+    "doc_type": 3,
+    "update_time": "1765959197",
+    "keywords": [
+      "Coming Soon",
+      "Action Required"
+    ]
+  },
+  "detail": {
+    "title": "For SEA market: Product category expansion cutoff date is January 12, 2026",
+    "content": "# What is changing?\nOn August 21, 2025, we introduced the product category expansion in SEA market. Please check this link: https://partner.tiktokshop.com/docv2/page/npb6fvbh\nNow we announce that the cutoff date for this product category expansion is January 12, 2026. After this date, use **`category_version=V2`** parameter for all category trees when listing new products or editing products. \nThis applies to the following Product APIs:\n– [POST Create Product](https://partner.tiktokshop.com/docv2/page/create-product-202309)\n– [PUT Edit Product](https://partner.tiktokshop.com/docv2/page/edit-product-202309)\n# Which markets are affected?\nThe updates of the requirements apply to the Local to Local and Cross Border sellers for Singapore, Philippines, Vietnam, Thailand, Malaysia and Indonesia markets.\n# Who is affected?\nDevelopers with applications that use Product APIs listed above.\n# Which version is applicable?\nThe updates of the requirements apply to all versions of the related APIs.\n# What action is required?\nDevelopers need to use **`category_version=V2`** for all category trees when listing new products or editing products. \n",
+    "update_time": "1765959197",
+    "view_count": 0,
+    "prev_document_id": "694247ec448a12074c0189ed",
+    "prev_document_path": "fapus8ql",
+    "next_document_id": "698bf5f4d5932e049fad408c",
+    "next_document_path": "r1wchdjn",
+    "is_api_doc": false,
+    "document_id": "694261f89c2edf068501a9b2",
+    "doc_type": 3,
+    "keywords": [
+      {
+        "keyword": "Coming Soon",
+        "font_color": "#3B87F6",
+        "background_color": "#EBF3FE"
+      },
+      {
+        "keyword": "Action Required",
+        "font_color": "#F754A8",
+        "background_color": "#FFE8F1"
+      }
+    ]
+  }
+}

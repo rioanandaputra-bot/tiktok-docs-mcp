@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "document_id": "69cf908570d83304e25ea66e",
+    "parent_id": "654b22360fe8ca02c079012f",
+    "name": "US market: Mandatory compliance attributes added for Paper Money and Coins Categories",
+    "document_path": "l8xklei9",
+    "is_api_doc": false,
+    "doc_type": 3,
+    "update_time": "1775210851",
+    "keywords": [
+      "Coming Soon",
+      "Action Required"
+    ]
+  },
+  "detail": {
+    "title": "US market: Mandatory compliance attributes added for Paper Money and Coins Categories",
+    "content": "# Summary\n### What are we launching\nIn the event that non-circulating currencies are sold as commodities, to ensure full regulatory compliance, we will introduce new mandatory attributes to the Get Attributes API. Sellers are required to fully complete all such attributes as a precondition for listing products in the affected product categories.\n### When are we launching it\nAPI enforcement for product listings (**Create and Edit Product APIs**) with these compliance attributes will begin after **April 7th, 2026**.\n### Impact\nAll existing and new listings in the affected categories must comply and provide the required information after **April 7th, 2026** to avoid being taken down or receiving listing errors.\n### Which markets are impacted?\nOnly the **US market** will be impacted at this time.\n# Affected Categories and Attributes\n### Affected Categories\nThe following leaf categories are impacted by this update:\n| Category Name | Leaf Category ID |\n| --- | --- |\n| US Paper Money | 1393552 |\n| US Coins | 1931792 |\n### Mandatory Compliance Attributes\nThe following attributes will become mandatory for the categories listed above:\n| **attribute.name**  | **attribute.id**  | **Supported input type** |\n| --- | --- | --- |\n| Circulation | 102992 | Drop down only |\n| Authenticated/Graded | 102216 | Drop down only |\n| Paper money grader | 102995 | Drop down only |\n| Paper money grade | 102998 | Drop down only |\n| Certification number | 102218 | Free form only |\n| Paper money condition | 103351 | Drop down only |\n| Coin grader | 102993 | Drop down only |\n| Coin grade | 102996 | Drop down only |\n| Coin condition | 103353 | Drop down only |\n| Year | 100530 | Free form only |\n| Fineness | 102893 | Free form& Drop down |\n| Coin composition | 103355 | Free form& Drop down |\n# API Changes\n### 1. Get Attributes\nThe response will include the mandatory status for the listed attributes when querying for the affected categories.\n### 2. Get Category Rules\nThe `requirement_conditions` in the response will indicate that these attributes are now mandatory for the US market.\n### 3. Create Product & Edit Product\nDevelopers must ensure that these attributes are provided in the request body. Failure to provide mandatory attributes will result in an error with a message indicating the missing fields.\n\n**For more information, please refer to the TikTok Shop Academy.**\n",
+    "update_time": "1775210851",
+    "view_count": 0,
+    "prev_document_id": "698bf5f4d5932e049fad408c",
+    "prev_document_path": "r1wchdjn",
+    "next_document_id": "69e12a0e70d83304e28a63bc",
+    "next_document_path": "nvx9wggt",
+    "is_api_doc": false,
+    "document_id": "69cf908570d83304e25ea66e",
+    "doc_type": 3,
+    "keywords": [
+      {
+        "keyword": "Coming Soon",
+        "font_color": "#3B87F6",
+        "background_color": "#EBF3FE"
+      },
+      {
+        "keyword": "Action Required",
+        "font_color": "#F754A8",
+        "background_color": "#FFE8F1"
+      }
+    ]
+  }
+}

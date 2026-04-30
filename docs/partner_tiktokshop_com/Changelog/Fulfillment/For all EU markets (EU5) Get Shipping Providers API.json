@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "document_id": "69a6adf196796b049fe30fc0",
+    "parent_id": "654dc3f79b8d1c02d8697a23",
+    "name": "For all EU markets (EU5) Get Shipping Providers API ",
+    "document_path": "7z0wsn3s",
+    "is_api_doc": false,
+    "doc_type": 3,
+    "update_time": "1772619039",
+    "keywords": [
+      "Updated",
+      "Action Required",
+      "Coming Soon"
+    ]
+  },
+  "detail": {
+    "title": "For all EU markets (EU5) Get Shipping Providers API ",
+    "content": "# What is changing?\nStarting **March 26, 2026**, the **Get Shipping Providers API** has been enhanced to support accurate **EU shipping provider resolution**.\nDue to interconnected logistics services within the EU, a single delivery option can correspond to **multiple cross-border shipping routes**. To return the correct shipping provider for a specific route, ISVs are now required to specify both:\n\n* the **shipping origin country** (warehouse), and\n* the **destination country** (buyer).\n\nTwo new input parameters have been introduced to enable this behavior:\n\n* `warehouse_region`\n* `buyer_region`\n\n# **API endpoint changes**\n\n* **Get Shipping Providers**\n\n# **New parameters added:**\n\n* `warehouse_region` – ISO 3166-1 alpha-2 country code of the warehouse (shipping origin)\n* `buyer_region` – ISO 3166-1 alpha-2 country code of the buyer (delivery destination)\n\nWhen these parameters are provided, the API will return the **shipping provider ID and name** that corresponds to the specified delivery option and cross-border route.\n# **Which markets are affected?**\n\n* All **EU markets**\n* **Intra-EU cross-border shipping** scenarios\n\n# Who is affected?\nDevelopers and ISVs whose applications:\n\n* Manage logistics, fulfillment, or shipping configuration\n* Support **intra-EU delivery flows**\n* Resolve shipping providers programmatically using delivery options\n\n# What action is required?\n\n1. Update integrations to pass `warehouse_region` and `buyer_region` when calling **Get Shipping Providers** for EU shipments.\n2. Ensure shipping provider resolution logic accounts for **origin–destination combinations**, rather than assuming a single provider per delivery option.\n\n# **General recommendation**\n\n* This API **can be called at parcel level** to determine the correct shipping provider in real time.\n* Alternatively, ISVs may **cache shipping provider mappings** and refresh them periodically to stay aligned with the latest logistics configuration.\n* If warehouse locations or shipping destinations change frequently, calling the API in real time is recommended to avoid incorrect provider selection.\n",
+    "update_time": "1772619039",
+    "view_count": 0,
+    "prev_document_id": "694af90a7b0f6f049ae109cc",
+    "prev_document_path": "m5p1u1fo",
+    "next_document_id": "68704c5d6e6e7404973b5cea",
+    "next_document_path": "order_orders_post_town",
+    "is_api_doc": false,
+    "document_id": "69a6adf196796b049fe30fc0",
+    "doc_type": 3,
+    "keywords": [
+      {
+        "keyword": "Updated",
+        "font_color": "#FF7D00",
+        "background_color": "#FFF7E8"
+      },
+      {
+        "keyword": "Action Required",
+        "font_color": "#F754A8",
+        "background_color": "#FFE8F1"
+      },
+      {
+        "keyword": "Coming Soon",
+        "font_color": "#3B87F6",
+        "background_color": "#EBF3FE"
+      }
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "document_id": "69e12a0e70d83304e28a63bc",
+    "parent_id": "654b22360fe8ca02c079012f",
+    "name": "US market: New GTM for OTC Mandatory Attributes",
+    "document_path": "nvx9wggt",
+    "is_api_doc": false,
+    "doc_type": 3,
+    "update_time": "1776364152",
+    "keywords": [
+      "Coming Soon",
+      "Action Required"
+    ]
+  },
+  "detail": {
+    "title": "US market: New GTM for OTC Mandatory Attributes",
+    "content": "# Summary\n### What are we launching\nTo meet legal requirements for over-the-counter (OTC) medicines, new mandatory compliance attributes will be introduced for 31 OTC medicine categories. Sellers will be required to complete these new attributes for all new and existing product listings in the affected categories.\n### When are we launching it\nThe enforcement date is 4/17 and will be communicated in a follow-up notice.\n### Impact\nAll new and existing listings in the affected categories must include the mandatory attributes to avoid listing errors or potential takedown after the enforcement date.\n### Which markets are impacted?\nImpacted markets: US.\n# Affected Categories and Attributes\n### Affected Categories\nThe following leaf categories are impacted by this update:\n| Category Name | Leaf Category ID |\n| --- | --- |\n| Asthma | 1291408 |\n| Thrush | 1290384 |\n| Dandruff | 1291024 |\n| Jock Itch | 1290896 |\n| Nasal Treatment | 1290640 |\n| OTC Acne Treatment | 1290512 |\n| Yeast Infection | 1290256 |\n| Rosacea Care | 1289872 |\n| Psoriasis | 1290000 |\n| Pain Relief Homeopathic Remedies | 1289104 |\n| Aceaminophen | 1289744 |\n| Ibuprofen | 1289616 |\n| Muscle stimulators and accessories | 1289232 |\n| Scar Tape, Patch | 1288976 |\n| Joint and Muscle Pain Relief Rubs | 1289360 |\n| Stretchmarks Removal Cream, gel, lotion, oil | 1288848 |\n| Joint and Muscle Pain Relief Medication | 1289488 |\n| Nail Fungus Treatments | 1290768 |\n| Coughs & Colds | 949640 |\n| Eczema | 1290128 |\n| Sinus | 1291280 |\n| Cuts & Wounds | 950536 |\n| Digestion & Nausea | 949768 |\n| Allergies | 1291536 |\n| Antifungal Remedies | 1889040 |\n| Acetaminophen | 1070728 |\n| Ibuprofen | 1070856 |\n| Aspirin | 1064968 |\n| Baby & Child Cold & Flu Remedies | 1063048 |\n| Baby & Child Allergy Medicine | 1063176 |\n| Baby & Child Adhesive Bandages | 1063304 |\n### Mandatory Compliance Attributes\nThe following attributes will become mandatory for the categories listed above:\n| **attribute.name** | **attribute.id** | **Supported input type** |\n| --- | --- | --- |\n| Country of Origin | 100336 | Free form only |\n| Manufacturer | 100706 | Free form only |\n| Age Group | 100662 | Drop down only |\n| Number of Items | 101578 | Free form only |\n| Color | 101328 | Free form only |\n| Function | 101367 | Free form only |\n| Product Form | 100335 | Free form only |\n| Quantity per Pack | 100347 | Free form only |\n| Applicable Symptoms | 102698 | Free form only |\n| Net Content Count | 103361 | Free form only |\n| Net Weight | 100342 | Free form only |\n| Is the Liquid Product Double Sealed | 103362 | Free form only |\n| Is the Item Heath Sensitive? | 102245 | Free form only |\n| Unity Count Type | 102249 | Free form only |\n| Contains Liquid Contents? | 101604 | Drop down only |\n# API Changes\n### 1. Get Attributes\nThe response will include the mandatory status for the listed attributes when querying affected categories.\n### 2. Get Category Rules\nThe `requirement_conditions` in the response will indicate that these attributes are now mandatory (market-specific once markets are confirmed).\n### 3. Create Product & Edit Product\nDevelopers must include the mandatory attributes in the request body; missing attributes will return an error indicating the missing fields.\n\n**For more information, please refer to the TikTok Shop Academy.**\n",
+    "update_time": "1776364152",
+    "view_count": 0,
+    "prev_document_id": "69cf908570d83304e25ea66e",
+    "prev_document_path": "l8xklei9",
+    "next_document_id": "69e9cc34186bcf04b431d1f2",
+    "next_document_path": "9q4we8qr",
+    "is_api_doc": false,
+    "document_id": "69e12a0e70d83304e28a63bc",
+    "doc_type": 3,
+    "keywords": [
+      {
+        "keyword": "Coming Soon",
+        "font_color": "#3B87F6",
+        "background_color": "#EBF3FE"
+      },
+      {
+        "keyword": "Action Required",
+        "font_color": "#F754A8",
+        "background_color": "#FFE8F1"
+      }
+    ]
+  }
+}

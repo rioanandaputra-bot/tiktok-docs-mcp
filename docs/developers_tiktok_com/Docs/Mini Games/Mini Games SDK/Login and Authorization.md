@@ -1,0 +1,99 @@
+Docs
+These APIs manage the user's login status and data permissions.
+## .login(opts)
+Engages the **silent login** feature. This attempts to log the user in and get their basic access credentials (`code`) without showing an authorization screen. Used for IAP and basic identification.
+### Parameters
+
+| **Field** | **Type** | **Description** |
+| --- | --- | --- |
+| **success** | SuccessHandler | Returns a temporary code which must be sent to your backend server to exchange for the permanent `open_id`and `access_token` |
+| **fail** | FailHandler | Executed if silent login fails (for example, if the user is completely unauthorized) |
+| **complete** | CompleteHandler | Executed upon completion |
+
+- **success**: Callback for successful execution
+```
+type SuccessHandler = （result：{
+  code: string;
+}）= void;
+```
+- **fail**: Callback for execution failure
+```
+type FailHandler = (result: {
+  error: {
+    error_code: number;
+    error_msg: string;
+    error_extra: Record<string, unknown>;
+  }
+}) => void;
+```
+- **complete**: Callback for execution completion
+```
+type CompleteHandler = （）= void;
+```
+### Example
+```
+TTMinis.game.login({
+  success: (result) => {
+  // The user has logged in and authorized the application
+  // You can get the code and send it to the backend in exchange for open_id, access_token, and more
+   let code = result.code;
+  },
+  fail: (error) => {
+  // Other errors or deauthorization code is null
+  },
+  complete: () => {
+   //  Both success and failure will trigger this callback
+  }
+});
+```
+## .authorize(opts)
+Engages the **explicit authorization** process, which prompts the user with an authorization screen to grant your game specific data permissions. This is needed for data beyond basic ID, like username and avatar.
+By default, calling `TTMinis.game` attempts to verify the user's basic permissions (avatar, display name, open ID, and union ID).
+If you need one or more additional permissions, use the `scope` parameter, call `TTMinis.game` login, and set the `scope` parameter with a comma-separated list of permissions.
+- For account binding, please apply for this scope on the Developer Portal: **user.info****.basic - Login Kit**.
+- When you call `TTMinis.game.login`, please refer to the following examples.
+### Parameters
+
+| **Field** | **Type** | **Description** |
+| --- | --- | --- |
+| **scope** | string | Optional. The specific permission scope requested, such as "user.info.basic". Defaults to basic permissions if omitted but is necessary for additional data access. |
+| **success** | SuccessHandler | Returns the temporary code after the user explicitly grants permission. This code is then used by your server to fetch the authorized data. |
+
+- **success**: Callback for successful execution
+```
+type SuccessHandler = （result：{
+  code: string;
+}）= void;
+```
+- **fail**: Callback for execution failure
+```
+type FailHandler = (result: {
+  error: {
+    error_code: number;
+    error_msg: string;
+    error_extra: Record<string, unknown>;
+  }
+}) => void;
+```
+- **complete**: Callback for execution completion
+```
+type CompleteHandler = （）= void;
+```
+### Example
+```
+TTMinis.game.authorize({
+  scope: "user.info.basic"
+  success: (result) => {
+  // The user has logged in and authorized the application
+  // You can get the code and send it to the backend in exchange for open_id, access_token, and more
+   let code = result.code;
+  },
+  fail: (error) => {
+  // Other errors or deauthorization code is null
+  },
+  complete: () => {
+   //  Both success and failure will trigger this callback
+  }
+});
+```
+Was this document helpful?

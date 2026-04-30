@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "document_id": "697687c19d942f0499ad7c28",
+    "parent_id": "68af6766f863d304997a97ff",
+    "name": "[Important] New Analytics API Supports Data Drill Down & Deprecation of Old Versions",
+    "document_path": "ukjcmkq5",
+    "is_api_doc": false,
+    "doc_type": 3,
+    "update_time": "1769376080",
+    "keywords": [
+      "Action Required",
+      "New"
+    ]
+  },
+  "detail": {
+    "title": "[Important] New Analytics API Supports Data Drill Down & Deprecation of Old Versions",
+    "content": "# Summary\nThe existing **Analytics APIs** have a **new** version for `202509`, with the primary objective of aligning the data caliber with Seller Center Data Compass. Additionally, 3 new APIs have been added to provide data granularity to help merchants and influencers review, consolidate, and iterate content (video + live) production processes. \n\nDetails of the new API endpoints and functions are listed below.\n\n\n---\n\n\n# Impact\n| Impacted market(s) | * All markets - local and cross-border |\n| --- | --- |\n| Impacted version(s) | * 202509 (and later) |\n## Important Note\nAnalytic API Versions `202406` and `202409` will be **deprecated** and offline in **April 2026**\n\n\n---\n\n\n# What's new?\nAll existing Analytics APIs are now available in all markets. These include:\n| **Endpoint** | **Change Point** |\n| --- | --- |\n| [Get Shop Performance](https://partner.tiktokshop.com/docv2/page/get-shop-performance-202509) | **for Version 202509** <br>  <br> 1. Align with Seller Center Data Compass data and add more detailed sub-item data (For more details, please refer to the API documentation） <br> 2. Removed the `with_comparison` field, and now developers can make comparisons by themselves <br>  <br>  |\n| [Get Shop LIVE Performance Overview](https://partner.tiktokshop.com/docv2/page/get-shop-live-performance-overview-202509) |  |\n| [Get Shop LIVE Performance List](https://partner.tiktokshop.com/docv2/page/get-shop-live-performance-list-202509) |  |\n| [Get Shop Video Performance List](https://partner.tiktokshop.com/docv2/page/get-shop-video-performance-list-202509) |  |\n| [Get Shop Video Product Performance List](https://partner.tiktokshop.com/docv2/page/get-shop-video-product-performance-list-202509) |  |\n| [Get Shop Video Performance Details](https://partner.tiktokshop.com/docv2/page/get-shop-video-performance-details-202509) |  |\n| [Get Shop Video Performance Overview](https://partner.tiktokshop.com/docv2/page/get-shop-video-performance-overview-202509) |  |\n| [Get Shop Product Performance List](https://partner.tiktokshop.com/docv2/page/get-shop-product-performance-list-202509) |  |\n| [Get Shop Product Performance Detail](https://partner.tiktokshop.com/docv2/page/get-shop-product-performance-detail-202509) |  |\n| [Get Shop SKU Performance](https://partner.tiktokshop.com/docv2/page/get-shop-sku-performance-202509) |  |\n| [Get Shop SKU Performance List](https://partner.tiktokshop.com/docv2/page/get-shop-sku-performance-list-202509) |  |\n## New Analytics APIs\nThe following endpoints have been newly launched:\n| **Endpoint** | **Description** | **Version** |\n| --- | --- | --- |\n| [Get Shop Performance Per Hour](https://partner.tiktokshop.com/docv2/page/get-shop-performance-per-hour-202510) | Daily performance per hour detail, within 30 days. Including today. | 202510 <br>  |\n| [Get Shop LIVE Performance Per Minutes](https://partner.tiktokshop.com/docv2/page/get-shop-live-performance-per-minutes-202510) <br>  | Get the Live session performance break down to every minute, after the live session is finished. <br> This API only returns data of live streams hosted by shop official account or marketing account. |  |\n| [Get Shop LIVE Products Performance List](https://partner.tiktokshop.com/docv2/page/get-shop-live-products-performance-list-202512) | Shop related LIVE session (official account & marketing accounts） Sale performance of each product | 202512 |\n",
+    "update_time": "1769376080",
+    "view_count": 0,
+    "prev_document_id": "68d6ce2d8e2c770495cced8c",
+    "prev_document_path": "j5k1cmia",
+    "next_document_id": "69de0329404e8ddd87800ea6",
+    "next_document_path": "3dk9557y",
+    "is_api_doc": false,
+    "document_id": "697687c19d942f0499ad7c28",
+    "doc_type": 3,
+    "keywords": [
+      {
+        "keyword": "Action Required",
+        "font_color": "#F754A8",
+        "background_color": "#FFE8F1"
+      },
+      {
+        "keyword": "New",
+        "font_color": "#7EB712",
+        "background_color": "#EDF8BB"
+      }
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "meta": {
+    "document_id": "695a529cea754504a04bf8cc",
+    "parent_id": "64f1987fdc7f3e028d380fb4",
+    "name": "[US] Partner Growth Center ",
+    "document_path": "lu8gy7a6",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1767845496",
+    "keywords": [
+      "Growth Task"
+    ]
+  },
+  "detail": {
+    "title": "[US] Partner Growth Center ",
+    "content": "# **Introduction**\nThe Partner Growth Task Center (Partner - TTSPC) is an exclusive task management platform for partner users. Its entrance is located on the homepage of the \"Growth Center\" within the Partner Center, divided into two modules: \"Task\" and \"Growth Task\". This center is only accessible to partner roles (Seller Service- *TSP/* Creator Service*- CAP*/ Creator Matchmaking- *TAP*) logging in through main accounts or authorized sub-accounts.\n\n# **What Are the Benefits?** \nCentralized task hub in Partner Center enables easy access to policies and tasks, paired with real-time progress tracking and self-service.\nGain a partner conversion rate and an expanded base of high-quality partners to strengthen its ecosystem, increase total agency GMV and form a scalable, modular framework that supports future expansion.\n\n---\n\n\n# **Step by Step Guide** \n## **How to check your tasks?**\n**Entrance:**\n\n* Partner Center - Growth Center - Home Page - Task\n* Partner Center - Growth Center - Growth Center - Growth Task\n\n**Permission Control**:\n\n* Partner roles only (Seller Service<span style=\"color: #646a73\">- </span><span style=\"color: #646a73\"><em>TSP</em></span>*/* Creator Service<span style=\"color: #646a73\"><em>- CAP</em></span>/ Creator Matchmaking<span style=\"color: #646a73\">- </span><span style=\"color: #646a73\"><em>TAP</em></span>)\n* Login via main accounts/authorized sub-accounts.\n\n\n<div style=\"display: flex;\">\n<div style=\"flex-shrink: 0;width: calc((100% - 16px) * 0.5000);\">\n\n\n![Image](https://p16-arcosite-sg.ibyteimg.com/tos-alisg-i-k9wyc2ijk0-sg/7a157bb1ebca4fe58c7ba6b8a259ac55~tplv-k9wyc2ijk0-image.image)\n<div style=\"text-align: center\">Home Page</div>\n\n\n\n</div>\n<div style=\"flex-shrink: 0;width: calc((100% - 16px) * 0.5000);margin-left: 16px;\">\n\n\n![Image](https://p16-arcosite-sg.ibyteimg.com/tos-alisg-i-k9wyc2ijk0-sg/19cdc0b9fec44c4db92c89cf5b1fde51~tplv-k9wyc2ijk0-image.image)\n<div style=\"text-align: center\">Growth Task</div>\n\n\n\n</div>\n</div>\n\n\n## **How to claim a task ?**\n\n<div style=\"display: flex;\">\n<div style=\"flex-shrink: 0;width: calc((100% - 16px) * 0.5000);\">\n\n\n![Image](https://p16-arcosite-sg.ibyteimg.com/tos-alisg-i-k9wyc2ijk0-sg/9ee67fa48ec940889ba5ac7363166000~tplv-k9wyc2ijk0-image.image)\n<div style=\"text-align: center\">Home Page</div>\n\n\n\n</div>\n<div style=\"flex-shrink: 0;width: calc((100% - 16px) * 0.5000);margin-left: 16px;\">\n\n\n![Image](https://p16-arcosite-sg.ibyteimg.com/tos-alisg-i-k9wyc2ijk0-sg/6011403d3b0c47749584deb4f5c5382b~tplv-k9wyc2ijk0-image.image)\n<div style=\"text-align: center\">Growth Task</div>\n\n\n\n</div>\n</div>\n\n\n## **How to understand task details？**\n\n<div style=\"display: flex;\">\n<div style=\"flex-shrink: 0;width: calc((100% - 16px) * 0.5000);\">\n\n\n![Image](https://p16-arcosite-sg.ibyteimg.com/tos-alisg-i-k9wyc2ijk0-sg/de6de49edf664a298f50b8671529eea5~tplv-k9wyc2ijk0-image.image)\n<div style=\"text-align: center\">Home Page</div>\n\n\n\n</div>\n<div style=\"flex-shrink: 0;width: calc((100% - 16px) * 0.5000);margin-left: 16px;\">\n\n\n![Image](https://p16-arcosite-sg.ibyteimg.com/tos-alisg-i-k9wyc2ijk0-sg/f9c56812462f4ce897c59e51eeb151b0~tplv-k9wyc2ijk0-image.image)\n<div style=\"text-align: center\">Growth Task</div>\n\n\n\n</div>\n</div>\n\n\n* Task Name: Task name \n* Task Status：Not started, In progress, Completed, Expired\n* Task reward situation: the detail of task incentive \n* Task start and end time: The task start and end time \n* Task Objectives/Completion Rules (multiple)\n* Task Description: Task description text \n* Task Attachment URL: Task Jump URL displayed \n* Task Progress: Tasks after being claimed will display their progress.\n",
+    "update_time": "1767845496",
+    "view_count": 0,
+    "prev_document_id": "695a2ac57b0f6f049a666b4c",
+    "prev_document_path": "27l52z0f",
+    "next_document_id": "69e864aa124e9404bbe1c397",
+    "next_document_path": "npz00tc3",
+    "is_api_doc": false,
+    "document_id": "695a529cea754504a04bf8cc",
+    "doc_type": 2,
+    "keywords": [
+      {
+        "keyword": "Growth Task",
+        "font_color": "#141414",
+        "background_color": "#E6E6E6"
+      }
+    ]
+  }
+}

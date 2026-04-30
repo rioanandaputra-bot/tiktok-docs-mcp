@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "document_id": "694a789b100d45049710a9d7",
+    "parent_id": "654dc3f79b8d1c02d8697a23",
+    "name": "For SEA market: The parameter \"handover_method\" in API Ship Package and Batch Ship Package will be useless for cross-border overseas sellers",
+    "document_path": "4260w8mg",
+    "is_api_doc": false,
+    "doc_type": 3,
+    "update_time": "1766488326",
+    "keywords": [
+      "Coming Soon",
+      "Action Required"
+    ]
+  },
+  "detail": {
+    "title": "For SEA market: The parameter \"handover_method\" in API Ship Package and Batch Ship Package will be useless for cross-border overseas sellers",
+    "content": "# What is changing?\nFrom June 17, 2024, Platform updated the collection method to support sellers to choose different collection methods for different warehouse content. The parameter \"handover_method\" in API [Ship Package](https://partner.tiktokshop.com/docv2/page/650aa4f1defece02be6e7cb1?external_id=650aa4f1defece02be6e7cb1#Back%20To%20Top) and [Batch Ship Package](https://partner.tiktokshop.com/docv2/page/650aa3ebbace3e02b75d8bd4?external_id=650aa3ebbace3e02b75d8bd4#Back%20To%20Top) will be useless from March 31, 2026.\n# Which markets are affected?\nThe updates of the requirements apply to cross-border overseas sellers in Singapore, Philippines, Vietnam, Thailand and Malaysia markets.\n# Who is affected?\nDevelopers with applications that use [Ship Package](https://partner.tiktokshop.com/docv2/page/650aa4f1defece02be6e7cb1?external_id=650aa4f1defece02be6e7cb1#Back%20To%20Top) and [Batch Ship Package](https://partner.tiktokshop.com/docv2/page/650aa3ebbace3e02b75d8bd4?external_id=650aa3ebbace3e02b75d8bd4#Back%20To%20Top).\n# Which version is applicable?\nThe updates of the requirements apply to all versions of the related APIs\n# What action is required?\nDevelopers need to check whether to use handover_method to update the collection method. It will be useless.\nIf sellers want to know the order's collection method, they need to go to Seller Center to see the setting of related warehouses. The path is \"Orders\"->\"Manage Orders\"->\"Fulfillment settings\"->\"Collection method settings\".\n",
+    "update_time": "1766488326",
+    "view_count": 0,
+    "prev_document_id": "69015eaf5b602804822560ba",
+    "prev_document_path": "gt8qv13g",
+    "next_document_id": "694af90a7b0f6f049ae109cc",
+    "next_document_path": "m5p1u1fo",
+    "is_api_doc": false,
+    "document_id": "694a789b100d45049710a9d7",
+    "doc_type": 3,
+    "keywords": [
+      {
+        "keyword": "Coming Soon",
+        "font_color": "#3B87F6",
+        "background_color": "#EBF3FE"
+      },
+      {
+        "keyword": "Action Required",
+        "font_color": "#F754A8",
+        "background_color": "#FFE8F1"
+      }
+    ]
+  }
+}
