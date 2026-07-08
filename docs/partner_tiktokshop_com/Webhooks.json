@@ -1,0 +1,1371 @@
+[
+ {
+  "path": "Customer Service/_13_ New conversation.json",
+  "data": {
+   "meta": {
+    "document_id": "6614330bfe9fdc02e002abfd",
+    "parent_id": "670cb977a88d1103247e6d60",
+    "name": "(13) New conversation",
+    "document_path": "13-new-conversation",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1751450044",
+    "keywords": []
+   },
+   "detail": {
+    "title": "(13) New conversation",
+    "content": "# 1. Trigger scenario\nThis **new conversation** webhook is triggered when a customer service agent joins or leaves a conversation.\nWe recommend refreshing the conversation list when receiving this event.\n# 2. Data business parameters\n| **Parameter name** | **Data type** | **Sample** | **Description** |\n| --- | --- | --- | --- |\n| conversation_id | string | 576486316948490001 | The identification of the conversation |\n| create_time | int | 1627587506 | Conversation creation time, represented as a Unix timestamp (in seconds). |\n## Event example\n```JSON\n{\n  \"type\": 13,\n  \"tts_notification_id\": \"7327112393057371910\",\n  \"shop_id\": \"7494049642642441621\",\n  \"timestamp\": 1644412885,\n  \"data\": {    \n    \"conversation_id\": \"576486316948490001\",\n    \"create_time\": 1627587506\n  }\n}\n```\n\n\n",
+    "update_time": "1751450044",
+    "view_count": 0,
+    "prev_document_id": "6939a1e66ae5d8050a4bd0c4",
+    "prev_document_path": "urzvzank",
+    "next_document_id": "66143486ef8a1202dc323258",
+    "next_document_path": "14-new-message",
+    "is_api_doc": false,
+    "document_id": "6614330bfe9fdc02e002abfd",
+    "doc_type": 2,
+    "keywords": [
+     {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "path": "Customer Service/_14_ New message.json",
+  "data": {
+   "meta": {
+    "document_id": "66143486ef8a1202dc323258",
+    "parent_id": "670cb977a88d1103247e6d60",
+    "name": "(14) New message",
+    "document_path": "14-new-message",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1770189733",
+    "keywords": []
+   },
+   "detail": {
+    "title": "(14) New message",
+    "content": "# 1. Trigger scenario\nThe **new message** webhook is triggered when a new message is sent in a customer service conversation.\n# 2. Data business parameters\n| **Parameter name** | **Data type** | **Sample** | **Description** |\n| --- | --- | --- | --- |\n| message_id | string | 7494560109732334263 | The identification of the message |\n| index | string | 7494560109732334274 | The message index that can be used to sort messages. <br> Newer messages have a larger index. |\n| conversation_id | string | 576486316948490001 | The identification of the conversation |\n| type | string(enum) | TEXT | Message type, with possible values: <br> * TEXT <br> * IMAGE <br> * ALLOCATED_SERVICE <br> * NOTIFICATION <br> * BUYER_ENTER_FROM_TRANSFER <br> * BUYER_ENTER_FROM_PRODUCT <br> * BUYER_ENTER_FROM_ORDER <br> * PRODUCT_CARD <br> * ORDER_CARD <br> * EMOTICONS <br> * VIDEO <br> * COUPON_CARD <br> *LOGISTICS_CARD <br> * OTHER |\n| content | string | {\"content\": \"simple text message\"} | Message content, in JSON serialized string. <br> Examples: <br>  <br> * TEXT: <br> {\"content\": \"simple text\"} <br>  <br> * IMAGE: <br> {  <br>      \"height\": \"290\",  <br>      \"url\": \"https://tosv.boei18n.byted.org/obj/temai-im/FszkJ53nSapYG6KDaJQmqR3jjoZGwww304-290\",  <br>      \"width\": \"304\"  <br>  }  <br>  <br> * PRODUCT_CARD, BUYER_ENTER_FROM_PRODUCT: <br>  {\"product_id\": \"12345\"}  <br>  <br> * ORDER_CARD, BUYER_ENTER_FROM_ORDER : <br>  {\"order_id\": \"12345\"}  <br>  <br> * VIDEO: <br>  {  <br>      \"url\": \"https://video-boei18n.byted.org/storage/v1/tos-boei18n-v-c72c01/e8240f35244646428df9c3244d1a7408?x-tos-algorithm=v2&x-tos-authkey=5bf25627da095a5cba28ace592de46cc&x-tos-expires=1681980481&x-tos-signature=r_bRxtrvGhXAuZgMmNhlZ_Upqzg\",  <br>      \"cover\": \"https://p-boei18n.byted.org/tos-boei18n-v-c72c01/o8keEOhzTcNCcJyAbkWZwpLIyTfkJxcGbRBvLP~tplv-jvtte31kaf-origin-jpeg.jpeg?\",  <br>      \"width\": 640,  <br>      \"height\": 360,  <br>      \"duration\": \"20.504\",  <br>      \"vid\": \"v0e30cg700f7cgcmu8jc77u9e2bdp95g\",  <br>      \"expire_time\": \"1681980481\",  <br>      \"format\": \"mp4\",  <br>      \"size\": 400000,  <br>      \"bit_rate\": 156067,  <br>      \"quality\": \"original\",  <br>      \"codec_type\": \"h264\"  <br>  }  <br>  <br> * LOGISTICS_CARD: <br> { <br>     \"order_id\": \"580874485811283206\", <br>     \"package_id\": \"123456\"  // Optional  (recommended for one order with multiple packages; not required for one order with one package) <br> } <br>  <br> * COUPON_CARD: <br>  {\"coupon_id\": \"7262992004278206762\"} <br>  <br>  <br> Note: Use Get Coupon for the details of the coupon. <br>  <br> * ALLOCATED_SERVICE, NOTIFICATION, BUYER_ENTER_FROM_TRANSFER, OTHER: <br> {\"content\": \"simple text\"} |\n| create_time | int | 1691411573 | Message creation time, represented as a Unix timestamp (seconds). |\n| is_visible | bool | true | Whether this message should be displayed to customer service. |\n| sender | Object |  | The message sender. <br> For system and robot roles, the shop is the sender. |\n| ^im_user_id | string | 7494560109732334261 | Sender's ID <br> These are IM IDs, and can not be used to query orders. |\n| ^role | string(enum) | BUYER | Sender's role, with possible values: <br> * BUYER <br> * SHOP <br> * CUSTOMER_SERVICE <br> * SYSTEM <br> * ROBOT |\n## Event example\n```JSON\n{\n  \"type\": 14,\n  \"tts_notification_id\": \"7327112393057371910\",\n  \"shop_id\": \"7494049642642441621\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"content\": \"{\\\"content\\\":\\\"444\\\"}\",\n    \"conversation_id\": \"710688832392260838\",\n    \"create_time\": 1681790246,\n    \"is_visible\": true,\n    \"message_id\": \"722323407926368819\",\n    \"index\": \"7494560109732334274\",\n    \"type\": \"TEXT\",\n    \"sender\": {\n      \"im_user_id\": \"707885565181165594\",\n      \"role\": \"BUYER\"\n    }\n  }\n}\n```\n\n\n",
+    "update_time": "1770189733",
+    "view_count": 0,
+    "prev_document_id": "6614330bfe9fdc02e002abfd",
+    "prev_document_path": "13-new-conversation",
+    "next_document_id": "67b68ca185619104a6772e5d",
+    "next_document_path": "36-invoice-status-change",
+    "is_api_doc": false,
+    "document_id": "66143486ef8a1202dc323258",
+    "doc_type": 2,
+    "keywords": [
+     {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "path": "Seller/_35_ Tokopedia mirror status change.json",
+  "data": {
+   "meta": {
+    "document_id": "678f43b378f4c20311becd07",
+    "parent_id": "670cb9871c9fc90307d9cf5d",
+    "name": "(35) Tokopedia mirror status change",
+    "document_path": "35-tokopedia-mirror-status-change",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1751450178",
+    "keywords": []
+   },
+   "detail": {
+    "title": "(35) Tokopedia mirror status change",
+    "content": "# 1. Trigger scenario\nThis webhook is triggered when the TikTok Shop to Tokopedia mirroring process is completed or rolled back. Applicable only for the **Indonesia** market.\n\n**Prerequisite**: The shop is [active](get-active-shops), and the \"**Shop Authorized Information**\" API scope is enabled in Partner Center. For more information, refer to [Access Scope](access-scope).\n# 2. Data business parameters\n| **Parameter name** | **Data type** | **Sample** | **Description** |\n| --- | --- | --- | --- |\n| type | int | 35 | The ID of this webhook topic, which is 35. |\n| tts_notification_id | string | \"7327112393057371910\" | The ID of this webhook notification. |\n| seller_open_id | string | \"VIyStQAAAADCBQ40s4TzOSSOEIW-bM5O9cod3vK8OytW8m-bnBYlXw\" | The open_id of the seller. For more information, refer to [Authorization overview](authorization-overview-202407). |\n| timestamp | int | 1644412885 | The time when this webhook is triggered. Unix timestamp. |\n| data | object |  |  |\n| └ tts_shop_id | string | \"7494049642642441621\" | The shop ID in TikTok Shop. |\n| └ update_time | int | 1627587600 | The time when the change occurred. Unix timestamp. |\n| └ mirror_status | string | \"MIRRORED\" | The shop mirroring status: <br> - MIRRORED <br> - ROLLED_BACK <br> - CANCELED |\n## Event example\n```JSON\n{\n  \"type\": 35,\n  \"tts_notification_id\" : \"7327112393057371910\",\n  \"seller_open_id\": \"VIyStQAAAADCBQ40s4TzOSSOEIW-bM5O9cod3vK8OytW8m-bnBYlXw\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"tts_shop_id\": \"7494049642642441621\",\n    \"mirror_status\" : \"MIRRORED\",\n    \"update_time\": 1627587600\n  }\n}\n```\n\n\n",
+    "update_time": "1751450178",
+    "view_count": 0,
+    "prev_document_id": "6509579c0fcef602bf11312c",
+    "prev_document_path": "7-upcoming-authorization-expiration",
+    "next_document_id": "66063c677be39902c7774b24",
+    "next_document_path": "66063c677be39902c7774b24",
+    "is_api_doc": false,
+    "document_id": "678f43b378f4c20311becd07",
+    "doc_type": 2,
+    "keywords": [
+     {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "path": "Seller/_6_ Seller deauthorization.json",
+  "data": {
+   "meta": {
+    "document_id": "65095746defece02be4d749d",
+    "parent_id": "670cb9871c9fc90307d9cf5d",
+    "name": "(6) Seller deauthorization",
+    "document_path": "6-seller-deauthorization",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1751450168",
+    "keywords": []
+   },
+   "detail": {
+    "title": "(6) Seller deauthorization",
+    "content": "# 1. Trigger scenario\nThe **seller deauthorization** webhook is triggered after a seller is deauthorized. This is important to prevent developers from assuming there is an issue with the platform authorization function.\n# 2. Data business parameters\n| **Parameter name** | **Sample** | **Description** |\n| --- | --- | --- |\n| type | 6 | The identification of each type of notification |\n| shop_id | 123455 | The identification of the shop |\n| timestamp | 1627587506 | The time when the notification is pushed, represented as a Unix timestamp (seconds). |\n| data | \"data\": {\"message\": \"Shop_id {xxx} is deauthorized from your APP by merchant.\"} | The object contains business parameters related to the specific notification type |\n## Event example\n```JSON\n{\n  \"type\": 6,\n  \"tts_notification_id\": \"7327112393057371910\",\n  \"shop_id\": \"7494049642642441621\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"message\": \"Shop_id {xxx} is deauthorized from your APP by merchant.\"\n  }\n}\n```\n\n\n",
+    "update_time": "1751450168",
+    "view_count": 0,
+    "prev_document_id": "65030162bb2a4d028d50cc51",
+    "prev_document_path": "12-return-status-change",
+    "next_document_id": "6509579c0fcef602bf11312c",
+    "next_document_path": "7-upcoming-authorization-expiration",
+    "is_api_doc": false,
+    "document_id": "65095746defece02be4d749d",
+    "doc_type": 2,
+    "keywords": [
+     {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "path": "Seller/_7_ Upcoming authorization expiration.json",
+  "data": {
+   "meta": {
+    "document_id": "6509579c0fcef602bf11312c",
+    "parent_id": "670cb9871c9fc90307d9cf5d",
+    "name": "(7) Upcoming authorization expiration",
+    "document_path": "7-upcoming-authorization-expiration",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1751450172",
+    "keywords": []
+   },
+   "detail": {
+    "title": "(7) Upcoming authorization expiration",
+    "content": "# 1. Trigger scenario\nThe **upcoming authorization expiration** webhook is triggered 30 days before authorization automatically expires. This webhook continues to notify the seller once a day at 0:00 until re-authorization is completed.\n# 2. Data business parameters\n| **Parameter name** | **Sample** | **Description** |\n| --- | --- | --- |\n| type | 7 | The identification of each type of notification |\n| shop_id | 123455 | The identification of the shop |\n| timestamp | 1627587506 | The time when the notification is pushed, represented as a Unix timestamp (seconds). |\n| data | \"data\": {\"message\": \"Authorization of shop_id {xxx} is expiring in {} days. Please direct the merchant to re-authorize.\", \"expiration_time\": \"1627587506\"} | The object contains business parameters related to the specific notification type. |\n## Event example\n```JSON\n{\n  \"type\": 7,\n  \"tts_notification_id\": \"7327112393057371910\",\n  \"shop_id\": \"7494049642642441621\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"message\": \"Authorization of shop_id {xxx} is expiring in {x} days. Please direct the merchant to re-authorize.\",\n    \"expiration_time\": \"1627587506\"\n  }\n}\n```\n\n\n",
+    "update_time": "1751450172",
+    "view_count": 0,
+    "prev_document_id": "65095746defece02be4d749d",
+    "prev_document_path": "6-seller-deauthorization",
+    "next_document_id": "678f43b378f4c20311becd07",
+    "next_document_path": "35-tokopedia-mirror-status-change",
+    "is_api_doc": false,
+    "document_id": "6509579c0fcef602bf11312c",
+    "doc_type": 2,
+    "keywords": [
+     {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "path": "Fulfilled by TikTok/_21_ Inbound FBT order status change.json",
+  "data": {
+   "meta": {
+    "document_id": "6708f866a88d1103246fed6a",
+    "parent_id": "670cb979889b3d031da0235c",
+    "name": "(21) Inbound FBT order status change",
+    "document_path": "21-inbound-fbt-order-status-change",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1751450066",
+    "keywords": []
+   },
+   "detail": {
+    "title": "(21) Inbound FBT order status change",
+    "content": "## Trigger scenario\nThis webhook is triggered when the status of an FBT inbound order changes.\n> Prerequisite: The **Fulfilled by TikTok(FBT) Info** API scope is enabled in Partner Center. For more information, refer to [Access Scope](access-scope).\n\n## Data business parameters\n| **Parameter Name** <!-- width:240px --> | **Data Type** | **Sample** | **Description** |\n| --- | --- | --- | --- |\n| type | int | `21` | The ID of this webhook topic, which is 21. |\n| tts_notification_id | string | `\"7327112393057371910\"` | The ID of this webhook notification. |\n| seller_open_id | string | `\"VIyStQAAAADCBQ40s4TzOSSOEIW-bM5O9cod3vK8OytW8m-bnBYlXw\"` | The open_id of the seller. For more information, refer to [Authorization overview](authorization-overview-202407). |\n| timestamp | int | `1644412885` | The time when this webhook is triggered. Unix timestamp. |\n| data | object |  |  |\n| └ inbound_order_id | string | `\"IBR577087614418520388\"` | FBT inbound order ID. |\n| └ order_status | string | `\"CANCELLED\"` | Inbound order status. Possible enumerations: <br>- TO_BE_RECEIVED <br>- ARRIVE_HUB, <br>- RECEIVING, <br>- PARTIALLY_RECEIVED, <br>- RECEIVED, <br>- CANCELLED |\n| └ update_time | int | `1644412845` | The time when the change occurred. Unix timestamp. |\n## Event example\n```JSON\n{\n  \"type\": 21,\n  \"seller_open_id\": \"VIyStQAAAADCBQ40s4TzOSSOEIW-bM5O9cod3vK8OytW8m-bnBYlXw\",\n  \"tts_notification_id\" : \"7327112393057371910\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"inbound_order_id\": \"IBR577087614418520388\",\n    \"order_status\": \"CANCELLED\",\n    \"update_time\": 1644412845\n  }\n}\n```\n\n\n",
+    "update_time": "1751450066",
+    "view_count": 0,
+    "prev_document_id": "67b68ca185619104a6772e5d",
+    "prev_document_path": "36-invoice-status-change",
+    "next_document_id": "6708f86842f5af03316bccff",
+    "next_document_path": "22-fbt-merchant-onboarding",
+    "is_api_doc": false,
+    "document_id": "6708f866a88d1103246fed6a",
+    "doc_type": 2,
+    "keywords": [
+     {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "path": "Fulfilled by TikTok/_22_ FBT merchant onboarding.json",
+  "data": {
+   "meta": {
+    "document_id": "6708f86842f5af03316bccff",
+    "parent_id": "670cb979889b3d031da0235c",
+    "name": "(22) FBT merchant onboarding",
+    "document_path": "22-fbt-merchant-onboarding",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1751450069",
+    "keywords": []
+   },
+   "detail": {
+    "title": "(22) FBT merchant onboarding",
+    "content": "## Trigger scenario\nThis webhook is triggered when the TikTok Shop seller onboards FBT platform to enable FBT service.\n> Prerequisite: The **Fulfilled by TikTok(FBT) Info** API scope is enabled in Partner Center. For more information, refer to [Access Scope](access-scope).\n\n## Data business parameters\n| **Parameter Name** <!-- width:240px --> | **Data Type** | **Sample** | **Description** |\n| --- | --- | --- | --- |\n| type | int | `22` | The ID of this webhook topic, which is 22. |\n| tts_notification_id | string | `\"7327112393057371910\"` | The ID of this webhook notification. |\n| seller_open_id | string | `\"VIyStQAAAADCBQ40s4TzOSSOEIW-bM5O9cod3vK8OytW8m-bnBYlXw\"` | The open_id of the seller. For more information, refer to [Authorization overview](authorization-overview-202407). |\n| timestamp | int | `1644412885` | The UNIX timestamp when the FBT onboarding status is updated. |\n| data | object |  |  |\n| └ onboarded_regions | []object |  | All onboarded FBT regions. |\n| └└ region_code | string | `\"GB\"` | Onboarded FBT region code. |\n| └ update_time | int | `1644412845` | The latest update time. Unix timestamp. |\n## Event example\n```JSON\n{\n  \"type\": 22,\n  \"seller_open_id\": \"VIyStQAAAADCBQ40s4TzOSSOEIW-bM5O9cod3vK8OytW8m-bnBYlXw\",\n  \"tts_notification_id\" : \"7327112393057371910\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"onboarded_regions\": [\n      {\n        \"region_code\": \"GB\"\n      }\n    ],\n    \"update_time\": 1644412845\n  }\n}\n```\n\n\n",
+    "update_time": "1751450069",
+    "view_count": 0,
+    "prev_document_id": "6708f866a88d1103246fed6a",
+    "prev_document_path": "21-inbound-fbt-order-status-change",
+    "next_document_id": "6708f86aed6fab0308fa780e",
+    "next_document_path": "23-goods-match",
+    "is_api_doc": false,
+    "document_id": "6708f86842f5af03316bccff",
+    "doc_type": 2,
+    "keywords": [
+     {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "path": "Fulfilled by TikTok/_23_ Goods match.json",
+  "data": {
+   "meta": {
+    "document_id": "6708f86aed6fab0308fa780e",
+    "parent_id": "670cb979889b3d031da0235c",
+    "name": "(23) Goods match",
+    "document_path": "23-goods-match",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1751450073",
+    "keywords": []
+   },
+   "detail": {
+    "title": "(23) Goods match",
+    "content": "## Trigger scenario\nThis webhook is triggered when the seller matches / unmatches the TikTok Shop product to the FBT Goods.\n> Prerequisite: The **Fulfilled by TikTok(FBT) Info** API scope is enabled in Partner Center. For more information, refer to [Access Scope](access-scope).\n\n## Data business parameters\n| **Parameter Name** <!-- width:240px --> | **Data Type** | **Sample** | **Description** |\n| --- | --- | --- | --- |\n| type | int | `23` | The ID of this webhook topic, which is 23. |\n| tts_notification_id | string | `\"7327112393057371910\"` | The ID of this webhook notification. |\n| seller_open_id | string | `\"VIyStQAAAADCBQ40s4TzOSSOEIW-bM5O9cod3vK8OytW8m-bnBYlXw\"` | The open_id of the seller. For more information, refer to [Authorization overview](authorization-overview-202407). |\n| timestamp | int | `1644412885` | The time when this webhook is triggered. Unix timestamp. |\n| data | object |  |  |\n| └ match_type | string | `\"MATCH\"` | Indicates whether the seller is matching or unmatching products. Possible enumerations are: `MATCH` and `UNMATCH`. |\n| └ product_type | string | `\"LOCAL\"` | Possible enumerations are: `LOCAL` and `GLOBAL`. |\n| └ goods_id | string | `\"732357708734418520388\"` | FBT Goods ID. |\n| └ product_id | string | `\"123513234\"` | TikTok Shop product ID. |\n| └ sku_id | string | `\"123563781\"` | TikTok Shop SKU ID. |\n| └ update_time | int | `1644412845` | The time when the action occurred. Unix timestamp. |\n## Event example\n```JSON\n{\n  \"type\": 23,\n  \"seller_open_id\": \"VIyStQAAAADCBQ40s4TzOSSOEIW-bM5O9cod3vK8OytW8m-bnBYlXw\",\n  \"tts_notification_id\" : \"7327112393057371910\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"match_type\": \"MATCH\",\n    \"product_type\": \"LOCAL\",\n    \"goods_id\": \"732357708734418520388\",\n    \"product_id\": \"123513234\",\n    \"sku_id\": \"123563781\",\n    \"update_time\": 1644412845\n  }\n}\n```\n\n\n",
+    "update_time": "1751450073",
+    "view_count": 0,
+    "prev_document_id": "6708f86842f5af03316bccff",
+    "prev_document_path": "22-fbt-merchant-onboarding",
+    "next_document_id": "6708f86d24e99e035deee8b9",
+    "next_document_path": "24-fbt-inventory-update",
+    "is_api_doc": false,
+    "document_id": "6708f86aed6fab0308fa780e",
+    "doc_type": 2,
+    "keywords": [
+     {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "path": "Fulfilled by TikTok/_24_ FBT inventory update.json",
+  "data": {
+   "meta": {
+    "document_id": "6708f86d24e99e035deee8b9",
+    "parent_id": "670cb979889b3d031da0235c",
+    "name": "(24) FBT inventory update",
+    "document_path": "24-fbt-inventory-update",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1751450076",
+    "keywords": []
+   },
+   "detail": {
+    "title": "(24) FBT inventory update",
+    "content": "## Trigger scenario\nThis webhook is triggered when the FBT inventory updates.\n> Prerequisite: The **Fulfilled by TikTok(FBT) Info** API scope is enabled in Partner Center. For more information, refer to [Access Scope](access-scope).\n\n## Data business parameters\n| Parameter Name <!-- width:240px --> | Data Type | Sample | Description |\n| --- | --- | --- | --- |\n| type | int | `24` | The ID of this webhook topic, which is 24. |\n| tts_notification_id | string | `\"7327112393057371910\"` | The ID of this webhook notification. |\n| seller_open_id | string | `\"VIyStQAAAADCBQ40s4TzOSSOEIW-bM5O9cod3vK8OytW8m-bnBYlXw\"` | The open_id of the seller. For more information, refer to [Authorization overview](authorization-overview-202407). |\n| timestamp | int | `1644412885` | The time when this webhook is triggered. Unix timestamp. |\n| data | object |  |  |\n| └ goods_id | string | `\"732357708734418520388\"` | FBT goods ID. |\n| └ sku_id | string | `\"123513234\"` | TikTok Shop SKU ID. |\n| └ fbt_warehouse_inventory | []object |  | Inventory in different FBT warehouses. |\n| └└ fbt_warehouse_id | string | `\"73823232239293999999\"` | ID of the FBT warehouse. |\n| └└ on_hand_detail | object |  | The number of units physically in the warehouse, excluding those in transit or damaged. |\n| └└└ total_quantity | int | `7` | The total number of units. |\n| └└└ reserved_quantity | int | `5` | The number of units reserved for confirmed orders and yet to be outbound. |\n| └└└ available_quantity | int | `2` | The number of units available for sale. This does not include reserved units. |\n| └ update_time | int | `1644412845` | The time when the action occurred. Unix timestamp. |\n## Event example\n```JSON\n{\n  \"type\": 24,\n  \"seller_open_id\": \"VIyStQAAAADCBQ40s4TzOSSOEIW-bM5O9cod3vK8OytW8m-bnBYlXw\",\n  \"tts_notification_id\" : \"7327112393057371910\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"goods_id\": \"732357708734418520388\",\n    \"sku_id\": \"123513234\",\n    \"fbt_warehouse_inventory\": [\n        {\n            \"fbt_warehouse_id\": \"73823232239293999999\",\n            \"on_hand_detail\": {\n                \"total_quantity\": 7,\n                \"reserved_quantity\": 5,\n                \"available_quantity\": 2\n            }\n        }\n    ],\n    \"update_time\": 1644412845\n  }\n}\n```\n\n\n",
+    "update_time": "1751450076",
+    "view_count": 0,
+    "prev_document_id": "6708f86aed6fab0308fa780e",
+    "prev_document_path": "23-goods-match",
+    "next_document_id": "69844ba3a131ab04a49b6420",
+    "next_document_path": "gqh1f39k",
+    "is_api_doc": false,
+    "document_id": "6708f86d24e99e035deee8b9",
+    "doc_type": 2,
+    "keywords": [
+     {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "path": "Fulfilled by TikTok/_58_ Get FBT MCF Order Status.json",
+  "data": {
+   "meta": {
+    "document_id": "69844ba3a131ab04a49b6420",
+    "parent_id": "670cb979889b3d031da0235c",
+    "name": "(58) Get FBT MCF Order Status",
+    "document_path": "gqh1f39k",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1773171457",
+    "keywords": []
+   },
+   "detail": {
+    "title": "(58) Get FBT MCF Order Status",
+    "content": "## Trigger scenario\nThis webhook is triggered when the FBT multi-channel-fulfillment order status has changed/updated.\n> Prerequisite: The **Fulfilled by TikTok(FBT) Info** API scope is enabled in Partner Center. For more information, refer to [Access Scope](access-scope).\n\n## Data business parameters\n| Properties |  |  |  |  | Type | Example | Properties description |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| type |  |  |  |  | int | 58 | The ID of the webhook type. |\n| tts_notification_id |  |  |  |  | string | 7327112393057371910 | The ID of the notification. |\n| seller_open_id <br>  |  |  |  |  | string | VIyStQAAAADCBQ40s4TzOSSOEIW-bM5O9cod3vK8OytW8m-bnBYlXw | The open_id of the seller. For more information, refer to [Authorization overview](https://partner.tiktokshop.com/docv2/page/authorization-overview-202407). |\n| timestamp |  |  |  |  | int | 1644412885 | The UNIX timestamp when this webhook was triggered. |\n| data |  |  |  |  |  |  |  |\n|  | mcf_order |  |  |  | object |  | MCF order information |\n| > |  | external_order_id <br>  |  |  | string | shopify202208291503530001100220033 | The corresponding order ID in your OMS. |\n| > |  | mcf_order_id |  |  | string | 7136104329798256386 | A unique ID that identifies different MCF orders |\n| > |  | consign_orders |  |  | []object |  | Once the order has been shipped, the `consign_orders` field will display the consignment details of the order. |\n| > |  | > | id |  | string | OBF12345678 | `consign order` unique id |\n| > |  | > | tracking_number |  | string | TN87654321 | The tracking number of this consign order. If the order has not yet been handed over to the logistics carrier, this field may be a null value. |\n| > |  | > | status |  | string | processing | The status of this consign order <br>  <br> Possible Status Enumerations <br> 1. **SHIPPED** - Order has been shipped out from the warehouse <br> 2. **HANDOVER** - Order has been received by the logistics carrier and is in transit <br> 3. **CLOSED** - Order has been closed <br> 4. **LOST** - Order is lost <br> 5. **DAMAGE** - Order is damaged <br> 6. **COMPLETED** - Order has been completed <br> 7. **ABNORMAL** - There is an issue related to this order and cannot be fulfilled. |\n| > |  | > | goods |  | []object |  | The goods id and quantity in this consign order.  |\n| > |  | > | > | id | string | 1231231 | Identifier for goods generated by Fulfilled by TikTok systemgoods id |\n| > |  | > | > | quantity | int16 | 1 | The goods quantity in this consign order |\n|  |  | > <br>  | is_platform_closed <br>  |  | string  | true <br>  | This field indicates whether a consign order has been canceled by the FBT platform. If the value is true, it means the order has been canceled by the platform; if it is false, it means the order has been canceled by your OMS. |\n|  |  | > | issue |  | string | Lack of inventory | This field displays the reason for order stalling. When a `consign order` is in an abnormal status (such as ABNORMAL, LOST, etc.), specific issue reasons will be shown here. |\n|  |  | > | shipping_provider |  | object |  | The shipping carrier detailed information of this consign order. If the order has not yet been handed over to the logistics carrier, this field may be a null value. |\n|  |  | > | > | id | string | 7345645330412603141 | The shipping carrier unique id. |\n|  |  | > | > | name | string | UPS | The shipping carrier name. |\n| > |  | create_time |  |  | int64 | 1661756811 | The time when the mcf order is created |\n\n## Event example\n```JSON\n{\n  \"type\": 58,\n  \"creator_open_id\": \"VIyStQAAAADCBQ40s4TzOSSOEIW-bM5O9cod3vK8OytW8m-bnBYlXw\",\n  \"tts_notification_id\": \"7327112393057371910\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"mcf_order\": {\n      \"external_order_id\": \"shopify202208291503530001100220033\",\n      \"mcf_order_id\": \"7136104329798256386\",\n      \"consign_orders\": {\n        \"id\": \"OBF12345678\",\n        \"tracking_number\": \"TN87654321\",\n        \"carrier\": \"USPS\",\n        \"status\": \"processing\",\n        \"goods\": {\n          \"id\": \"1231231\",\n          \"quantity\": 1\n        }\n      },\n      \"create_time\": 1661756811\n    }\n  }\n}\n```\n\n\n",
+    "update_time": "1773171457",
+    "view_count": 0,
+    "prev_document_id": "6708f86d24e99e035deee8b9",
+    "prev_document_path": "24-fbt-inventory-update",
+    "next_document_id": "650301af5a12ff0294ea3bf9",
+    "next_document_path": "3-recipient-address-update",
+    "is_api_doc": false,
+    "document_id": "69844ba3a131ab04a49b6420",
+    "doc_type": 2,
+    "keywords": [
+     {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "path": "Fulfillment/_36_ Invoice status change.json",
+  "data": {
+   "meta": {
+    "document_id": "67b68ca185619104a6772e5d",
+    "parent_id": "67b68c9f0dea6c04ba56834b",
+    "name": "(36) Invoice status change",
+    "document_path": "36-invoice-status-change",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1751450059",
+    "keywords": []
+   },
+   "detail": {
+    "title": "(36) Invoice status change",
+    "content": "# 1. Trigger scenario\nThis webhook is triggered when the status of an invoice upload changes after using the [POST Upload Invoice](upload-invoice) endpoint.\n**Note**: The [POST Upload Invoice](upload-invoice) API is currently only applicable to the Brazil market.\n# 2. Data business parameters\n| **Parameter name** | **Data type** | **Sample** | **Description** |\n| --- | --- | --- | --- |\n| shop_id | string | \"7494049642642441621\" | The TikTok Shop ID. |\n| type | int64 | 36 | The ID of this webhook topic, which is 36. |\n| tts_notification_id | string | \"7327112393057371910\" | The ID of this webhook notification. |\n| timestamp | int64 | 1644412885 | The time when this webhook is triggered. Unix timestamp. |\n| data | object |  |  |\n| └ package_id | string | \"123456\" | The ID of the package. |\n| └ order_ids | []string | [\"152523\", \"532123\"] | List of order IDs in the corresponding `package_id`. |\n| └ invoice_status | string | \"SUCCESS\" | The status of the invoice upload. Possible values: <br>  <br> * `SUCCESS` <br> * `PROCESSING` <br> * `FAILED` <br> * `INVALID` |\n| └ invalid_reason | string | \"NOT_FOUND\" | The reason why `invoice_status = INVALID`. Possible values: <br>  <br> * `UNKNOWN`: Internal system error. Please try again later. <br> * `FAILED`: The NFe file or access key is invalid. Please check the XML file for correctness. <br> * `NOT_FOUND`: The NFe was not found. This may be due to data delay. Please try again later. <br> * `NOT_AUTHORIZED`: The NFe is not legally authorized. It may not have been issued or has been canceled. <br> * `ACCESS_KEY_DUPLICATE`: The access key already exists. You cannot upload an invoice with duplicate access key. |\n## Event example\n```json\n{\n    \"type\":36,\n    \"tts_notification_id\": \"7327112393057371910\",\n    \"shop_id\": \"7494049642642441621\",\n    \"timestamp\": 1644412885,\n    \"data\":{\n        \"package_id\": \"123456\",\n        \"order_ids\": [\"152523\", \"532123\"],\n        \"invoice_status\": \"INVALID\",\n        \"invalid_reason\": \"NOT_FOUND\"\n    }\n}\n```\n\n\n",
+    "update_time": "1751450059",
+    "view_count": 0,
+    "prev_document_id": "66143486ef8a1202dc323258",
+    "prev_document_path": "14-new-message",
+    "next_document_id": "6708f866a88d1103246fed6a",
+    "next_document_path": "21-inbound-fbt-order-status-change",
+    "is_api_doc": false,
+    "document_id": "67b68ca185619104a6772e5d",
+    "doc_type": 2,
+    "keywords": [
+     {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "path": "Promotion/_39_ Activity status change.json",
+  "data": {
+   "meta": {
+    "document_id": "67ff82ce550a99048d938b2e",
+    "parent_id": "67ff82cca15973047eddcb5b",
+    "name": "(39) Activity status change",
+    "document_path": "39-activity-status-change",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1777452300",
+    "keywords": []
+   },
+   "detail": {
+    "title": "(39) Activity status change",
+    "content": "## Trigger scenario\nWhen a promotion activity of the specified type starts, expires, or is deactivated, you'll receive this webhook.\nThis webhook will only be triggered when all the following conditions are met:\n\n* Your App has been authorized the` Promotion Information` scope.\n* The activities are of the following types:\n   * `FIXED_PRICE`\n   * `DIRECT_DISCOUNT`\n   * `SHIPPING_DISCOUNT`\n   * `BUY_MORE_SAVE_MORE`\n   * `FLASHSALE` (Only available in SEA markets: SG, TH, ID, MY, PH, VN)\n* One of the following status changes happens:\n   * The activity starts: the status changes from `NOT_START` to `ONGOING`.\n   * The activity expires: the status changes from `ONGOING` to `EXPIRED`.\n   * The activity is deactivated: the status changes to `DEACTIVATED`.\n\n## Data business parameters\n| **Parameter name** | **Data Type** | **Sample** | **Description** |\n| --- | --- | --- | --- |\n| type | int | `39` | The ID of the webhook type. |\n| tts_notification_id | string | `\"7327112393057371910\"` | The ID of the notification. |\n| shop_id | string | `\"7494049642642441621\"` | The ID of the shop. |\n| timestamp | int | `1644412885` | The time when this webhook was triggered, represented by Unix timestamp. |\n| data | object |  |  |\n| └ activity_id | string | `\"7136104329798256386\"` | The ID of the promotion activity. |\n| └ update_time | int | `1644412885` | The time when the status changed, represented as a Unix timestamp (seconds). |\n| └ activity_type | string | `\"FIXED_PRICE\"` | The type of the promotion activity. Possible values are: <br>  <br> * `FIXED_PRICE` <br> * `DIRECT_DISCOUNT` <br> * `SHIPPING_DISCOUNT` <br> * `BUY_MORE_SAVE_MORE` <br> * `FLASHSALE` (Only available in SEA markets: SG, TH, ID, MY, PH, VN) |\n| └ product_level | string | `\"PRODUCT\"` | Activity product dimension, values are: <br>  <br> * `PRODUCT` <br> * `VARIATION` <br> * `SHOP` |\n| └ status | string | `ONGOING` | The current status of the promotion activity. Possible values are: <br>  <br> * `ONGOING` <br> * `EXPIRED` <br> * `DEACTIVATED` |\n## Event example\n```JSON\n{\n  \"type\": 39,\n  \"shop_id\": \"7494049642642441621\",\n  \"tts_notification_id\" : \"7327112393057371910\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"activity_id\": \"7136104329798256386\",\n    \"update_time\": 1644412885,\n    \"activity_type\": \"FIXED_PRICE\",\n    \"product_level\": \"PRODUCT\",\n    \"status\": \"ONGOING\"\n  }\n}\n```\n\n\n",
+    "update_time": "1777452300",
+    "view_count": 0,
+    "prev_document_id": "69e9cba00a0aa9e23a75c941",
+    "prev_document_path": "7u0ofsrd",
+    "next_document_id": "69c3bda1d468e604f335362a",
+    "next_document_path": "x6legjl9",
+    "is_api_doc": false,
+    "document_id": "67ff82ce550a99048d938b2e",
+    "doc_type": 2,
+    "keywords": [
+     {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "path": "Promotion/_63_ Activity change.json",
+  "data": {
+   "meta": {
+    "document_id": "69c3bda1d468e604f335362a",
+    "parent_id": "67ff82cca15973047eddcb5b",
+    "name": "(63) Activity change",
+    "document_path": "x6legjl9",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1774447756",
+    "keywords": []
+   },
+   "detail": {
+    "title": "(63) Activity change",
+    "content": "## Trigger scenario\nThe Activity change webhook is designed to notify partners about modifications related to  activities and the products associated with them. This allows applications to stay synchronized with changes in activity details or product inclusion/exclusion lists.\n## Data business parameters\n| Properties | Type | Example | Description |\n| --- | --- | --- | --- |\n| shop_id | String | \"7494049642642441621\" | The ID of the shop. |\n| timestamp | Int64 | 1732526400 | The time when this webhook was triggered, represented by Unix timestamp. |\n| tts_notification_id | String | \"7327112393057371910\" | The ID of the notification. |\n| type | Int64 | 63 | The ID of the webhook type. |\n| data | Object |  |  |\n| └ activity_id | String | \"7136104329798256386\" | The ID of the promotion activity. |\n| └ update_time | Int64 | 1732526465 | The time when the status changed, represented as a Unix timestamp (seconds). |\n| └ change_type | String | CREATE | The type of activity changes.  <br>  <br> * CREATE <br> * UPDATE <br> * DEACTIVATE |\n| └ product_update_list | Object |  | Products included in an updated scope. |\n| └└ product_ids | []String | [\"123456\",\"789012\"] | Included product IDs. |\n| └└ exclude_product_ids | []String | [\"345678\"] | IDs of the BXGY exclude products to remove. <br> Max count: 100. |\n| └└ benefit_product_ids | []String | [\"456789\"] | TikTokShop product ID list. |\n| └ product_remove_list | Object |  | Products removed from the activity. |\n| └└ product_ids | []String | [\"111222\",\"333444\"] | Removed product IDs. |\n| └└ sku_ids | []String | [\"111\",\"222\"] | Removed SKU IDs. |\n| └└ benefit_product_ids | []String | [\"555666\"] | TikTokShop product ID list. |\n| └└ exclude_product_ids | []String | [\"345678\"] | IDs of the BXGY exclude products to remove. <br> Max count: 100. |\n\n## Event example\n```JSON\n{\n  \"type\": 63,\n  \"timestamp\": 1678886400,\n  \"shop_id\": \"789123456789123456\",\n  \"tts_notification_id\": \"000000000000000001\",\n  \"data\": {\n    \"activity_id\": \"act_123456789012345678\",\n    \"update_time\": 1678886400,\n    \"change_type\": \"product_update\",\n    \"product_update_list\": {\n      \"product_ids\": [\n        \"11111111\",\n        \"22222222\"\n      ],\n      \"exclude_product_ids\": [\n        \"33333333\"\n      ],\n      \"benefit_product_ids\": [\n        \"44444444\"\n      ]\n    },\n    \"product_remove_list\": {\n      \"product_ids\": [\n        \"55555555\"\n      ],\n      \"sku_ids\": [\n        \"66666666\"\n      ],\n      \"benefit_product_ids\": [],\n      \"exclude_product_ids\": []\n    }\n  }\n}\n```\n\n\n",
+    "update_time": "1774447756",
+    "view_count": 0,
+    "prev_document_id": "67ff82ce550a99048d938b2e",
+    "prev_document_path": "39-activity-status-change",
+    "next_document_id": "65030162bb2a4d028d50cc51",
+    "next_document_path": "12-return-status-change",
+    "is_api_doc": false,
+    "document_id": "69c3bda1d468e604f335362a",
+    "doc_type": 2,
+    "keywords": [
+     {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "path": "Logistics/_3_ Recipient address update.json",
+  "data": {
+   "meta": {
+    "document_id": "650301af5a12ff0294ea3bf9",
+    "parent_id": "670cb97c192d3d0308408c8f",
+    "name": "(3) Recipient address update",
+    "document_path": "3-recipient-address-update",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1751450083",
+    "keywords": [
+     "Recipient Address Update"
+    ]
+   },
+   "detail": {
+    "title": "(3) Recipient address update",
+    "content": "# 1. Trigger scenario\nThe **recipient address update** webhook triggers when an order recipient's address is updated.\n# 2. Data business parameters\n| **Parameter name** | **Sample** | **Description** |\n| --- | --- | --- |\n| order_id | 1X2X3X4X5 | The identification of a TikTok Shop order |\n| update_time | 1627587600 | The time when recipient address is updated, represented as a Unix timestamp (seconds). |\n## Event example\n```json\n{\n    \"type\":3,\n    \"shop_id\":\"7494049642642441621\",\n    \"timestamp\":1644412885,\n    \"data\":{\n        \"order_id\":\"576486316948490001\",\n        \"update_time\":1644412885\n    }\n}\n```\n\n\n",
+    "update_time": "1751450083",
+    "view_count": 0,
+    "prev_document_id": "69844ba3a131ab04a49b6420",
+    "prev_document_path": "gqh1f39k",
+    "next_document_id": "650955cabace3e02b73cc886",
+    "next_document_path": "4-package-update",
+    "is_api_doc": false,
+    "document_id": "650301af5a12ff0294ea3bf9",
+    "doc_type": 2,
+    "keywords": [
+     {
+      "keyword": "Recipient Address Update",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "path": "Logistics/_4_ Package update.json",
+  "data": {
+   "meta": {
+    "document_id": "650955cabace3e02b73cc886",
+    "parent_id": "670cb97c192d3d0308408c8f",
+    "name": "(4) Package update",
+    "document_path": "4-package-update",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1751450086",
+    "keywords": []
+   },
+   "detail": {
+    "title": "(4) Package update",
+    "content": "# 1. Trigger scenario\nThe **package update** webhook is triggered when package updates such as combine, split, cancel the combine package operation, etc. occur.\n# 2. Data business parameters\n| **Parameter name** | **Sample** | **Description** |\n| --- | --- | --- |\n| sc_type | COMBINE | Type of the event trigger, with possible values: <br>  <br> * COMBINE <br> * CANCEL_COMBINE <br> * SPLIT <br> * CANCEL_SPLIT <br> * ADDRESS_UPDATE_SPLIT <br> * CANCEL_FULFILL_SPLIT <br> * FULFILL_UNCOMBINE <br> * PARTLY_CANCEL_SPLIT <br> * SPLIT_BY_SKU_CANCEL |\n| role_type | ROLE_USER | Operator of the event trigger, with possible values: <br>  <br> * ROLE_USER <br> * ROLE_SELLER <br> * ROLE_OPERATOR <br> * ROLE_SYSTEM |\n| package_list | []object | Package list updated by the event trigger |\n| └ package_id | \"123456\" | The identification of a package |\n| └ order_id_list | [\"152523\", \"532123\"] | List of order IDs in a given package |\n| update_time | 1627587600 | The time when the package was updated, represented as a Unix timestamp (seconds). |\n## Event example\n```JSON\n{\n  \"type\": 4,\n  \"tts_notification_id\": \"7327112393057371910\",\n  \"shop_id\": \"7494049642642441621\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"sc_type\": \"COMBINE\",\n    \"role_type\": \"ROLE_USER\",\n    \"package_list\": [\n      {\n        \"package_id\": \"123456\",\n        \"order_id_list\": [\n          \"152523\",\n          \"532123\"\n        ]\n      }\n    ],\n    \"update_time\": 1644412885\n  }\n}\n```\n\n\n",
+    "update_time": "1751450086",
+    "view_count": 0,
+    "prev_document_id": "650301af5a12ff0294ea3bf9",
+    "prev_document_path": "3-recipient-address-update",
+    "next_document_id": "650300b8a57708028b430b4a",
+    "next_document_path": "1-order-status-change",
+    "is_api_doc": false,
+    "document_id": "650955cabace3e02b73cc886",
+    "doc_type": 2,
+    "keywords": [
+     {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "path": "Affiliate Creator/_17_ Shoppable content posting.json",
+  "data": {
+   "meta": {
+    "document_id": "66851c2c37c1a902f8f2c3ac",
+    "parent_id": "670cb975c78b9802f7942cda",
+    "name": "(17) Shoppable content posting",
+    "document_path": "17-shoppable-content-posting",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1751450028",
+    "keywords": []
+   },
+   "detail": {
+    "title": "(17) Shoppable content posting",
+    "content": "## Trigger scenario\nThe shoppable content posting webhook is triggered when the creator adds, updates, or removes a product link in a video or livestream.\n> This webhook will only be triggered after the creator has authorized the `Read Creator Affiliate Collaborations` scope.\n\n## Data business parameters\n| **Parameter name** | **Data Type** | **Sample** | **Description** |\n| --- | --- | --- | --- |\n| type | int | `17` | The ID of the webhook type. |\n| tts_notification_id | string | `\"7327112393057371910\"` | The ID of the notification. |\n| creator_open_id | string | `\"VIyStQAAAADCBQ40s4TzOSSOEIW-bM5O9cod3vK8OytW8m-bnBYlXw\"` | The open_id of the creator. To get the value, see [Authorization overview](authorization-overview-202407). |\n| timestamp | int | `1644412885` | The UNIX timestamp when this webhook was triggered. |\n| data | object |  |  |\n| └product_id | string | `\"789078671231\"` | ID of the product promoted in the creator's video. |\n| └event | object |  |  |\n| └└type | string | `\"ADD\"` | The action which the creator takes to the product promoted in the video or live stream. The possible enumerations are: <br>  <br> * `ADD`: Add the product. <br> * `UPDATE`: Update the product. <br> * `REMOVE`: Remove the product. |\n| └└scene | string | `\"VIDEO\"` | The scene where the creator promotes the product. The possible enumerations are: <br>  <br> * `VIDEO`: short video. |\n| └└content_id | string | `\"789078671231\"` | The ID of the short video. |\n## Event example\n```JSON\n{\n  \"type\": 17,\n  \"creator_open_id\": \"VIyStQAAAADCBQ40s4TzOSSOEIW-bM5O9cod3vK8OytW8m-bnBYlXw\",\n  \"tts_notification_id\" : \"7327112393057371910\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"product_id\": \"789078671231\",\n    \"event\": {\n      \"type\": \"ADD\",\n      \"scene\": \"VIDEO\",\n      \"content_id\": \"789078671231\"\n    }\n  }\n}\n```\n\n\n",
+    "update_time": "1751450028",
+    "view_count": 0,
+    "prev_document_id": "694385796ae5d8050a8e3248",
+    "prev_document_path": "upload-file-init-202512",
+    "next_document_id": "6711e6d663de6102f8181142",
+    "next_document_path": "20-creator-deauthorization",
+    "is_api_doc": false,
+    "document_id": "66851c2c37c1a902f8f2c3ac",
+    "doc_type": 2,
+    "keywords": [
+     {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "path": "Affiliate Creator/_20_ Creator deauthorization.json",
+  "data": {
+   "meta": {
+    "document_id": "6711e6d663de6102f8181142",
+    "parent_id": "670cb975c78b9802f7942cda",
+    "name": "(20) Creator deauthorization",
+    "document_path": "20-creator-deauthorization",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1751450031",
+    "keywords": []
+   },
+   "detail": {
+    "title": "(20) Creator deauthorization",
+    "content": "## Trigger scenario\nWhen a creator completely removes the App's access to his/her data.\n## Data business parameters\n| Parameter name | Data Type | Sample | Description |\n| --- | --- | --- | --- |\n| type | int | `20` | Webhook type, fixed to `20` for this webhook. |\n| tts_notification_id | string | `\"7327112393057371910\"` | The ID of the notification. |\n| creator_open_id | string | `\"VIyStQAAAADCBQ40s4TzOSSOEIW-bM5O9cod3vK8OytW8m-bnBYlXw\"` | The open_id of the creator. To get the value, see [Authorization overview](authorization-overview-202407). |\n| timestamp | int | `1644412885` | The UNIX timestamp when this webhook was triggered. |\n| data | object |  |  |\n| └ cancel_time | string | `\"1644412885\"` | The UNIX timestamp when this event happened. |\n## Event example\n```JSON\n{\n  \"type\": 20,\n  \"creator_open_id\": \"VIyStQAAAADCBQ40s4TzOSSOEIW-bM5O9cod3vK8OytW8m-bnBYlXw\",\n  \"tts_notification_id\" : \"7327112393057371910\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"cancel_time\": 1644412885\n  }\n}\n```\n\n\n",
+    "update_time": "1751450031",
+    "view_count": 0,
+    "prev_document_id": "66851c2c37c1a902f8f2c3ac",
+    "prev_document_path": "17-shoppable-content-posting",
+    "next_document_id": "692642e6d70f1a06103f0a2c",
+    "next_document_path": "iygh3ycz",
+    "is_api_doc": false,
+    "document_id": "6711e6d663de6102f8181142",
+    "doc_type": 2,
+    "keywords": [
+     {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "path": "Affiliate Creator/_55_ Video Precheck Result.json",
+  "data": {
+   "meta": {
+    "document_id": "692642e6d70f1a06103f0a2c",
+    "parent_id": "670cb975c78b9802f7942cda",
+    "name": "(55) Video Precheck Result",
+    "document_path": "iygh3ycz",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1773026026",
+    "keywords": []
+   },
+   "detail": {
+    "title": "(55) Video Precheck Result",
+    "content": "## Trigger scenario\nThe Video Precheck Result webhook is triggered when the Precheck Video Content API is called, and the results are surfaced to know if the video has any violations, or if it has passed inspection.\n## Data business parameters\n| **Parameter name** | **Data Type** | **Sample** | **Description** |\n| --- | --- | --- | --- |\n| type | int | `55` | The ID of the webhook type. |\n| tts_notification_id | string | `\"7327112393057371910\"` | The ID of the notification. |\n| creator_open_id | string | `\"VIyStQAAAADCBQ40s4TzOSSOEIW-bM5O9cod3vK8OytW8m-bnBYlXw\"` | The open_id of the creator. To get the value, see [Authorization overview](authorization-overview-202407). |\n| timestamp | int | `1644412885` | The UNIX timestamp when this webhook was triggered. |\n| data | object |  |  |\n| └precheck_task_id | string | `\"7493990579714164574\"` | ID of precheck task generated by TikTok Shop. |\n| └result | string | `\"FAIL\"` | Possible enumerations:  <br> `PASS` <br> `FAIL` |\n| └issues | []object |  | Only if the `result` is `FAIL` |\n| └└risk | string | `\"Pirated Content\"` | Risk type. |\n| └└suggestion | string | `\"Your video may include unoriginal content. Creating original content is essential for standing out from the crowd.\"` | Suggestions on how to fix the risk. |\n## Event example\n```JSON\n{\n  \"type\": 55,\n  \"creator_open_id\": \"VIyStQAAAADCBQ40s4TzOSSOEIW-bM5O9cod3vK8OytW8m-bnBYlXw\",\n  \"tts_notification_id\": \"7327112393057371910\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"precheck_task_id\": \"7493990579714164574\",\n    \"result\": \"FAIL\",\n    \"issues\": [\n      {\n        \"risk\": \"Pirated Content\",\n        \"suggestion\": \"Your video may include unoriginal content. Creating original content is essential for standing out from the crowd.\"\n      }\n    ]\n  }\n}\n```\n\n\n",
+    "update_time": "1773026026",
+    "view_count": 0,
+    "prev_document_id": "6711e6d663de6102f8181142",
+    "prev_document_path": "20-creator-deauthorization",
+    "next_document_id": "6981c2b6a131ab04a483745a",
+    "next_document_path": "arpnre1g",
+    "is_api_doc": false,
+    "document_id": "692642e6d70f1a06103f0a2c",
+    "doc_type": 2,
+    "keywords": [
+     {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "path": "Affiliate Creator/_59_ Shoppable Video Precheck Tasks Result.json",
+  "data": {
+   "meta": {
+    "document_id": "6981c2b6a131ab04a483745a",
+    "parent_id": "670cb975c78b9802f7942cda",
+    "name": "(59) Shoppable Video Precheck Tasks Result",
+    "document_path": "arpnre1g",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1770174725",
+    "keywords": []
+   },
+   "detail": {
+    "title": "(59) Shoppable Video Precheck Tasks Result",
+    "content": "## Trigger scenario\nThe Video Precheck Result webhook is triggered when the Precheck Video Content API is called, and provides the results of the video’s quality assessment and violation checks.\n## Data business parameters\n| **Parameter name** | **Data Type** | **Sample** | **Description** |\n| --- | --- | --- | --- |\n| type | int | `59` | The ID of the webhook type. |\n| tts_notification_id | string | `\"7327112393057389710\"` | The ID of the notification. |\n| creator_open_id | string | `\"VIyStQAAAADCBQ40s4TzODDSEIW-bM5O9cod3vK8OytW8m-bnBYlXw\"` | The open_id of the creator. To get the value, see [Authorization overview](authorization-overview-202407). |\n| timestamp | int | `1644412885` | The UNIX timestamp when this webhook was triggered. |\n| data | object |  |  |\n| └task_id | string | `\"7493990579714178574\"` | ID of precheck task generated by TikTok Shop. |\n| └violation_check_result | object |  |  |\n| └└status | string | `SUCCESS` | Possible enumerations:  <br> `SUCCESS` <br> `FAIL` <br> `PROCESSING` |\n| └└issues | []object |  |  |\n| └└└risk | string | `\"HIGH\"` | Risk type. |\n| └└└suggestions | string | `\"Your video may include unoriginal content. Creating original content is essential for standing out from the crowd.\"` | Suggestions on how to fix the risk. |\n| └good_quality_check_result | object |  |  |\n| └└status | string | `FAIL` | Possible enumerations:  <br> `SUCCESS` <br> `FAIL` <br> `PROCESSING` |\n| └└issues | []object |  |  |\n| └└└code | string | `\"LOW RESOLUTION\"` |  Quality check code. |\n| └└└suggestions | string | `\"Your video may include unoriginal content. Creating original content is essential for standing out from the crowd.\"` | How to improve video quality. |\n## Event example\n```JSON\n{\n  \"type\": 59,\n  \"creator_open_id\": \"VIyStQAAAADCBQ40s4TzOSSOEIW-bM5O9cod3vK8OytW8m-bnBYlXw\",\n  \"tts_notification_id\": \"7327112393057371910\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"task_id\": \"task_202402011200001234\",\n    \"violation_check_result\": {\n      \"status\": \"FAIL\",\n      \"issues\": [\n        {\n          \"risk\": \"HIGH\",\n          \"suggestions\": \"Remove prohibited visual elements and resubmit the video.\"\n        }\n      ]\n    },\n    \"good_quality_check_result\": {\n      \"status\": \"SUCCESS\",\n      \"issues\": [\n        {\n          \"code\": \"LOW_RESOLUTION\",\n          \"suggestions\": \"Consider uploading a higher-resolution video for better viewing experience.\"\n        }\n      ]\n    }\n  }\n}\n```\n\n\n",
+    "update_time": "1770174725",
+    "view_count": 0,
+    "prev_document_id": "692642e6d70f1a06103f0a2c",
+    "prev_document_path": "iygh3ycz",
+    "next_document_id": "6790b76eb59cf9030997b783",
+    "next_document_path": "33-new-message-listener",
+    "is_api_doc": false,
+    "document_id": "6981c2b6a131ab04a483745a",
+    "doc_type": 2,
+    "keywords": [
+     {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "path": "Affiliate Seller/_33_ New message listener.json",
+  "data": {
+   "meta": {
+    "document_id": "6790b76eb59cf9030997b783",
+    "parent_id": "6790b76b786253031540ac36",
+    "name": "(33) New message listener",
+    "document_path": "33-new-message-listener",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1751450037",
+    "keywords": []
+   },
+   "detail": {
+    "title": "(33) New message listener",
+    "content": "## Trigger scenario\nWhen a creator sends a message to the seller.\n## Data business parameters\n| Parameter name | Data Type | Sample | Description |\n| --- | --- | --- | --- |\n| type | int64 | `33` | Webhook type, fixed to `33` for this webhook. |\n| shop_id | string | `\"7494049642642441621\"` | TikTok shop ID. |\n| tts_notification_id | string | `\"7327112393057371910\"` | ID of the webhook. |\n| timestamp | int | `1644412885` | The UNIX timestamp when this webhook was triggered. |\n| data | object |  |  |\n| └index | string | `\"1735032460678899\"` | Index of the message in the conversation. A large index number corresponds to newer message. |\n| └message_id | string | `\"7451907556216407553\"` | Message ID. |\n| └conversation_id | string | `\"7451873679308620048\"` | ID of the conversation to which the message belongs. |\n| └msg_type | string | `\"TEXT\"` | Message type, with possible values: <br>  <br> * TEXT <br> * PRODUCT_CARD <br> * TARGET_COLLABORATION_CARD <br> * FREE_SAMPLE_CARD |\n| └content | string | `\"Hello\"` | Message content, in JSON serialized string. <br>  <br> * TEXT: {\"content\": \"simple text\"} <br> * PRODUCT_CARD: {\"product_id\": \"12345\"} <br> * TARGET_INVITATION_CARD: {\"invitation_group_id\": \"1234\"} <br> * FREE_SAMPLE_CARD: {\"apply_id\": \"1234\"} |\n| └create_time | string | `1691411573` | Message creation time, represented as a Unix timestamp (seconds). |\n| └sender | object |  |  |\n| └└sender_im_user_id | string | `\"2368694990397660924\"` | ID in IM system for the sender. |\n## Event example\n```JSON\n{\n  \"type\": 33,\n  \"shop_id\": \"7494049642642441621\",\n  \"tts_notification_id\" : \"7327112393057371910\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"index\": \"1735032460678899\",\n    \"message_id\": \"7451907556216407553\",\n    \"conversation_id\": \"7451873679308620048\",\n    \"msg_type\": \"TEXT\",\n    \"content\": \"Hello\",\n    \"create_time\": \"1691411573\",\n    \"sender\": {\n      \"sender_im_user_id\": \"2368694990397660924\"\n    }\n  }\n}\n```\n\n\n",
+    "update_time": "1751450037",
+    "view_count": 0,
+    "prev_document_id": "6981c2b6a131ab04a483745a",
+    "prev_document_path": "arpnre1g",
+    "next_document_id": "6939a1e66ae5d8050a4bd0c4",
+    "next_document_path": "urzvzank",
+    "is_api_doc": false,
+    "document_id": "6790b76eb59cf9030997b783",
+    "doc_type": 2,
+    "keywords": [
+     {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "path": "Affiliate Seller/_56_ Sample Application Status Change.json",
+  "data": {
+   "meta": {
+    "document_id": "6939a1e66ae5d8050a4bd0c4",
+    "parent_id": "6790b76b786253031540ac36",
+    "name": "(56) Sample Application Status Change",
+    "document_path": "urzvzank",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1765390250",
+    "keywords": []
+   },
+   "detail": {
+    "title": "(56) Sample Application Status Change",
+    "content": "## Trigger scenario\nThis webhook will trigger when the creator's sample application status changes.\n## Data business parameters\n| **Parameter name** | **Data Type** | **Sample** | **Description** |\n| --- | --- | --- | --- |\n| type | int | `56` | The ID of the webhook type. |\n| tts_notification_id | string | `\"7327112393057371910\"` | The ID of the notification. |\n| shop_id | string | `\"7494049642642441621\"` | TikTok shop ID |\n| timestamp | int | `1644412885` | The UNIX timestamp when this webhook was triggered. |\n| data | object |  |  |\n| └application_id | string | `\"123456\"` | The id of the sample application |\n| └new_status | string | `\"PENDING\"` | The status of sample applications. <br> The possible enumerated values are: <br>  <br> * `PENDING`: The sample application is waiting for the seller's review. <br> * `AWAITING_SHIPMENT`: The application is approved, and the seller needs to ship the sample. <br> * `SHIPPED`: The sample has been shipped by the seller and is waiting for the creator to receive the package. <br> * `CONTENT_PENDING`: The creator has received the sample package and is expected to create content. <br> * `REJECT_CANCELLED`: The sample application has been rejected by the seller. <br> * `OVERDUE_CANCELLED`: The sample application has expired due to being overdue. <br> * `UNFULFILL_CANCELLED`: The creator did not fulfill the commitment to create content within the agreed timeframe. <br> * `DEL_OPEN_COLLAB`: Open collaboration has been deleted. <br> * `SELLER_NOT_SHIP_CANCELLED`: The seller did not ship the sample within the required timeframe. <br> * `WITHDRAW_CANCELLED`: The creator withdrew the sample application before the seller approved it. <br> * `UNFULFILLABLE_CANCELLED`: The application was cancelled due to reasons beyond the creator's control, making it impossible to create content. <br> * `OPS_CANCELLED`: The application was manually cancelled by operations staff. <br> * `OPS_FAILED`: The application was marked as failed by operations staff. <br> * `OPS_COMPLETED`: The application was manually marked as completed by operations staff. <br> * `COMPLETED`: The application is complete, and the creator has posted the content. <br>  <br> This field allows for tracking the status of a sample application throughout its lifecycle, providing visibility into each stage of the process for sellers and creators. |\n| └creator | []object |  | Creator detailed information. It includes various details such as the creator's TikTok user name and TikTok user id. |\n| └└creator_open_id | string | `\"uACafQAAAABmUU2qon4R0vUYvUVS3QC6CICP2m5A2-wd77j8R9G0yg\"` | Creator Open ID. [More details](https://partner.tiktokshop.com/docv2/page/3obfokj6) |\n| └product | []object |  | Product information. |\n| └└id | string | `\"1729859829942358814\"` | The product identifier. |\n| └└sku_id | string | `\"1729859567502267166\"` | The unique id of product sku which the creator applied for as a sample. |\n## Event example\n```JSON\n{\n  \"type\": 56,\n  \"shop_id\": \"7494049642642441621\",\n  \"tts_notification_id\": \"7327112393057371910\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"application_id\": \"123456\",\n    \"new_status\": \"PENDING\",\n    \"creator\": {\n      \"creator_open_id\": \"uACafQAAAABmUU2qon4R0vUYvUVS3QC6CICP2m5A2-wd77j8R9G0yg\"\n    },\n    \"product\": {\n      \"id\": \"1729859829942358814\",\n      \"sku_id\": \"1729859567502267166\"\n    }\n  }\n}\n```\n\n\n",
+    "update_time": "1765390250",
+    "view_count": 0,
+    "prev_document_id": "6790b76eb59cf9030997b783",
+    "prev_document_path": "33-new-message-listener",
+    "next_document_id": "6614330bfe9fdc02e002abfd",
+    "next_document_path": "13-new-conversation",
+    "is_api_doc": false,
+    "document_id": "6939a1e66ae5d8050a4bd0c4",
+    "doc_type": 2,
+    "keywords": [
+     {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "path": "Product/_15_ Product information change.json",
+  "data": {
+   "meta": {
+    "document_id": "65d6f41411a60f02dc1cf8bf",
+    "parent_id": "670cb97f889b3d031da023d6",
+    "name": "(15) Product information change",
+    "document_path": "15-product-information-change",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1751450106",
+    "keywords": []
+   },
+   "detail": {
+    "title": "(15) Product information change",
+    "content": "# 1. Trigger scenario\nThis webhook is triggered when changes to a **live** product's properties take effect online.\n**Prerequisite**: The product is **live** and the \"Product Basic\" API scope is enabled in Partner Center. For more information, refer to [Access Scope](access-scope).\n# 2. Data business parameters\n| **Parameter name** | **Data type** | **Sample** | **Description** |\n| --- | --- | --- | --- |\n| type | int | 15 | The ID of this webhook topic, which is 15. |\n| tts_notification_id | string | \"7327112393057371910\" | The ID of this webhook notification. |\n| shop_id | string | \"7494049642642441621\" | The shop ID. |\n| timestamp | int | 1644412885 | The time when this webhook is triggered. Unix timestamp. |\n| data | object |  |  |\n| └ product_id | string | \"123456789\" | The ID of the product that's being changed. |\n| └ change_source | string | \"SELLER_CENTER\" | The originating source of the change. <br> Possible values: <br> - `SELLER_CENTER` <br> - `OPEN_API` |\n| └ changed_fields | []string | [ <br> \"title\", <br> \"description\", <br> \"main_images\", <br> \"product_attributes\", <br> \"size_chart_image\", <br> \"size_chart_template\", <br> \"others\" <br> ] | The product properties that were changed. <br> Possible values: <br> - `title`: The product name was changed. <br> - `description`: The product description was changed. <br> - `main_images`: Product images that appear in the image gallery were added, removed, or changed. <br> - `product_attributes`: Product attributes were added, removed, or edited. <br> - `size_chart_image`: The size chart image was added, removed, or changed. <br> - `size_chart_template`: The associated size chart template was removed or its details were edited, or a new size chart template was associated. <br> - `others`: Other product properties not specified above were changed. |\n| └ update_time | int | 1627587600 | The time when the change occurred. Unix timestamp. |\n## Event example\n```JSON\n{\n  \"type\": 15,\n  \"tts_notification_id\": \"7327112393057371910\",\n  \"shop_id\": \"7494049642642441621\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"product_id\": \"123456789\",\n    \"change_source\": \"SELLER_CENTER\",\n    \"changed_fields\": [\n      \"title\",\n      \"description\",\n      \"main_images\",\n      \"product_attributes\",\n      \"size_chart_image\",\n      \"size_chart_template\",\n      \"others\"\n    ],\n    \"update_time\": 1627587600\n  }\n}\n```\n\n\n",
+    "update_time": "1751450106",
+    "view_count": 0,
+    "prev_document_id": "650956aff1fd3102b90b6261",
+    "prev_document_path": "5-product-status-change",
+    "next_document_id": "663c98b566828e02e4515580",
+    "next_document_path": "16-product-creation",
+    "is_api_doc": false,
+    "document_id": "65d6f41411a60f02dc1cf8bf",
+    "doc_type": 2,
+    "keywords": [
+     {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "path": "Product/_16_ Product creation.json",
+  "data": {
+   "meta": {
+    "document_id": "663c98b566828e02e4515580",
+    "parent_id": "670cb97f889b3d031da023d6",
+    "name": "(16) Product creation",
+    "document_path": "16-product-creation",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1751945690",
+    "keywords": []
+   },
+   "detail": {
+    "title": "(16) Product creation",
+    "content": "# 1. Trigger scenario\nTriggers a webhook message when a product is created\n# 2. Data business parameters\n| **Parameter name** | **Data Type** | **Sample** | **Description** |\n| --- | --- | --- | --- |\n| product_id | int | 1X2X3X4X5 | The identification of a TikTok Shop product |\n| product_types | []string | [\"GPR_PRODUCT\"] | The type of product, including: <br>  <br> * COMBINED_PRODUCT: Virtual bundle product. <br> * GPR_PRODUCT: Target products created using the GPR tool |\n| update_time | int | 1627587600 | The time when the product was created, represented as a Unix timestamp (seconds). |\n## Event example\n```JSON\n{\n  \"type\": 16,\n  \"tts_notification_id\": \"7327112393057371910\",\n  \"shop_id\": \"7494049642642441621\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"product_id\": 576486316948490000,\n    \"product_types\": [\"GPR_PRODUCT\"],\n    \"update_time\": 1644412885\n  }\n}\n```\n\n\n",
+    "update_time": "1751945690",
+    "view_count": 0,
+    "prev_document_id": "65d6f41411a60f02dc1cf8bf",
+    "prev_document_path": "15-product-information-change",
+    "next_document_id": "668764a371f16d02eef1f393",
+    "next_document_path": "18-product-category-change",
+    "is_api_doc": false,
+    "document_id": "663c98b566828e02e4515580",
+    "doc_type": 2,
+    "keywords": [
+     {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "path": "Product/_18_ Product category change.json",
+  "data": {
+   "meta": {
+    "document_id": "668764a371f16d02eef1f393",
+    "parent_id": "670cb97f889b3d031da023d6",
+    "name": "(18) Product category change",
+    "document_path": "18-product-category-change",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1751450119",
+    "keywords": []
+   },
+   "detail": {
+    "title": "(18) Product category change",
+    "content": "# 1. Trigger scenario\nWhen the category of a product is changed, all apps authorized by the shop (using `shop_id`) receive this webhook. When you receive the webhook, you can get more detailed product information by using the [Get Product](get-product) API.\nThis webhook is triggered regardless of how a product category is changed. Categories can be changed by the seller, developer, or TikTok Shop.\n# 2. Data business parameters\n| **Parameter name** | **Data Type** | **Sample** | **Description** |\n| --- | --- | --- | --- |\n| type | int | `18` | The ID of the webhook type. |\n| tts_notification_id | string | `\"7327112393057371910\"` | The ID of the notification. |\n| shop_id | string | `\"7494049642642441621\"` | The ID of the shop. |\n| timestamp | int | `1644412885` | The time when this webhook was triggered, represented by Unix timestamp. |\n| data | object |  |  |\n| └product_id | string | `\"789078671231\"` | ID of the product promoted in the creator's video. |\n| └previous_category_id | string | `\"600001\"` | The category ID of the product before the category update. |\n| └current_category_id | string | `\"600002\"` | The category ID of the product after the category update. |\n| └update_time | int | `1644412845` | The time when this category update happens, represented by Unix timestamp. |\n## Event example\n```JSON\n{\n  \"type\": 18,\n  \"shop_id\": \"7494049642642441621\",\n  \"tts_notification_id\" : \"7327112393057371910\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"product_id\": \"789078671231\",\n    \"previous_category_id\": \"600001\",\n    \"current_category_id\": \"600002\",\n    \"update_time\": 1644412845\n  }\n}\n```\n\n\n",
+    "update_time": "1751450119",
+    "view_count": 0,
+    "prev_document_id": "663c98b566828e02e4515580",
+    "prev_document_path": "16-product-creation",
+    "next_document_id": "66befac437ede902f8dd21d1",
+    "next_document_path": "19-size-chart-change",
+    "is_api_doc": false,
+    "document_id": "668764a371f16d02eef1f393",
+    "doc_type": 2,
+    "keywords": [
+     {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "path": "Product/_19_ Size chart change.json",
+  "data": {
+   "meta": {
+    "document_id": "66befac437ede902f8dd21d1",
+    "parent_id": "670cb97f889b3d031da023d6",
+    "name": "(19) Size chart change",
+    "document_path": "19-size-chart-change",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1751450122",
+    "keywords": []
+   },
+   "detail": {
+    "title": "(19) Size chart change",
+    "content": "# 1. Trigger scenario\nThis webhook is triggered when a product size chart is created, edited, or deleted.\n**Prerequisite**: The \"Product Basic\" API scope is enabled in Partner Center. For more information, refer to [Access Scope](access-scope).\n# 2. Data business parameters\n| **Parameter Name** <!-- width:240px --> | **Data Type** | **Sample** | **Description** |\n| --- | --- | --- | --- |\n| type | int | `19` | The ID of this webhook topic, which is 19. |\n| tts_notification_id | string | `\"7327112393057371910\"` | The ID of this webhook notification. |\n| seller_open_id | string | `\"VIyStQAAAADCBQ40s4TzOSSOEIW-bM5O9cod3vK8OytW8m-bnBYlXw\"` | The open_id of the seller. For more information, refer to [Authorization overview](authorization-overview-202407). |\n| timestamp | int | `1644412885` | The time when this webhook is triggered. Unix timestamp. |\n| data | object |  |  |\n| └ size_chart_template_id | string | `\"789078671231\"` | The ID of the size chart template that's being changed. |\n| └ size_chart_template_name | string | `\"600001\"` | The name of the size chart template that's being changed. |\n| └ event_type | string | `\"EDIT\"` | The change that occurred for the size chart. Possible values: <br> - `CREATE`: A new size chart is created <br> - `EDIT`: The size chart is edited <br> - `DELETE`: The size chart is deleted |\n| └ update_time | int | `1644412845` | The time when the change occurred. Unix timestamp. |\n## Event example\n```JSON\n{\n  \"type\": 19,\n  \"seller_open_id\": \"VIyStQAAAADCBQ40s4TzOSSOEIW-bM5O9cod3vK8OytW8m-bnBYlXw\",\n  \"tts_notification_id\" : \"7327112393057371910\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"size_chart_template_id\": \"789078671231\",\n    \"size_chart_template_name\": \"600001\",\n    \"event_type\": \"EDIT\",\n    \"update_time\": 1644412845\n  }\n}\n```\n\n\n",
+    "update_time": "1751450122",
+    "view_count": 0,
+    "prev_document_id": "668764a371f16d02eef1f393",
+    "prev_document_path": "18-product-category-change",
+    "next_document_id": "6710c02ba88d1103248e82b2",
+    "next_document_path": "25-opportunity-matching-status-change",
+    "is_api_doc": false,
+    "document_id": "66befac437ede902f8dd21d1",
+    "doc_type": 2,
+    "keywords": [
+     {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "path": "Product/_25_ Opportunity matching status change.json",
+  "data": {
+   "meta": {
+    "document_id": "6710c02ba88d1103248e82b2",
+    "parent_id": "670cb97f889b3d031da023d6",
+    "name": "(25) Opportunity matching status change",
+    "document_path": "25-opportunity-matching-status-change",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1751450126",
+    "keywords": []
+   },
+   "detail": {
+    "title": "(25) Opportunity matching status change",
+    "content": "# 1. Trigger scenario\nThis webhook is triggered when the status of opportunity matching for a candidate product changes.\n**Prerequisite**: The \"Product Opportunities\" API scope is enabled in Partner Center. For more information, refer to [Access Scope](access-scope).\n<span style=\"background-color: rgb(255, 245, 235)\">📌 This webhook is currently available only to a limited set of developers.</span>\n# 2. Data business parameters\n| **Parameter name** | **Data type** | **Sample** | **Description** |\n| --- | --- | --- | --- |\n| type | int | 25 | The ID of this webhook topic, which is 25. |\n| tts_notification_id | string | \"7327112393057371910\" | The ID of this webhook notification. |\n| shop_id | string | \"7494049642642441621\" | The shop ID. |\n| timestamp | int | 1730458800 | The time when this webhook is triggered. Unix timestamp. |\n| data | object |  |  |\n| └ external_product_id | string | \"576486316948490000\" | An external product identifier used in the external ecommerce platform. |\n| └ opportunity_matching_status | string | \"PENDING\" | The status of opportunity matching. <br> Possible values: <br> - `PENDING`: Waiting for opportunity matching. <br> - `MATCHED`: There are one or more matched opportunities. <br> - `NOT_MATCHED`: There are no matches. |\n| └ opportunity_ids | []string | [\"213231\", \"213233\"] | A list of IDs for the matched opportunities. |\n| └ opportunity_matching_end_time | int | 1735603200 | The time by which the system will stop matching opportunities for this candidate product. Unix timestamp. <br> - Default: 60 days from the upload time. <br> - Latest allowable time: 60 days from the upload time. |\n| └ update_time | int | 1730458800 | The time when the opportunity matching status is last updated. Unix timestamp. |\n## Event example\n```JSON\n{  \n  \"type\": 25,  \n  \"tts_notification_id\": \"7327112393057371910\", \n  \"shop_id\": \"7494049642642441621\",  \n  \"timestamp\": 1730458800,  \n  \"data\": {  \n    \"external_product_id\": \"576486316948490000\",  \n    \"opportunity_matching_status\": \"PENDING\",\n    \"opportunity_ids\": [\"213231\", \"213233\"],\n    \"opportunity_matching_end_time\": 1735603200,\n    \"update_time\": 1730458800\n  }  \n}\n```\n\n\n",
+    "update_time": "1751450126",
+    "view_count": 0,
+    "prev_document_id": "66befac437ede902f8dd21d1",
+    "prev_document_path": "19-size-chart-change",
+    "next_document_id": "672995e79ba2a002fe5dc92e",
+    "next_document_path": "27-inventory-status-change",
+    "is_api_doc": false,
+    "document_id": "6710c02ba88d1103248e82b2",
+    "doc_type": 2,
+    "keywords": [
+     {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "path": "Product/_27_ Inventory status change.json",
+  "data": {
+   "meta": {
+    "document_id": "672995e79ba2a002fe5dc92e",
+    "parent_id": "670cb97f889b3d031da023d6",
+    "name": "(27) Inventory status change",
+    "document_path": "27-inventory-status-change",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1751450133",
+    "keywords": []
+   },
+   "detail": {
+    "title": "(27) Inventory status change",
+    "content": "# 1. Trigger scenario\nThis webhook will be triggered in either of the following situations:\n\n* The `current_inventory_status` has dropped to LOW_STOCK / OUT_OF_STOCK.\n* TikTok Shop predicts the `available_quantity` will drop to `0` in X days.\n\n> Note: The value of X can be system-configured or manually set by the seller.\n# 2. Data business parameters\n| **Parameter name** | **Data type** | **Sample** | **Description** |\n| --- | --- | --- | --- |\n| type | int | 27 | The ID of this webhook topic, which is 27. |\n| tts_notification_id | string | \"7327112393057371910\" | The ID of this webhook notification. |\n| shop_id | string | \"7494049642642441621\" | The shop ID. |\n| timestamp | int | 1644412885 | The time when this webhook is triggered. Unix timestamp. |\n| data | object |  |  |\n| └ product_id | string | \"732357708734418520388\" | The ID of the product. |\n| └ sku_id | string | \"73235770873441823254\" | The ID of the SKU. |\n| └ trigger_reason | object |  |  |\n| └└ alert_type | string | \"PREDICTION\" | PREDICTION: TikTok Shop predicts the inventory will go out of stock in X days <br> REALTIME: The inventory has reached LOW_STOCK or OUT_OF_STOCK |\n| └└ lead_days | int | 21 | When `alert_type == PREDICTION`, the value is the time slot between `update_time` and the predicted out-of-stock date. <br> When `alert_type == REALTIME`, the parameter is not returned. |\n| └└ low_stock_threshold | int | 0 | When `alert_type == REALTIME`, the value is the low stock threshold met. <br> When `alert_type == PREDICTION`, the parameter is not returned. |\n| └ current_inventory_status | string | \"LOW_STOCK\" | SUFFICIENT_STOCK: defined as having enough stocks. <br> LOW_STOCK: defined as available stock ≤ stock alert value <br> OUT_OF_STOCK: defined as having 0 available stock. |\n| └ inventory_distribution | object |  |  |\n| └└ total_quantity | int | 100 | The total quantity of the stock physically in the warehouses. `total_quantity`=`available_quantity` + `creator_reserved_quantity` + `campaign_reserved_quantity` + `committed_quantity`. |\n| └└ available_quantity | int | 50 | The total number of SKUs available for ordering in the warehouses. |\n| └└ creator_reserved_quantity | int | 20 | The total number of SKUs reserved for creators in the warehouses. |\n| └└ campaign_reserved_quantity | int | 20 | The total number of SKUs reserved for campaigns in the warehouses. |\n| └└ committed_quantity | int | 10 | The total number of SKUs reserved by existing customer orders in the warehouses. |\n| └ update_time | int | 1627587600 | The time when the status changed, represented as a Unix timestamp (seconds). |\n## Event example\n```JSON\n{\n  \"type\": 27,\n  \"tts_notification_id\": \"7327112393057371910\",\n  \"shop_id\": \"7494049642642441621\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"product_id\": \"732357708734418520388\"\n    \"sku_id\": \"73235770873441823254\"\n    \"trigger_reason\": {\n        \"alert_type\": \"PREDICTION\",\n        \"lead_days\": 21\n    },\n    \"current_inventory_status\": \"LOW_STOCK\",\n    \"inventory_distribution\": {\n        \"total_quantity\": 100,\n        \"available_quantity\": 50,\n        \"creator_reserved_quantity\": 20,\n        \"campaign_reserved_quantity\": 20,\n        \"committed_quantity\": 10\n    },\n    \"update_time\": 1627587600\n  }\n}\n```\n\n\n",
+    "update_time": "1751450133",
+    "view_count": 0,
+    "prev_document_id": "6710c02ba88d1103248e82b2",
+    "prev_document_path": "25-opportunity-matching-status-change",
+    "next_document_id": "67b5c6cba42623049abe5062",
+    "next_document_path": "37-product-audit-status-change",
+    "is_api_doc": false,
+    "document_id": "672995e79ba2a002fe5dc92e",
+    "doc_type": 2,
+    "keywords": [
+     {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "path": "Product/_37_ Product audit status change.json",
+  "data": {
+   "meta": {
+    "document_id": "67b5c6cba42623049abe5062",
+    "parent_id": "670cb97f889b3d031da023d6",
+    "name": "(37) Product audit status change",
+    "document_path": "37-product-audit-status-change",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1751450137",
+    "keywords": []
+   },
+   "detail": {
+    "title": "(37) Product audit status change",
+    "content": "## Trigger scenario\nWhen the product audit status changes, you'll receive this webhook.\nWith this webhook, you can easily get the audit status information of a product instead of calling [Get Product](get-product) API.\nTo receive this webhook, you must ensure the `Product Basic` API scope is enabled in Partner Center.\n## Data business parameters\n| **Parameter name** | **Data Type** | **Sample** | **Description** |\n| --- | --- | --- | --- |\n| type | int | `37` | The ID of the webhook type. |\n| tts_notification_id | string | `\"7327112393057371910\"` | The ID of the notification. |\n| shop_id | string | `\"7494049642642441621\"` | The ID of the shop. |\n| timestamp | int | `1644412885` | The time when this webhook was triggered, represented by Unix timestamp. |\n| data | object |  |  |\n| └ product_id | int | `789078671231` | The ID of the product. |\n| └ audit | object |  | The product audit information. |\n| └└ status | string | `PRE_APPROVED` | The product audit status. <br> Possible values: <br>  <br> * NONE: The product is not applicable for audit because it has not been submitted for listing on this platform, or it is in a draft, frozen, or deactivated state. <br> * AUDITING: The product is currently being audited. <br> * FAILED: The product failed the audit, or the audit was cancelled. <br> * PRE_APPROVED: The product has passed the audit but is not yet listed due to pending prerequisites. Refer to `pre_approved_reasons` for the prerequisites. <br> * APPROVED: The product passed the audit and has been listed on the platform. |\n| └└ pre_approved_reasons | []string | [\"KYC_PENDING\"] | The reason why the audit status of the product is `PRE_APPROVED`. <br> Possible values: <br>  <br> * KYC_PENDING: The seller's onboarding (KYC - Know Your Customer information) is incomplete or awaiting processing. <br> * RESTRICTED_CATEGORY_PENDING: Applicable only for the US market. The product is in a restricted category, and category approval is still pending. To request access, submit an application through the Qualification Center on TikTok Shop Seller Center. |\n| └ integrated_platform_statuses | object |  | The current audit status of the product on platforms that are natively integrated with TikTok Shop (e.g. TOKOPEDIA). |\n| └└ platform | string | `TOKOPEDIA` | The integrated platform name. <br> Possible values: <br>  <br> * TOKOPEDIA. |\n| └└ status | string | `AUDITING` | The product audit status. <br> Possible values: <br>  <br> * NONE: The product is not applicable for audit because it has not been submitted for listing on this platform, or it is in a draft, frozen, or deactivated state. <br> * AUDITING: The product is currently being audited. <br> * FAILED: The product failed the audit or the audit was cancelled. <br> * APPROVED: The product passed the audit and has been listed on the platform. |\n| └ update_time | int | `1644412885` | The time when the status changed, represented as a Unix timestamp (seconds). |\n## Event example\n```JSON\n{\n  \"type\": 37,\n  \"shop_id\": \"7494049642642441621\",\n  \"tts_notification_id\" : \"7327112393057371910\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"product_id\": 789078671231,\n    \"audit\": {\n        \"status\": \"PRE_APPROVED\",\n        \"pre_approved_reason\": \"KYC_PENDING\"\n    },\n    \"integrated_platform_statuses\": {\n        \"platform\": \"TOKOPEDIA\",\n        \"status\": \"AUDITING\"\n    },\n    \"update_time\": 1644412885\n  }\n}\n```\n\n\n",
+    "update_time": "1751450137",
+    "view_count": 0,
+    "prev_document_id": "672995e79ba2a002fe5dc92e",
+    "prev_document_path": "27-inventory-status-change",
+    "next_document_id": "67c6f62e6704d704a6e5deed",
+    "next_document_path": "38-strikethrough-price-expired",
+    "is_api_doc": false,
+    "document_id": "67b5c6cba42623049abe5062",
+    "doc_type": 2,
+    "keywords": [
+     {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "path": "Product/_38_ Strikethrough price expired.json",
+  "data": {
+   "meta": {
+    "document_id": "67c6f62e6704d704a6e5deed",
+    "parent_id": "670cb97f889b3d031da023d6",
+    "name": "(38) Strikethrough price expired",
+    "document_path": "38-strikethrough-price-expired",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1751450141",
+    "keywords": []
+   },
+   "detail": {
+    "title": "(38) Strikethrough price expired",
+    "content": "# 1. Trigger scenario\nThis webhook will be triggered when the strikethrough pricing verification information expires, 90 days after submission.\nPrerequisite: The \"Strikethrough Price\" API scope is enabled in Partner Center. For more information, refer to [Access Scope](access-scope).\n# 2. Data business parameters\n| **Parameter name** | **Data type** | **Sample** | **Description** |\n| --- | --- | --- | --- |\n| type | int | 38 | The ID of this webhook topic, which is 38. |\n| tts_notification_id | string | \"7327112393057371910\" | The ID of this webhook notification. |\n| shop_id | string | \"7494049642642441621\" | The shop ID. |\n| timestamp | int | 1644412885 | The time when this webhook is triggered. Unix timestamp. |\n| data | object |  |  |\n| └ product_id | string | \"732357708734418520388\" | The TikTok Shop product ID. |\n| └ sku_id | string | \"73235770873441823254\" | The TikTok Shop SKU ID. |\n## Event example\n```JSON\n{\n  \"type\": 38,\n  \"tts_notification_id\": \"7327112393057371910\",\n  \"shop_id\": \"7494049642642441621\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"product_id\": \"732357708734418520388\",\n    \"sku_id\": \"73235770873441823254\"\n  }\n}\n```\n\n\n",
+    "update_time": "1751450141",
+    "view_count": 0,
+    "prev_document_id": "67b5c6cba42623049abe5062",
+    "prev_document_path": "37-product-audit-status-change",
+    "next_document_id": "68232cac0b038904a68c3753",
+    "next_document_path": "42-combined-listing-change",
+    "is_api_doc": false,
+    "document_id": "67c6f62e6704d704a6e5deed",
+    "doc_type": 2,
+    "keywords": [
+     {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "path": "Product/_42_ Combined listing change.json",
+  "data": {
+   "meta": {
+    "document_id": "68232cac0b038904a68c3753",
+    "parent_id": "670cb97f889b3d031da023d6",
+    "name": "(42) Combined listing change",
+    "document_path": "42-combined-listing-change",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1751450144",
+    "keywords": []
+   },
+   "detail": {
+    "title": "(42) Combined listing change",
+    "content": "# 1. Trigger scenario\nThis webhook is triggered when a combined listing is created, updated (the list of products in the combined listing changes), or deleted.\n**Prerequisite**: The \"Product Basic\" API scope is enabled in Partner Center. For more information, refer to [Access Scope](access-scope).\n# 2. Data business parameters\n| **Parameter name** | **Data type** | **Sample** | **Description** |\n| --- | --- | --- | --- |\n| type | int | 42 | The ID of this webhook topic, which is 42. |\n| tts_notification_id | string | \"7327112393057371910\" | The ID of this webhook notification. |\n| shop_id | string | \"7494049642642441621\" | The shop ID. |\n| timestamp | int | 1644412885 | The time when this webhook is triggered. Unix timestamp. |\n| data | object |  |  |\n| └ combined_listing_id | string | \"123456789\" | The combined listing ID. |\n| └ products | []object |  | The current list of products in this combined listing after the change. |\n| └└ id | string | \"987654321\" | The product id. |\n| └ status | string | \"LIVE\" | The status of the combined listing. <br> Possible values: <br>  <br> * LIVE <br> * SYSTEM_DEACTIVATED <br> * SELLER_DEACTIVATED <br> * DELETED <br>  <br> Note: Only products in LIVE combined listings will appear on the product display page. |\n| └ change_type | string | \"UPDATE\" | The type of change made to this combined listing. <br> Possible values: <br>  <br> * CREATE: The combined listing was created. <br> * UPDATE: The combined listing was updated to add or remove products. <br> * DELETE: The combined listing was deleted. |\n| └ added_product_ids | []string | [\"987654321\"] | The list of products that were newly added to the combined listing. |\n| └ removed_product_ids | []string | [\"987654322\"] | The list of products that were removed from the combined listing. |\n## Event example\n```JSON\n{\n  \"type\": 42,\n  \"tts_notification_id\": \"7327112393057371910\",\n  \"shop_id\": \"7494049642642441621\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"combined_listing_id\": \"123456789\",\n    \"products\": [\n      {\n        \"id\": \"987654321\"\n      },\n      {\n        \"id\": \"987654322\"\n      }\n    ],\n    \"status\": \"LIVE\",\n    \"change_type\": \"UPDATE\",\n    \"added_product_ids\": [\"987654321\"],\n    \"removed_product_ids\": [\"987654333\"]    \n  }\n}\n```\n\n\n",
+    "update_time": "1751450144",
+    "view_count": 0,
+    "prev_document_id": "67c6f62e6704d704a6e5deed",
+    "prev_document_path": "38-strikethrough-price-expired",
+    "next_document_id": "684f8d9bcc4e44049347a12e",
+    "next_document_path": "46-image-translation-completed",
+    "is_api_doc": false,
+    "document_id": "68232cac0b038904a68c3753",
+    "doc_type": 2,
+    "keywords": [
+     {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "path": "Product/_46_ Image translation completed.json",
+  "data": {
+   "meta": {
+    "document_id": "684f8d9bcc4e44049347a12e",
+    "parent_id": "670cb97f889b3d031da023d6",
+    "name": "(46) Image translation completed",
+    "document_path": "46-image-translation-completed",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1756905018",
+    "keywords": []
+   },
+   "detail": {
+    "title": "(46) Image translation completed",
+    "content": "# 1. Trigger scenario\nThis webhook is triggered when an image translation is completed or failed.\n\n\nApplicable only for sellers that sell across EU.\n**Prerequisite**: The \"Product Basic\" API scope is enabled in Partner Center. For more information, refer to [Access Scope](access-scope).\n# 2. Data business parameters\n| **Parameter name** | **Data type** | **Sample** | **Description** |\n| --- | --- | --- | --- |\n| type | int | 46 | The ID of this webhook topic, which is 46. |\n| tts_notification_id | string | \"7327112393057371910\" | The ID of this webhook notification. |\n| shop_id | string | \"7494049642642441621\" | The shop ID. |\n| timestamp | int | 1644412885 | The time when this webhook is triggered. Unix timestamp. |\n| data | object |  |  |\n| └ translation_task | object |  | The image translation task and the corresponding results. Each task corresponds to the translation of 1 image into 1 target language. |\n| └ └ id | string | 764c6e87eedcea90399a0dafcd572b71 | The ID to identify the image translation task. |\n| └ └ status | string | COMPLETED | The translation status. <br> Possible values: <br> - PROCESSING: Translation is underway and has not yet completed. <br> - COMPLETED: Translation has completed and results are ready. <br> - FAILED: Translation did not complete due to an error. |\n| └ └ fail_reason | string |  | The reason why the translation task failed. |\n| └ └ target_language | string | it-IT | The target language to translate the image into. <br> Possible values: <br> - de-DE <br> - en-IE <br> - es-ES <br> - fr-FR <br> - it-IT |\n| └ └ original_image | string |  | The original image to be translated. |\n| └ └ └ uri | string | tos-useast2a-i-tulkllf4y5-euttp/748e39ecff38453ab8396a36a53dbb92 | The URI of the original image. |\n| └ └ └ url | string | https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xyz-sg/sample.jpeg | The URL of the original image. |\n| └ └ translated_image | object |  | The translated image. |\n| └ └ └ uri | string | tos-maliva-i-o3syd03w52-us/53b55d6e8cdf1f315affa7e70b45707d | The URI of the translated image. |\n| └ └ └ url | string | https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/sample.jpeg | The URL of the translated image. |\n\n---\n\n\n## Event example\n```JSON\n{\n    \"type\": 46,\n    \"shop_id\": \"7494049642642441621\",\n    \"tts_notification_id\": \"7327112393057371910\",\n    \"timestamp\": 1644412885,\n    \"data\": {\n        \"translation_task\": {\n            \"id\": \"764c6e87eedcea90399a0dafcd572b71\",\n            \"status\": \"COMPLETED\",\n            \"fail_reason\": \"\",            \n            \"target_lang\": \"it-IT\",\n            \"original_image\": {\n                \"uri\": \"tos-useast2a-i-tulkllf4y5-euttp/748e39ecff38453ab8396a36a53dbb92\",\n                \"url\": \"https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xyz-sg/sample.jpeg\"\n            },\n            \"translated_image\": {\n                \"uri\": \"tos-maliva-i-o3syd03w52-us/53b55d6e8cdf1f315affa7e70b45707d\",\n                \"url\": \"https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/sample.jpeg\"\n            }\n        }\n    }\n}\n```\n\n\n",
+    "update_time": "1756905018",
+    "view_count": 0,
+    "prev_document_id": "68232cac0b038904a68c3753",
+    "prev_document_path": "42-combined-listing-change",
+    "next_document_id": "68b83e1629f2990489c3d277",
+    "next_document_path": "7nzxgima",
+    "is_api_doc": false,
+    "document_id": "684f8d9bcc4e44049347a12e",
+    "doc_type": 2,
+    "keywords": [
+     {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "path": "Product/_51_ Global replication status change.json",
+  "data": {
+   "meta": {
+    "document_id": "68b83e1629f2990489c3d277",
+    "parent_id": "670cb97f889b3d031da023d6",
+    "name": "(51) Global replication status change",
+    "document_path": "7nzxgima",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1756914652",
+    "keywords": []
+   },
+   "detail": {
+    "title": "(51) Global replication status change",
+    "content": "# 1. Trigger scenario\nThis webhook is triggered when a product replication operation in another market is completed, regardless of success or failure. If the replication fails, the failure reason(s) will be included in the response.\n**Applicable only for global sellers.**\n**Prerequisite**: The \"Product Basic\" API scope is enabled in Partner Center. For more information, refer to [Access Scope](https://partner.tiktokshop.com/docv2/page/access-scope).\n# 2. Data business parameters\n| **Parameter name** | **Data type** | **Sample** | **Description** |\n| --- | --- | --- | --- |\n| type | int | 51 | The ID of this webhook topic, which is 51. |\n| tts_notification_id | string | \"7327112393057371910\" | The ID of this webhook notification. |\n| shop_id | string | \"7494049642642441621\" | The shop ID. |\n| timestamp | int | 1644412885 | The time when this webhook is triggered. Unix timestamp. |\n| data | object |  |  |\n| └ source_product_id | string | \"764c6e87eedcea90399a0dafcd572b71\" | The ID of the product that's being replicated to other markets. |\n| └ replicated_product | object |  | The product that was replicated from the source product. |\n| └ └ product_id | string | \"576486316948490000\" | The ID of the product created through replication. <br> Pass this ID to the [GET Product](https://partner.tiktokshop.com/docv2/page/get-product-202309) endpoint for more details about the product. |\n| └ └ region | string | \"GB\" | The market where the product has been replicated. |\n| └ └ result | string | \"SUCCESS\" | The result of replicating the product. <br> Possible values: <br>  <br> * SUCCESS: The product was successfully replicated to the local shop, submitted for listing, and is now under review. <br> * DRAFT: The product was successfully replicated to the local shop but saved as a draft local product due to validation errors. You need to call [GET Product](https://partner.tiktokshop.com/docv2/page/get-product-202309) to obtain the original submitted data, pass that data to [POST Check Product Listing](https://partner.tiktokshop.com/docv2/page/check-product-listing-202309) to identify the errors, then call [PUT Edit Product](https://partner.tiktokshop.com/docv2/page/edit-product-202309) to rectify the errors and send for review. <br> * FAILED: Replication of the product to the local shop was unsuccessful. |\n| └ └ fail_reasons | []object |  | The list of reasons for why the replication failed. |\n| └ └ └ message | string |  | The reason for why the replication failed. |\n\n---\n\n\n## Event example\n```JSON\n{\n    \"type\": 51,\n    \"shop_id\": \"7494049642642441621\",\n    \"tts_notification_id\": \"7327112393057371910\",\n    \"timestamp\": 1644412885,\n    \"data\": {\n        \"source_product_id\": \"764c6e87eedcea90399a0dafcd572b71\",\n        \"replicated_product\": {\n            \"product_id\": \"576486316948490000\",\n            \"region\": \"GB\",\n            \"result\": \"SUCCESS\",            \n            \"fail_reasons\": {\n                \"message\": \"\"\n                }\n            }\n        }\n    }\n}\n```\n\n",
+    "update_time": "1756914652",
+    "view_count": 0,
+    "prev_document_id": "684f8d9bcc4e44049347a12e",
+    "prev_document_path": "46-image-translation-completed",
+    "next_document_id": "68b84210d40cf204a17e4d27",
+    "next_document_path": "g2wnrb57",
+    "is_api_doc": false,
+    "document_id": "68b83e1629f2990489c3d277",
+    "doc_type": 2,
+    "keywords": [
+     {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "path": "Product/_52_ Global listing method change.json",
+  "data": {
+   "meta": {
+    "document_id": "68b84210d40cf204a17e4d27",
+    "parent_id": "670cb97f889b3d031da023d6",
+    "name": "(52) Global listing method change",
+    "document_path": "g2wnrb57",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1756914700",
+    "keywords": []
+   },
+   "detail": {
+    "title": "(52) Global listing method change",
+    "content": "# 1. Trigger scenario\nThis webhook is triggered when the global listing method for a shop changes.\n**Applicable only for global sellers.**\n**Prerequisite**: The \"Product Basic\" API scope is enabled in Partner Center. For more information, refer to [Access Scope](https://partner.tiktokshop.com/docv2/page/access-scope).\n# 2. Data business parameters\n| **Parameter name** | **Data type** | **Sample** | **Description** |\n| --- | --- | --- | --- |\n| type | int | 52 | The ID of this webhook topic, which is 52. |\n| tts_notification_id | string | \"7327112393057371910\" | The ID of this webhook notification. |\n| timestamp | int | 1644412885 | The time when this webhook is triggered. Unix timestamp. |\n| seller_open_id | string | \"VIyStQAAAADCBQ40s4TzOSSOEIW-bM5O9cod3vK8OytW8m-bnBYlXw\" | The open_id of the seller. For more information, refer to [Authorization overview](https://partner.tiktokshop.com/docv2/page/authorization-overview-202407). |\n| data | object |  |  |\n| └ global_product_id | string | \"1729715829872102020\" | The global product ID associated with the local product. |\n| └ local_product_id | []string | [\"1731711955927208538\"] | The local product ID. |\n| └ listing_method | string | \"GLOBAL_PUBLISHING\" | The listing method applicable to the local product. <br> Possible values: <br>  <br> * GLOBAL_PUBLISHING: Create a global product, then publish it to target local markets. <br> * LOCAL_REPLICATION: Create local product, then replicate it to other target local markets. |\n\n---\n\n\n## Event example\n```JSON\n{\n    \"type\": 52,\n    \"tts_notification_id\": \"7327112393057371910\",\n    \"timestamp\": 1644412885,\n    \"seller_open_id\": \"VIyStQAAAADCBQ40s4TzOSSOEIW-bM5O9cod3vK8OytW8m-bnBYlXw\"\n    \"data\": {\n        \"global_product_id\": \"1729715829872102020\",\n        \"local_product_id\": [\"1731711955927208538\"],\n        \"listing_method\": \"GLOBAL_PUBLISHING\"\n            }\n        }\n    }\n}\n```\n\n",
+    "update_time": "1756914700",
+    "view_count": 0,
+    "prev_document_id": "68b83e1629f2990489c3d277",
+    "prev_document_path": "7nzxgima",
+    "next_document_id": "69a7a36996796b049fefc87e",
+    "next_document_path": "ve4gakno",
+    "is_api_doc": false,
+    "document_id": "68b84210d40cf204a17e4d27",
+    "doc_type": 2,
+    "keywords": [
+     {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "path": "Product/_5_ Product status change.json",
+  "data": {
+   "meta": {
+    "document_id": "650956aff1fd3102b90b6261",
+    "parent_id": "670cb97f889b3d031da023d6",
+    "name": "(5) Product status change",
+    "document_path": "5-product-status-change",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1751450101",
+    "keywords": []
+   },
+   "detail": {
+    "title": "(5) Product status change",
+    "content": "# 1. Trigger scenario\nThe **product status change** webhook triggers when a product audit status changes or is completed:\n\n* Product passes the first audit: `PRODUCT_FIRST_PASS_REVIEW`\n* Product status changes by platform: `PRODUCT_STATUS_CHANGED`\n* Product audit fails: `PRODUCT_AUDIT_FAILURE`\n\n# 2. Data business parameters\n| **Parameter name** | **Sample** | **Description** |\n| --- | --- | --- |\n| product_id | 1X2X3X4X5 | The identification of a TikTok Shop product |\n| status | Live-On sell | Product audit status, with possible values: <br>  <br> * PRODUCT_FIRST_PASS_REVIEW <br> * PRODUCT_STATUS_CHANGED <br> * PRODUCT_AUDIT_FAILURE |\n| suspended_reason | 1X2X3X4X5 | The reason a product audit was rejected or frozen |\n| update_time | 1627587600 | The time when the status changed, represented as a Unix timestamp (seconds). |\n## Event example\n```JSON\n{\n  \"type\": 5,\n  \"tts_notification_id\": \"7327112393057371910\",\n  \"shop_id\": \"7494049642642441621\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"product_id\": 576486316948490000,\n    \"status\": \"PRODUCT_FIRST_PASS_REVIEW\",\n    \"suspended_reason\": \"\",\n    \"update_time\": 1644412885\n  }\n}\n```\n\n\n",
+    "update_time": "1751450101",
+    "view_count": 0,
+    "prev_document_id": "65030150746462028285f657",
+    "prev_document_path": "11-cancellation-status-change",
+    "next_document_id": "65d6f41411a60f02dc1cf8bf",
+    "next_document_path": "15-product-information-change",
+    "is_api_doc": false,
+    "document_id": "650956aff1fd3102b90b6261",
+    "doc_type": 2,
+    "keywords": [
+     {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "path": "Product/_62_ Product Package Recommended.json",
+  "data": {
+   "meta": {
+    "document_id": "69a7a36996796b049fefc87e",
+    "parent_id": "670cb97f889b3d031da023d6",
+    "name": "(62) Product Package Recommended",
+    "document_path": "ve4gakno",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1772771363",
+    "keywords": []
+   },
+   "detail": {
+    "title": "(62) Product Package Recommended",
+    "content": "# 1. Trigger scenario\nThis webhook is triggered when a product package recommendation is generated.\n**Note:** Applicable only for Brazil (**BR**) and Mexico (**MX**) markets.\n**Prerequisite**: The \"Product Basic\" API scope is enabled in Partner Center. For more information, please refer to [Access Scope](https://partner.tiktokshop.com/docv2/page/access-scope).\n# 2. Data business parameters\n| Properties |  |  |  | Type | Example | Properties description |\n| --- | --- | --- | --- | --- | --- | --- |\n| type |  |  |  | int | 62 | The ID of the webhook type. |\n| tts_notification_id |  |  |  | string | 7327112393057371910 | The ID of the notification. |\n| shop_id <br>  |  |  |  | string | 2123123 | The shop_id of the seller. To get the value, see [Authorization overview](https://partner.tiktokshop.com/docv2/page/678e3a3292b0f40314a92d75). <br>  |\n| timestamp |  |  |  | int | 1644412885 | The UNIX timestamp when this webhook was triggered. |\n| data |  |  |  | object |  |  |\n| > | product_id |  |  | string <br>  | 7493990579714164574 <br>  | The product ID generated by TikTok Shop. <br>  |\n| > | > <br>  | abnormality_types <br>  |  | []string <br>  | [\"Weight\",\"Dimension\"] | List of current anomaly types.  <br> Return [\"None\"] if status is NORMAL. <br>  |\n| > | > | weight_recommendation <br>  |  | object <br>  |  | Weight correction recommendation. |\n| > | > | > | unit | string | GRAM | Recommended value unit |\n| > | > | > | weight | object |  | Recommended values for weight. |\n| > | > | > | >min_value | string | 450 | Recommended range minimum; unit: g |\n| > | > | > | >max_value | string | 550 | Recommended range maximum; unit: g |\n| > | > | dimension_recommendation |  | object |  | Dimension correction recommendation. |\n| > | > | > | unit | string <br>  | CENTIMETER | Recommended value unit |\n| > | > | > | length | object <br>  |  <br>  | Recommended values for length. |\n| > | > | > | > min_value | string | 19 | Recommended range minimum; unit: cm |\n| > | > | > | > max_value | string | 22 | Recommended range maximum.unit: cm |\n| > | > | > | width | object |  | Recommended values for width. |\n| > | > | > | > min_value | string | 19 | Recommended range minimum; unit: cm |\n| > | > | > | > max_value | string | 22 | Recommended range maximum.unit: cm |\n| > <br>  | > | > | height | object |  | Recommended values for height. |\n| > | > | > | > min_value | string | 19 | Recommended range minimum; unit: cm |\n| > | > | > | > max_value | string | 22 | Recommended range maximum; unit: cm |\n\n\n\n---\n\n\n\n## Event example\n```JSON\n{\n    \"type\": 62,\n    \"tts_notification_id\": \"7611238471432161025\",\n    \"shop_id\": \"1111111\",\n    \"timestamp\": 1772129552,\n    \"data\": {\n        \"abnormality_types\": [\n            \"Weight\",\n            \"Dimension\"\n        ],\n        \"dimension_recommendation\": {\n            \"height\": {\n                \"max_value\": \"3\",\n                \"min_value\": \"3\"\n            },\n            \"length\": {\n                \"max_value\": \"1234\",\n                \"min_value\": \"123\"\n            },\n            \"unit\": \"CENTIMETER\",\n            \"width\": {\n                \"max_value\": \"666\",\n                \"min_value\": \"555\"\n            }\n        },\n        \"product_id\": \"1733529220361062152\",\n        \"weight_recommendation\": {\n            \"unit\": \"GRAM\",\n            \"weight\": {\n                \"max_value\": \"12000\",\n                \"min_value\": \"12000\"\n            }\n        }\n    }\n}\n```\n\n",
+    "update_time": "1772771363",
+    "view_count": 0,
+    "prev_document_id": "68b84210d40cf204a17e4d27",
+    "prev_document_path": "g2wnrb57",
+    "next_document_id": "69e9cba00a0aa9e23a75c941",
+    "next_document_path": "7u0ofsrd",
+    "is_api_doc": false,
+    "document_id": "69a7a36996796b049fefc87e",
+    "doc_type": 2,
+    "keywords": [
+     {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "path": "Product/_68_ Inventory changed.json",
+  "data": {
+   "meta": {
+    "document_id": "69e9cba00a0aa9e23a75c941",
+    "parent_id": "670cb97f889b3d031da023d6",
+    "name": "(68) Inventory changed",
+    "document_path": "7u0ofsrd",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1776931399",
+    "keywords": []
+   },
+   "detail": {
+    "title": "(68) Inventory changed",
+    "content": "\n### What is changing?\nTikTok Shop is launching a new Inventory changed webhook to push real-time events for SKU inventory quantity changes. Previously, developers had to indirectly infer inventory changes by subscribing to multiple webhook messages (e.g., order creation, marketing campaigns), which was complex and error-prone.\nThe new Inventory changed webhook standardizes inventory change notifications. Whether caused by new order creation, order cancellation, manual seller adjustments, API calls, or inventory locking/releasing from marketing campaigns or creator collaborations, the system will push real-time messages with a unified structure via this webhook.\nThis will help developers and service providers synchronize product inventory more accurately and efficiently, avoiding overselling or stockout issues caused by inventory information delays or inconsistencies, and simplifying inventory management logic.\n### Which markets are affected?\nThis change applies to all markets.\n### Who is affected?\nThis change applies to all developers integrated with TikTok Shop APIs.\n### Which version is applicable?\nThis is a new webhook push event and does not involve API version changes. Messages will be pushed to the webhook URL configured in the developer's application.\n### What action is required?\nIt is highly recommended to integrate this webhook into your application so that your merchants can benefit from more real-time two-way inventory synchronization. Once implemented, you can more reliably track inventory changes on the TikTok Shop platform.\nDetailed protocol and field descriptions for this webhook can be found in the technical details below.\n\n### Technical Details\n#### Trigger Conditions\nThe Inventory changed webhook will be triggered when any of the following events cause SKU inventory quantity changes:\n\n* `order_created`: Order successfully placed, inventory is committed.\n* `order_canceled`: Order canceled by user or seller, committed inventory is released back to available stock.\n* `order_shipped`: Order shipped, committed inventory is deducted.\n* `manual_adjustment`: Seller manually modifies inventory in Seller Center.\n* `api_sync`: Developer updates inventory via inventory-related OpenAPIs.\n* `campaign_lock`: Seller signs up for platform marketing campaigns, part of the inventory is locked.\n* `campaign_unlock`: Marketing campaign ends or seller withdraws, locked inventory is released.\n* `creator_lock`: Seller establishes collaboration with a creator, allocating exclusive inventory.\n* `creator_unlock`: Collaboration with creator ends, locked inventory is released.\n* `system_auto_replenish`: System automatically replenishes inventory (e.g., order failure due to exceptions).\n\n#### Payload Structure\nThe payload for each inventory update push includes common event information, the post-change inventory snapshot, and specific change details.\n| **Field Name** | **Type** | **Required** | **Description** |\n| --- | --- | --- | --- |\n| `event_id` | String | Yes | Unique identifier for the event, can be used for event-level idempotency. |\n| `occurred_at` | String | Yes | Time when the event occurred (UTC+0), in ISO 8601 format. |\n| `seller_id` | int64 | Yes | Seller ID. |\n| `product_id` | int64 | Yes | Product ID. |\n| `sku_id` | int64 | Yes | SKU ID where the inventory change occurred. |\n| **quantity_snapshot_after_change (Object)**: Post-change SKU inventory snapshot |  |  |  |\n| ` total_quantity` | Integer | Yes | Total warehouse inventory. Equals `total_available_quantity` + `total_committed_quantity`. |\n| ` total_available_quantity` | Integer | Yes | Available warehouse inventory. Total inventory physically present in the warehouse and available for sale. |\n| ` total_committed_quantity` | Integer | Yes | Committed order inventory. Inventory that has been ordered by users but not yet shipped. |\n| ` in_shop_quantity` | Integer | Yes | In-shop available inventory. Available stock currently not locked by any orders, campaigns, or creators. Equals `total_available_quantity` - (`campaign_locked_quantity` + `creator_locked_quantity`). |\n| ` campaign_locked_quantity` | Integer | Yes | Inventory locked by marketing campaigns. |\n| ` creator_locked_quantity` | Integer | Yes | Inventory locked by creator collaborations. |\n| **change_detail (List<Object>)**: List of inventory change details. In most cases, this list contains only one object. |  |  |  |\n| ` idempotency_key` | String | Yes | Unique identifier for a single change operation, can be used for detail-level idempotency. |\n| ` trigger_source` | String | Yes | Reason for the inventory change, corresponding to the Trigger Condition Code above. |\n| ` occurred_at` | String | Yes | Time when the specific change event occurred (UTC+0). Can be used to ensure sequential processing. |\n| ` total_quantity_delta` | Integer | Yes | Change amount for total warehouse inventory. |\n| ` available_quantity_delta` | Integer | Yes | Change amount for available warehouse inventory. |\n| ` committed_quantity_delta` | Integer | Yes | Change amount for committed order inventory. |\n| ` in_shop_quantity_delta` | Integer | Yes | Change amount for in-shop available inventory. |\n| ` campaign_locked_quantity_delta` | Integer | Yes | Change amount for marketing campaign locked inventory. |\n| ` creator_locked_quantity_delta` | Integer | Yes | Change amount for creator collaboration locked inventory. |\n**Note: For all delta fields, positive numbers represent increases, and negative numbers represent decreases.**\n#### Example Payload\nThe following is an example of a Webhook payload when a seller manually increases the inventory of an SKU by 4 units through the Seller Center:\n```JSON\n{\n  \"event_id\": \"d7813cae-9997-4d24-a583-7d85801250f1\",\n  \"occurred_at\": \"2026-04-02T09:28:34.979101552Z\",\n  \"seller_id\": \"7498123456789012345\",\n  \"product_id\": \"1891234567890123456\",\n  \"sku_id\": \"1729507467923261408\",\n  \"quantity_snapshot_after_change\": {\n    \"total_quantity\": 7,\n    \"total_available_quantity\": 7,\n    \"total_committed_quantity\": 0,\n    \"in_shop_quantity\": 7,\n    \"campaign_locked_quantity\": 0,\n    \"creator_locked_quantity\": 0\n  },\n  \"change_detail\": [\n    {\n      \"idempotency_key\": \"d7813cae-9997-4d24-a583-7d85801250f1\",\n      \"trigger_source\": \"manual_adjustment\",\n      \"occurred_at\": \"2026-04-02T09:28:34.979101552Z\",\n      \"total_quantity_delta\": 4,\n      \"available_quantity_delta\": 4,\n      \"committed_quantity_delta\": 0,\n      \"in_shop_quantity_delta\": 4,\n      \"campaign_locked_quantity_delta\": 0,\n      \"creator_locked_quantity_delta\": 0\n    }\n  ]\n}\n```\n\n",
+    "update_time": "1776931399",
+    "view_count": 0,
+    "prev_document_id": "69a7a36996796b049fefc87e",
+    "prev_document_path": "ve4gakno",
+    "next_document_id": "67ff82ce550a99048d938b2e",
+    "next_document_path": "39-activity-status-change",
+    "is_api_doc": false,
+    "document_id": "69e9cba00a0aa9e23a75c941",
+    "doc_type": 2,
+    "keywords": [
+     {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "path": "Order/_11_ Cancellation status change.json",
+  "data": {
+   "meta": {
+    "document_id": "65030150746462028285f657",
+    "parent_id": "670cb97e54f920030fb8e2fc",
+    "name": "(11) Cancellation status change",
+    "document_path": "11-cancellation-status-change",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1751450095",
+    "keywords": []
+   },
+   "detail": {
+    "title": "(11) Cancellation status change",
+    "content": "# 1. Trigger scenario\nThe **cancellation status change** webhook is triggered when the `cancel_status` of an order changes:\n\n* An order cancellation is initiated: `CANCELLATION_REQUEST_PENDING`\n* An order cancellation is accepted by the `SELLER` or `SYSTEM`: `CANCELLATION_REQUEST_SUCCESS`\n* An order cancellation is closed by the `BUYER` or `SYSTEM`: `CANCELLATION_REQUEST_CANCELLED`\n* An order cancellation is successful and a refund is issued: `CANCELLATION_REQUEST_COMPLETE`\n\n# 2. Data business parameters\n| **Parameter name** | **Sample** | **Description** |\n| --- | --- | --- |\n| order_id | 577087614418520388 | The identification of a TikTok Shop order |\n| cancellations_role | BUYER | The user who initiated a cancellation, with possible values: <br>  <br> * BUYER <br> * SELLER <br> * SYSTEM |\n| cancel_status | CANCELLATION_REQUEST_PENDING | Order cancellation status, with possible values: <br>  <br> * CANCELLATION_REQUEST_PENDING <br> * CANCELLATION_REQUEST_SUCCESS <br> * CANCELLATION_REQUEST_CANCELLED <br> * CANCELLATION_REQUEST_COMPLETE |\n| cancel_id | 4035318504086604100 | The identifier of a specific order cancellation |\n| create_time | 1627587600 | The time when the buyer initiated the cancellation request, represented as a Unix timestamp (seconds). |\n## Event example\n```JSON\n{\n  \"type\": 11,\n  \"tts_notification_id\": \"7327112393057371910\",\n  \"shop_id\": \"7494049642642441621\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"order_id\": \"576486316948490001\",\n    \"cancellations_role\": \"BUYER\",\n    \"cancel_status\": \"CANCELLATION_REQUEST_PENDING\",\n    \"cancel_id\": \"4035318504086604100\",\n    \"create_time\": 1627587600\n  }\n}\n```\n\n\n",
+    "update_time": "1751450095",
+    "view_count": 0,
+    "prev_document_id": "650300b8a57708028b430b4a",
+    "prev_document_path": "1-order-status-change",
+    "next_document_id": "650956aff1fd3102b90b6261",
+    "next_document_path": "5-product-status-change",
+    "is_api_doc": false,
+    "document_id": "65030150746462028285f657",
+    "doc_type": 2,
+    "keywords": [
+     {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "path": "Order/_1_ Order status change.json",
+  "data": {
+   "meta": {
+    "document_id": "650300b8a57708028b430b4a",
+    "parent_id": "670cb97e54f920030fb8e2fc",
+    "name": "(1) Order status change",
+    "document_path": "1-order-status-change",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1751450092",
+    "keywords": [
+     "Order Status Update"
+    ]
+   },
+   "detail": {
+    "title": "(1) Order status change",
+    "content": "# 1. Trigger scenario\nThe **order status change** webhook is triggered when the `order_status` of an order changes.\n# 2. Data business parameters\n| **Parameter name** | **Sample** | **Description** |\n| --- | --- | --- |\n| order_id | 576462377512830168 | The identification of a TikTok Shop order |\n| order_status | CANCEL | The most recent order status, with possible values: <br>  <br> * `UNPAID` <br> * `ON_HOLD` <br> * `AWAITING_SHIPMENT` <br> * `AWAITING_COLLECTION` <br> * `CANCEL` <br> * `IN_TRANSIT` <br> * `DELIVERED` <br> * `COMPLETED` |\n| is_on_hold_order | false | Indicates whether the order has experienced or will experience `ON_HOLD` status |\n| update_time | 1627587505 | The order status update time, represented as a Unix timestamp (seconds). |\n## Event example\n```json\n{\n    \"type\":1,\n    \"tts_notification_id\": \"7327112393057371910\",\n    \"shop_id\":\"7494049642642441621\",\n    \"timestamp\":1644412885,\n    \"data\":{\n        \"order_id\":\"576486316948490001\",\n        \"order_status\":\"UNPAID\",\n        \"is_on_hold_order\": false,\n        \"update_time\":1644412885\n    }\n}\n```\n\n\n",
+    "update_time": "1751450092",
+    "view_count": 0,
+    "prev_document_id": "650955cabace3e02b73cc886",
+    "prev_document_path": "4-package-update",
+    "next_document_id": "65030150746462028285f657",
+    "next_document_path": "11-cancellation-status-change",
+    "is_api_doc": false,
+    "document_id": "650300b8a57708028b430b4a",
+    "doc_type": 2,
+    "keywords": [
+     {
+      "keyword": "Order Status Update",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "path": "Return and Refund/_12_ Return status change.json",
+  "data": {
+   "meta": {
+    "document_id": "65030162bb2a4d028d50cc51",
+    "parent_id": "670cb9846db0bb030f607b72",
+    "name": "(12) Return status change",
+    "document_path": "12-return-status-change",
+    "is_api_doc": false,
+    "doc_type": 2,
+    "update_time": "1751450160",
+    "keywords": []
+   },
+   "detail": {
+    "title": "(12) Return status change",
+    "content": "# 1. Trigger scenario\nThe **return status change** webhook is triggered when the `return_status` of an order changes:\n\n* The `BUYER` initiates a return or refund request and is pending `SELLER` review: `RETURN_OR_REFUND_REQUEST_PENDING`\n* The `SELLER` declines the `BUYER`'s return or refund request: `REFUND_OR_RETURN_REQUEST_REJECT`\n* The return request is approved and the `SELLER` is waiting for the `BUYER` to return the approved items: `AWAITING_BUYER_SHIP`. If the `BUYER` doesn't ship the items to the `SELLER` before the deadline, the request will be closed automatically.\n* To return the items to the `SELLER`, the `BUYER` drops off the package successfully or the `BUYER` ships the package and uploads the tracking number: `BUYER_SHIPPED_ITEM`\n* The `SELLER` declines the refund request for the return: `REJECT_RECEIVE_PACKAGE`\n* The `SELLER` accepts the refund request or issues a refund for the return: `RETURN_OR_REFUND_REQUEST_SUCCESS`\n* The `BUYER` or `SYSTEM` closes the return or refund request: `RETURN_OR_REFUND__REQUEST_CANCELLED`\n* The return or refund is successful: `RETURN_OR_REFUND_REQUEST_COMPLETE`\n\nAdditionally, a `BUYER` may request an identical replacement item instead of a refund:\n\n* The `BUYER` initiates a replacement request and is pending `SELLER` review: `REPLACEMENT_REQUEST_PENDING`\n* The `SELLER` declines the `BUYER`'s replacement request: `REPLACEMENT_REQUEST_REJECT`\n* The `SELLER` decides to issue a refund to the `BUYER` without replacement: `REPLACEMENT_REQUEST_REFUND_SUCCESS`\n* The `BUYER` cancels the replacement request: `REPLACEMENT_REQUEST_CANCEL`\n* The `SELLER` approves the replacement request: `REPLACEMENT_REQUEST_COMPLETE`\n\n# 2. Data business parameters\n| **Parameter** | **Description** | **Sample** |\n| --- | --- | --- |\n| order_id | The identification of a TikTok Shop order | 577087614418520388 |\n| return_role | Return or refund request user, with possible values: <br>  <br> * BUYER <br> * SELLER <br> * SYSTEM | BUYER |\n| return_type | The return or refund request type, with possible values: <br>  <br> * REFUND <br> * REPLACEMENT <br> * RETURN_AND_REFUND | REFUND |\n| return_status | The return status for a request, with possible values: <br>  <br> * AWAITING_BUYER_SHIP <br> * BUYER_SHIPPED_ITEM <br> * REFUND_OR_RETURN_REQUEST_REJECT <br> * REJECT_RECEIVE_PACKAGE <br> * REPLACEMENT_REQUEST_CANCEL <br> * REPLACEMENT_REQUEST_COMPLETE <br> * REPLACEMENT_REQUEST_PENDING <br> * REPLACEMENT_REQUEST_REFUND_SUCCESS <br> * REPLACEMENT_REQUEST_REJECT <br> * RETURN_OR_REFUND_REQUEST_CANCEL <br> * RETURN_OR_REFUND_REQUEST_COMPLETE <br> * RETURN_OR_REFUND_REQUEST_PENDING <br> * RETURN_OR_REFUND_REQUEST_SUCCESS | RETURN_OR_REFUND_REQUEST_PENDING |\n| return_id | The identifier of a specific return | 4035318504086604100 |\n| create_time | The time when the request was created. | 1627587600 |\n| update_time | The time when return order status update, represented as a Unix timestamp (seconds). | 1627587600 |\n## Event example\n```JSON\n{\n  \"type\": 12,\n  \"tts_notification_id\": \"7327112393057371910\",\n  \"shop_id\": \"7494049642642441621\",\n  \"timestamp\": 1644412885,\n  \"data\": {\n    \"order_id\": \"576486316948490001\",\n    \"return_role\": \"BUYER\",\n    \"return_type\": \"REFUND\",\n    \"return_status\": \"RETURN_OR_REFUND_REQUEST_PENDING\",\n    \"return_id\": \"576486316948490001\",\n    \"create_time\": 1627587600\n    \"update_time\": 1644412885\n  }\n}\n```\n\n\n",
+    "update_time": "1751450160",
+    "view_count": 0,
+    "prev_document_id": "69c3bda1d468e604f335362a",
+    "prev_document_path": "x6legjl9",
+    "next_document_id": "65095746defece02be4d749d",
+    "next_document_path": "6-seller-deauthorization",
+    "is_api_doc": false,
+    "document_id": "65030162bb2a4d028d50cc51",
+    "doc_type": 2,
+    "keywords": [
+     {
+      "keyword": "",
+      "font_color": "#141414",
+      "background_color": "#E6E6E6"
+     }
+    ]
+   }
+  }
+ }
+]
