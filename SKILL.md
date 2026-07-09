@@ -1,10 +1,10 @@
 ---
 name: tiktok-docs
-description: Use this skill whenever a task involves the TikTok Platform API (developers.tiktok.com — Login Kit, Content Posting, Video/Display API, Research Tools, Mini Games/Dramas, Scopes) or the TikTok Shop Partner API (partner.tiktokshop.com — Orders, Products, Authorization, Webhooks, Logistics, Finance, Affiliate, Return/Refund, and the Node.js SDK). Provides consolidated local reference docs and TypeScript SDK models so integration code (auth, signing, endpoints, webhooks) can be written correctly without guessing field names or request shapes. Trigger on mentions of TikTok API, TikTok Shop, open.tiktokapis.com, tiktokglobalshop, HMAC sign TikTok, TikTok webhook, or TikTok OAuth.
+description: Use this skill whenever a task involves the TikTok Platform API (developers.tiktok.com - Login Kit, Content Posting, Video/Display API, Research Tools, Mini Games/Dramas, Scopes) or the TikTok Shop Partner API (partner.tiktokshop.com - Orders, Products, Authorization, Webhooks, Logistics, Finance, Affiliate, Return/Refund, and the Node.js SDK). Provides consolidated local reference docs and TypeScript SDK models so integration code (auth, signing, endpoints, webhooks) can be written correctly without guessing field names or request shapes. Trigger on mentions of TikTok API, TikTok Shop, open.tiktokapis.com, tiktokglobalshop, HMAC sign TikTok, TikTok webhook, or TikTok OAuth.
 ---
 
 # TikTok Documentation Reference
-> **Untuk AI Agent** — Claude Code, OpenClaw, Hermes Agent, dan agent lain yang bisa membaca skill file.
+> **Untuk AI Agent** - Claude Code, OpenClaw, Hermes Agent, dan agent lain yang bisa membaca skill file.
 
 ## Overview
 
@@ -42,16 +42,16 @@ Satu file `.json` per kategori (`API_Reference.json`, `Partner_Guide.json`, `Dev
 Skema `data` per shape ada di Bagian 2.
 
 ### `docs/partner_tiktokshop_com_sdk_models/`
-Satu file `.ts` per modul SDK (`product.ts`, `order.ts`, `returnRefund.ts`, `finance.ts`, `affiliate.ts`, `affiliateCreator.ts`, `affiliatePartner.ts`, `affiliateSeller.ts`, `analytics.ts`, `authorization.ts`, `customerService.ts`, `dataReconciliation.ts`, `event.ts`, `fulfillment.ts`, `logistics.ts`, `open.ts`, `promotion.ts`, `seller.ts`, `supplyChain.ts`), plus `_utils.ts` dan `_sdk_README.md`. Model didefinisikan sebagai **`export class`** (bukan `interface`) hasil OpenAPI Generator, lengkap dengan `attributeTypeMap` (mapping properti camelCase ↔ field API snake_case). Tiap definisi diberi penanda:
+Satu file `.ts` per modul SDK (`product.ts`, `order.ts`, `returnRefund.ts`, `finance.ts`, `affiliate.ts`, `affiliateCreator.ts`, `affiliatePartner.ts`, `affiliateSeller.ts`, `analytics.ts`, `authorization.ts`, `customerService.ts`, `dataReconciliation.ts`, `event.ts`, `fulfillment.ts`, `logistics.ts`, `open.ts`, `promotion.ts`, `seller.ts`, `supplyChain.ts`), plus `_utils.ts` dan `_sdk_README.md`. Model didefinisikan sebagai **`export class`** (bukan `interface`) hasil OpenAPI Generator, lengkap dengan `attributeTypeMap` (mapping properti camelCase <-> field API snake_case). Tiap definisi diberi penanda:
 ```
 // ==== SOURCE: <path relatif file asli> ====
 ```
 
 ---
 
-## 2. Skema JSON — Partner Docs (di dalam field `data` tiap record)
+## 2. Skema JSON - Partner Docs (di dalam field `data` tiap record)
 
-**Shape A — API Reference** (`API_Reference.json`, `meta.is_api_doc: true`)
+**Shape A - API Reference** (`API_Reference.json`, `meta.is_api_doc: true`)
 ```json
 {
   "meta": { "document_id": "...", "name": "Create Product", "document_path": "...", "is_api_doc": true, "keywords": [...], ... },
@@ -74,12 +74,12 @@ Satu file `.ts` per modul SDK (`product.ts`, `order.ts`, `returnRefund.ts`, `fin
 ```
 `method` numerik: **1=POST, 2=GET, 3=PUT, 4=DELETE**. Versi API ada di `interface_path` (segmen `202309` dll). `query` adalah contoh URL lengkap.
 
-**Shape B — Guide / Panduan** (file selain API_Reference, `meta.is_api_doc: false`)
+**Shape B - Guide / Panduan** (file selain API_Reference, `meta.is_api_doc: false`)
 ```json
 { "meta": { ... }, "detail": { "title": "...", "content": "<HTML>", "doc_type": ..., "keywords": [...], "update_time": ..., "next_document_path": "...", "prev_document_path": "..." } }
 ```
 
-**Shape C — Metadata Fallback** (fetch gagal; hanya segelintir record, mis. di `Developer_Guide.json`)
+**Shape C - Metadata Fallback** (fetch gagal; hanya segelintir record, mis. di `Developer_Guide.json`)
 ```json
 { "note": "Konten tidak tersedia via API publik.", "url": "https://partner.tiktokshop.com/docv2/page/...", "meta": { ... } }
 ```
@@ -89,7 +89,7 @@ Satu file `.ts` per modul SDK (`product.ts`, `order.ts`, `returnRefund.ts`, `fin
 
 ## 3. Prosedur Lookup
 
-**Cari endpoint tertentu (mis. "Create Product"):** file JSON besar (satu baris), jangan di-Read langsung — parse per record:
+**Cari endpoint tertentu (mis. "Create Product"):** file JSON besar (satu baris), jangan di-Read langsung - parse per record:
 ```bash
 python3 -c "
 import json
@@ -111,11 +111,11 @@ grep -n "class.*Sku" docs/partner_tiktokshop_com_sdk_models/product.ts
 
 **Pahami alur autentikasi (Shop API):**
 ```
-docs/partner_tiktokshop_com/Developer_Guide.json — record dengan path:
+docs/partner_tiktokshop_com/Developer_Guide.json - record dengan path:
   "Get started/Authorization/..."                          -> alur OAuth shop
   "TikTok Shop API concepts/Sign your API request.json"    -> spec HMAC sign
   "Get started/Make your first API call/..."               -> contoh end-to-end
-docs/partner_tiktokshop_com/API_Reference.json — filter path mengandung "Authorization"
+docs/partner_tiktokshop_com/API_Reference.json - filter path mengandung "Authorization"
 ```
 Untuk Platform API: `docs/developers_tiktok_com/Login_Kit.md`.
 
@@ -137,7 +137,7 @@ Untuk Platform API: `docs/developers_tiktok_com/Login_Kit.md`.
 
 ### TikTok Platform API (`developers.tiktok.com`)
 - **Base URL:** `https://open.tiktokapis.com/v2/`
-- **Auth:** OAuth 2.0 — Authorization Code → Access Token → Refresh Token
+- **Auth:** OAuth 2.0 - Authorization Code -> Access Token -> Refresh Token
 - **Header:** `Authorization: Bearer <access_token>`
 - **Scope** harus didaftarkan di app portal dan diminta saat auth
 
@@ -162,7 +162,7 @@ Untuk Platform API: `docs/developers_tiktok_com/Login_Kit.md`.
 | `sign` mismatch | Urutan sort param, exclude `access_token` dari sign, versi API |
 | `access_token` expired | Implementasi refresh flow; token Platform API ~24 jam |
 | Error permission / scope | Pastikan scope aktif di app + re-authorize user |
-| Webhook signature invalid | Verifikasi header `x-tts-signature` — baca Webhooks.json |
+| Webhook signature invalid | Verifikasi header `x-tts-signature` - baca Webhooks.json |
 | Data terpotong di list | Loop via `page_token` sampai kosong |
 
 ---
@@ -186,12 +186,12 @@ Untuk Platform API: `docs/developers_tiktok_com/Login_Kit.md`.
 python scripts/developers_tiktok_com.py
 python scripts/partner_tiktokshop_com.py
 ```
-Resume otomatis — file yang sudah ada dilewati. Naikkan `DELAY_SECONDS` jika terkena rate limit.
+Resume otomatis - file yang sudah ada dilewati. Naikkan `DELAY_SECONDS` jika terkena rate limit.
 
 > Script menghasilkan struktur mentah per-file (ribuan file kecil). Jalankan langkah konsolidasi (merge per kategori sesuai layout Bagian 1) sebelum mengganti isi `docs/`, agar tetap ringkas dan mudah di-grep.
 
 ---
 
-## 8. Trigger — Kapan Menggunakan Skill Ini
+## 8. Trigger - Kapan Menggunakan Skill Ini
 
-Aktifkan skill ini untuk task yang menyebut: TikTok API · TikTok Shop · Login Kit · Content Posting · Video API · `open.tiktokapis.com` · `tiktokglobalshop` · HMAC sign TikTok · TikTok webhook · TikTok OAuth
+Aktifkan skill ini untuk task yang menyebut: TikTok API, TikTok Shop, Login Kit, Content Posting, Video API, `open.tiktokapis.com`, `tiktokglobalshop`, HMAC sign TikTok, TikTok webhook, TikTok OAuth
