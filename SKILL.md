@@ -3,8 +3,8 @@ name: tiktok-docs
 description: Use this skill whenever a task involves the TikTok Platform API (developers.tiktok.com — Login Kit, Content Posting, Video/Display API, Research Tools, Mini Games/Dramas, Scopes) or the TikTok Shop Partner API (partner.tiktokshop.com — Orders, Products, Authorization, Webhooks, Logistics, Finance, Affiliate, Return/Refund, and the Node.js SDK). Provides consolidated local reference docs and TypeScript SDK models so integration code (auth, signing, endpoints, webhooks) can be written correctly without guessing field names or request shapes. Trigger on mentions of TikTok API, TikTok Shop, open.tiktokapis.com, tiktokglobalshop, HMAC sign TikTok, TikTok webhook, or TikTok OAuth.
 ---
 
-# SKILL: TikTok Documentation Reference
-> **Untuk AI Agent** — Claude Code, OpenClaw, Hermes Agent, dan sistem agentic kompatibel MCP.
+# TikTok Documentation Reference
+> **Untuk AI Agent** — Claude Code, OpenClaw, Hermes Agent, dan agent lain yang bisa membaca skill file.
 
 ## Overview
 
@@ -187,7 +187,8 @@ python scripts/developers_tiktok_com.py
 python scripts/partner_tiktokshop_com.py
 ```
 Resume otomatis — file yang sudah ada dilewati. Naikkan `DELAY_SECONDS` jika terkena rate limit.
-Catatan: script ini menghasilkan struktur asli per-file; jika dipakai ulang untuk skill ini, jalankan langkah konsolidasi (merge per kategori) sebelum re-upload, agar tetap di bawah batas jumlah file.
+
+> Script menghasilkan struktur mentah per-file (ribuan file kecil). Jalankan langkah konsolidasi (merge per kategori sesuai layout Bagian 1) sebelum mengganti isi `docs/`, agar tetap ringkas dan mudah di-grep.
 
 ---
 
