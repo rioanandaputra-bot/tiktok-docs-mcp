@@ -18,6 +18,8 @@ Skill ini memberikan akses ke dua korpus dokumentasi TikTok, dikonsolidasikan me
 
 **Selalu baca file docs yang relevan sebelum menulis kode integrasi TikTok.**
 
+> Semua path `docs/...` di bawah relatif terhadap direktori skill ini (base directory yang ditampilkan saat skill di-load), bukan working directory project.
+
 ---
 
 ## 1. Layout File
@@ -37,10 +39,10 @@ Satu file `.json` per kategori (`API_Reference.json`, `Partner_Guide.json`, `Dev
   ...
 ]
 ```
-`data` punya skema sama seperti skill versi awal (lihat Bagian 2).
+Skema `data` per shape ada di Bagian 2.
 
 ### `docs/partner_tiktokshop_com_sdk_models/`
-Satu file `.ts` per modul SDK (`product.ts`, `order.ts`, `returnRefund.ts`, `finance.ts`, `affiliate.ts`, `affiliateCreator.ts`, `affiliatePartner.ts`, `affiliateSeller.ts`, `analytics.ts`, `authorization.ts`, `customerService.ts`, `dataReconciliation.ts`, `event.ts`, `fulfillment.ts`, `logistics.ts`, `open.ts`, `promotion.ts`, `seller.ts`, `supplyChain.ts`), plus `_utils.ts` dan `_sdk_README.md`. Tiap definisi interface diberi penanda:
+Satu file `.ts` per modul SDK (`product.ts`, `order.ts`, `returnRefund.ts`, `finance.ts`, `affiliate.ts`, `affiliateCreator.ts`, `affiliatePartner.ts`, `affiliateSeller.ts`, `analytics.ts`, `authorization.ts`, `customerService.ts`, `dataReconciliation.ts`, `event.ts`, `fulfillment.ts`, `logistics.ts`, `open.ts`, `promotion.ts`, `seller.ts`, `supplyChain.ts`), plus `_utils.ts` dan `_sdk_README.md`. Model didefinisikan sebagai **`export class`** (bukan `interface`) hasil OpenAPI Generator, lengkap dengan `attributeTypeMap` (mapping properti camelCase ↔ field API snake_case). Tiap definisi diberi penanda:
 ```
 // ==== SOURCE: <path relatif file asli> ====
 ```
@@ -49,26 +51,35 @@ Satu file `.ts` per modul SDK (`product.ts`, `order.ts`, `returnRefund.ts`, `fin
 
 ## 2. Skema JSON — Partner Docs (di dalam field `data` tiap record)
 
-**Shape A — API Reference** (`is_api_doc: true`)
+**Shape A — API Reference** (`API_Reference.json`, `meta.is_api_doc: true`)
 ```json
 {
-  "meta": { "name": "...", "is_api_doc": true, ... },
+  "meta": { "document_id": "...", "name": "Create Product", "document_path": "...", "is_api_doc": true, "keywords": [...], ... },
   "detail": {
-    "api_info": { "method": "GET", "path": "/...", "version": "202309" },
-    "request":  { "header": [...], "query": [...], "body": [...] },
-    "response": { "fields": [...] },
-    "error_codes": [...],
-    "examples":  { "request": {}, "response": {} }
+    "document_id": "...",
+    "document_api_meta": {
+      "title": "...",
+      "interface_path": "/product/202309/products",
+      "method": 1,
+      "query": "https://open-api.tiktokglobalshop.com/...?app_key=...&sign=...&timestamp=...",
+      "request_header_param": [...],
+      "request_query_param": [...],
+      "request_body_param": [...],
+      "response_param": [...],
+      "request_body": "...", "response_body": "...",
+      "error_code_list": [...]
+    }
   }
 }
 ```
+`method` numerik: **1=POST, 2=GET, 3=PUT, 4=DELETE**. Versi API ada di `interface_path` (segmen `202309` dll). `query` adalah contoh URL lengkap.
 
-**Shape B — Guide / Panduan** (`is_api_doc: false`)
+**Shape B — Guide / Panduan** (file selain API_Reference, `meta.is_api_doc: false`)
 ```json
-{ "meta": { ... }, "detail": { "content": "<HTML/Markdown>", "title": "..." } }
+{ "meta": { ... }, "detail": { "title": "...", "content": "<HTML>", "doc_type": ..., "keywords": [...], "update_time": ..., "next_document_path": "...", "prev_document_path": "..." } }
 ```
 
-**Shape C — Metadata Fallback** (fetch gagal)
+**Shape C — Metadata Fallback** (fetch gagal; hanya segelintir record, mis. di `Developer_Guide.json`)
 ```json
 { "note": "Konten tidak tersedia via API publik.", "url": "https://partner.tiktokshop.com/docv2/page/...", "meta": { ... } }
 ```
@@ -78,33 +89,35 @@ Satu file `.ts` per modul SDK (`product.ts`, `order.ts`, `returnRefund.ts`, `fin
 
 ## 3. Prosedur Lookup
 
-**Cari endpoint tertentu (mis. "Create Product"):**
-```bash
-grep -n "Create Product" docs/partner_tiktokshop_com/API_Reference.json
-# Lalu ekstrak object JSON di sekitar match tsb (cari "path" terdekat untuk konteks)
-```
-Atau parse dengan Python/jq untuk pencarian per-record:
+**Cari endpoint tertentu (mis. "Create Product"):** file JSON besar (satu baris), jangan di-Read langsung — parse per record:
 ```bash
 python3 -c "
 import json
 data = json.load(open('docs/partner_tiktokshop_com/API_Reference.json'))
 for r in data:
     if 'create product' in r['path'].lower():
-        print(r['path']); print(json.dumps(r['data'], indent=2)[:2000])
+        m = r['data']['detail']['document_api_meta']
+        print(r['path'], {1:'POST',2:'GET',3:'PUT',4:'DELETE'}[m['method']], m['interface_path'])
+        print(json.dumps(m['request_body_param'], indent=1)[:3000])
 "
 ```
+Daftar semua endpoint: loop record, print `r['path']` + `interface_path`.
 
 **Cari model TypeScript (mis. product SKU):**
 ```bash
-grep -n "interface.*Sku" docs/partner_tiktokshop_com_sdk_models/product.ts
+grep -n "class.*Sku" docs/partner_tiktokshop_com_sdk_models/product.ts
+# Lalu Read file di sekitar line number match untuk lihat properti + attributeTypeMap
 ```
 
-**Pahami alur autentikasi:**
+**Pahami alur autentikasi (Shop API):**
 ```
-1. docs/partner_tiktokshop_com/Developer_Guide.json  -> cari path mengandung "Overview"/"Authorization"
-2. docs/partner_tiktokshop_com/API_Reference.json    -> filter path yang mengandung "Authorization/"
-3. docs/developers_tiktok_com/Login_Kit.md
+docs/partner_tiktokshop_com/Developer_Guide.json — record dengan path:
+  "Get started/Authorization/..."                          -> alur OAuth shop
+  "TikTok Shop API concepts/Sign your API request.json"    -> spec HMAC sign
+  "Get started/Make your first API call/..."               -> contoh end-to-end
+docs/partner_tiktokshop_com/API_Reference.json — filter path mengandung "Authorization"
 ```
+Untuk Platform API: `docs/developers_tiktok_com/Login_Kit.md`.
 
 **Implementasi webhook:**
 ```
